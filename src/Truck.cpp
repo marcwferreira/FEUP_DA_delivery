@@ -3,17 +3,17 @@
 Truck::Truck(unsigned int maxVolume, unsigned int maxWeight, unsigned int cost)
     : maxVolume(maxVolume), maxWeight(maxWeight), cost(cost) {}
 
-unsigned int Truck::getMaxVolume()
+unsigned int Truck::getMaxVolume() const
 {
     return this->maxVolume;
 }
 
-unsigned int Truck::getMaxWeight()
+unsigned int Truck::getMaxWeight() const
 {
     return this->maxWeight;
 }
 
-unsigned int Truck::getCost()
+unsigned int Truck::getCost() const
 {
     return this->cost;
 }
