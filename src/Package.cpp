@@ -3,27 +3,27 @@
 Package::Package(bool express, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration)
     : express(express), volume(volume), weight(weight), reward(reward), duration(duration) {}
 
-bool Package::isExpress()
+bool Package::isExpress() const
 {
     return this->express;
 }
 
-unsigned int Package::getVolume()
+unsigned int Package::getVolume() const
 {
     return this->volume;
 }
 
-unsigned int Package::getWeight()
+unsigned int Package::getWeight() const
 {
     return this->weight;
 }
 
-unsigned int Package::getReward()
+unsigned int Package::getReward() const
 {
     return this->reward;
 }
 
-unsigned int Package::getDuration()
+unsigned int Package::getDuration() const
 {
     return this->duration;
 }
