@@ -1,7 +1,12 @@
 #include "Truck.h"
 
-Truck::Truck(unsigned int maxVolume, unsigned int maxWeight, unsigned int cost)
-    : maxVolume(maxVolume), maxWeight(maxWeight), cost(cost) {}
+Truck::Truck(string licencePlate, unsigned int maxVolume, unsigned int maxWeight, unsigned int cost)
+    : licencePlate(licencePlate), maxVolume(maxVolume), maxWeight(maxWeight), cost(cost) {}
+
+string Truck::getLicencePlate() const 
+{
+    return this->licencePlate;
+}
 
 unsigned int Truck::getMaxVolume() const
 {
@@ -20,7 +25,8 @@ unsigned int Truck::getCost() const
 
 bool Truck::operator==(const Truck &truck) const
 {
-    return this->maxWeight == truck.maxWeight && this->maxVolume == truck.maxVolume && this->cost == truck.cost;
+    return this->licencePlate == truck.licencePlate && this->maxWeight == truck.maxWeight && 
+                this->maxVolume == truck.maxVolume && this->cost == truck.cost;
 }
 
 bool Truck::operator<(const Truck &truck) const
