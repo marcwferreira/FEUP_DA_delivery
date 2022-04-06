@@ -1,30 +1,22 @@
+#include <vector>
 #include <iostream>
-#include <fstream>
-#include <string>
-
-#define PACKAGES_FILE "../data/encomendas.txt"
-#define TRUCKS_FILE "../data/carrinhas.txt"
-
+#include "Truck.h"
+#include "Package.h"
+#include "FileReader.h"
 using namespace std;
+
+#define TRUCKS_FILE "../data/carrinhas.txt"
+#define PACKAGES_FILE "../data/encomendas.txt"
 
 int main()
 {
-  fstream my_file;
-  my_file.open(PACKAGES_FILE, ios::in);
-  if (!my_file)
-  {
-    cout << "No such file";
-  }
-  else
-  {
-    string aux;
+  vector<Truck> trucks = FileReader::getTrucks(TRUCKS_FILE);
+  for (auto t : trucks)
+    cout << t;
 
-    while (!my_file.eof())
-    {
-      getline(my_file, aux, ' ');
-      cout << " " << aux;
-    }
-  }
-  my_file.close();
+  vector<Package> packages = FileReader::getPackages(PACKAGES_FILE);
+  for (auto p : packages)
+    cout << p;
+
   return 0;
 }
