@@ -6,11 +6,12 @@ int main()
 {
   MailSystem mailSystem = MailSystem();
 
-  // mailSystem.statistics();
-  char answer;
-  cout << "Weight (w) or Volume (v)? "; // para ser mais simples de visualizar soluções
-  cin >> answer;
-  if (tolower(answer) == 'w') mailSystem.case1_ByWeight(); else mailSystem.case1_ByVolume();
+  mailSystem.statistics();
+  mailSystem.reset();
+  mailSystem.case1_ByWeight();
+  mailSystem.reset();
+  mailSystem.case1_ByVolume();
+  cout << endl;
 
   return 0;
 }
