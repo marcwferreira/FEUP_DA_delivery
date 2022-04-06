@@ -2,7 +2,7 @@
 #define MAIL_SYSTEM
 
 #include "FileReader.h"
-#include "Truck.h"
+#include "Utils.h"
 
 #define TRUCKS_FILE "../data/carrinhas.txt"
 #define PACKAGES_FILE "../data/encomendas.txt"
@@ -15,8 +15,8 @@ private:
 
 public:
     MailSystem();
-    void scene1();
-    void printResults();
+    void statistics();
+    void case1();
 };
 
 #endif /* MAIL_SYSTEM */

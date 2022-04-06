@@ -38,6 +38,18 @@ vector<Package> Truck::getPackages() const
     return this->listOfPackages;
 }
 
+bool Truck::addPackage(Package p) 
+{
+    if (p.getVolume() + this->actualVolume <= this->maxVolume && p.getWeight() + this->actualWeight <= this->maxWeight)
+    {   
+        this->actualWeight += p.getWeight();
+        this->actualVolume += p.getVolume();
+        this->listOfPackages.push_back(p);
+        return true;
+    }
+    return false;
+}
+
 bool Truck::operator==(const Truck &truck) const
 {
     return this->licencePlate == truck.licencePlate && this->maxWeight == truck.maxWeight &&

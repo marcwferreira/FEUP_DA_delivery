@@ -5,8 +5,7 @@ using namespace std;
 int main()
 {
   MailSystem mailSystem = MailSystem();
-
-  mailSystem.scene1();
-  mailSystem.printResults();
+  //mailSystem.statistics();
+  mailSystem.case1();
   return 0;
 }

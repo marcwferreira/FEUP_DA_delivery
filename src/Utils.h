@@ -4,18 +4,32 @@
 #include "Package.h"
 #include "Truck.h"
 
-bool byVolume(const Package &p1, const Package &p2);
+bool byVolumeAsc(const Package &p1, const Package &p2);
 
-bool byWeight(const Package &p1, const Package &p2);
+bool byVolumeDesc(const Package &p1, const Package &p2);
 
-bool byReward(const Package &p1, const Package &p2);
+bool byWeightAsc(const Package &p1, const Package &p2);
 
-bool byDuration(const Package &p1, const Package &p2);
+bool byWeightDesc(const Package &p1, const Package &p2);
 
-bool byMaxVolume(const Truck &t1, const Truck &t2);
+bool byRewardAsc(const Package &p1, const Package &p2);
 
-bool byMaxWeight(const Truck &t1, const Truck &t2);
+bool byRewardDesc(const Package &p1, const Package &p2);
 
-bool byCost(const Truck &t1, const Truck &t2);
+bool byDurationAsc(const Package &p1, const Package &p2);
+
+bool byDurationDesc(const Package &p1, const Package &p2);
+
+bool byMaxVolumeAsc(const Truck &t1, const Truck &t2);
+
+bool byMaxVolumeDesc(const Truck &t1, const Truck &t2);
+
+bool byMaxWeightAsc(const Truck &t1, const Truck &t2);
+
+bool byMaxWeightDesc(const Truck &t1, const Truck &t2);
+
+bool byCostAsc(const Truck &t1, const Truck &t2);
+
+bool byCostDesc(const Truck &t1, const Truck &t2);
 
 #endif /* UTILS_H */
