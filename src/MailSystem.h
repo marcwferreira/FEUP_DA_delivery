@@ -18,6 +18,7 @@ public:
     void statistics();
     void case1_ByVolume();
     void case1_ByWeight();
+    void clearTrucks();
 };
 
 #endif /* MAIL_SYSTEM */

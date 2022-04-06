@@ -3,7 +3,9 @@
 MailSystem::MailSystem()
 {
     this->trucks = FileReader::getTrucks(TRUCKS_FILE);
+    this->trucks.sort();
     this->packages = FileReader::getPackages(PACKAGES_FILE);
+    this->packages.sort();
 }
 
 void MailSystem::statistics() {
@@ -85,6 +87,13 @@ void MailSystem::statistics() {
             "\nDesvio máximo da duração: " << desvioDuracao << endl;
 }
 
+void MailSystem::clearTrucks() {
+
+    for (list<Truck>::iterator it = trucks.begin() ; it != trucks.end() ; it++) {
+        (*it).clearPackages();
+    }
+}
+
 void MailSystem::case1_ByVolume() {
 
     this->trucks.sort(byMaxVolumeDesc);     // descending
@@ -99,22 +108,23 @@ void MailSystem::case1_ByVolume() {
     }
 
     // results
+    cout << "\nBy Volume!" << endl;
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
     for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
         list<Package> p = (*j).getPackages();
         if (!p.empty()) {
-            cout << "Truck: " <<  *j;;
+            //cout << "Truck: " <<  *j;;
             for (auto i = p.begin() ; i != p.end() ; i++) {
-                cout << (*i);
+                // cout << (*i);
                 howManyPackages++;
                 totalPackages++;
-            } cout << "Number of Packages: " << howManyPackages << endl << endl;
+            } //cout << "Number of Packages: " << howManyPackages << endl << endl;
             howManyTrucks++;
             howManyPackages = 0;
         }
     }
     cout << "Number of trucks: " << howManyTrucks << endl;
-    cout << "Number of packages: " << totalPackages << endl;
+    cout << "Number of packages (total, !express): " << totalPackages << endl << endl;
 }
 
 void MailSystem::case1_ByWeight() {
@@ -131,20 +141,21 @@ void MailSystem::case1_ByWeight() {
     }
 
     // results
+    cout << "\nBy Weight!" << endl;
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
     for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
         list<Package> p = (*j).getPackages();
         if (!p.empty()) {
-            cout << "Truck: " <<  *j;;
+            //cout << "Truck: " <<  *j;;
             for (auto i = p.begin() ; i != p.end() ; i++) {
-                cout << (*i);
+                // cout << (*i);
                 howManyPackages++;
                 totalPackages++;
-            } cout << "Number of Packages: " << howManyPackages << endl << endl;
+            } //cout << "Number of Packages: " << howManyPackages << endl << endl;
             howManyTrucks++;
             howManyPackages = 0;
         }
     }
     cout << "Number of trucks: " << howManyTrucks << endl;
-    cout << "Number of packages: " << totalPackages << endl;
+    cout << "Number of packages (total, !express): " << totalPackages << endl;
 }

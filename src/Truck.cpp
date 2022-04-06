@@ -38,6 +38,13 @@ list<Package> Truck::getPackages() const
     return this->listOfPackages;
 }
 
+void Truck::clearPackages() 
+{
+    this->listOfPackages.clear();
+    this->actualVolume = 0;
+    this->actualWeight = 0;
+}
+
 bool Truck::addPackage(Package p) 
 {
     if (p.getVolume() + this->actualVolume <= this->maxVolume && p.getWeight() + this->actualWeight <= this->maxWeight)
