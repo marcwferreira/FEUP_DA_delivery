@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
+#include <list>
 #include "Package.h"
 using namespace std;
 
@@ -18,7 +18,7 @@ private:
     unsigned int actualVolume = 0;
     unsigned int actualWeight = 0;
     unsigned int cost;
-    vector<Package> listOfPackages = {};
+    list<Package> listOfPackages = {};
 
 public:
     Truck(string licencePlate, unsigned int maxVolume, unsigned int maxWeight, unsigned int cost);
@@ -28,7 +28,7 @@ public:
     unsigned int getActualVolume() const;
     unsigned int getActualWeight() const;
     unsigned int getCost() const;
-    vector<Package> getPackages() const;
+    list<Package> getPackages() const;
     bool addPackage(Package p);
     bool operator==(const Truck &truck) const;
     bool operator<(const Truck &truck) const;

@@ -85,11 +85,66 @@ void MailSystem::statistics() {
             "\nDesvio máximo da duração: " << desvioDuracao << endl;
 }
 
-void MailSystem::case1() {
+void MailSystem::case1_ByVolume() {
 
-    this->trucks.sort(byMaxVolumeAsc); // ascending
-    for (auto i = trucks.begin() ; i != trucks.end() ; i++) {
-        cout << (*i).getMaxVolume() << endl;
+    this->trucks.sort(byMaxVolumeDesc);     // descending
+    this->packages.sort(byVolumeAsc);       // ascending -> na carrinha maior cabem mais packages menores
+    for (list<Package>::iterator i = packages.begin() ; i != packages.end() ; i++) {
+        if (!(*i).isExpress()) {
+            for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
+                if ((*j).addPackage(*i)) break;
+            }
+        }
+
     }
-    
+
+    // results
+    int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
+    for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
+        list<Package> p = (*j).getPackages();
+        if (!p.empty()) {
+            cout << "Truck: " <<  *j;;
+            for (auto i = p.begin() ; i != p.end() ; i++) {
+                cout << (*i);
+                howManyPackages++;
+                totalPackages++;
+            } cout << "Number of Packages: " << howManyPackages << endl << endl;
+            howManyTrucks++;
+            howManyPackages = 0;
+        }
+    }
+    cout << "Number of trucks: " << howManyTrucks << endl;
+    cout << "Number of packages: " << totalPackages << endl;
+}
+
+void MailSystem::case1_ByWeight() {
+
+    this->trucks.sort(byMaxWeightDesc);     // descending
+    this->packages.sort(byWeightAsc);       // ascending -> na carrinha que pode levar mais peso cabem mais packages menos pesados
+    for (list<Package>::iterator i = packages.begin() ; i != packages.end() ; i++) {
+        if (!(*i).isExpress()) {
+            for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
+                if ((*j).addPackage(*i)) break;
+            }
+        }
+
+    }
+
+    // results
+    int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
+    for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
+        list<Package> p = (*j).getPackages();
+        if (!p.empty()) {
+            cout << "Truck: " <<  *j;;
+            for (auto i = p.begin() ; i != p.end() ; i++) {
+                cout << (*i);
+                howManyPackages++;
+                totalPackages++;
+            } cout << "Number of Packages: " << howManyPackages << endl << endl;
+            howManyTrucks++;
+            howManyPackages = 0;
+        }
+    }
+    cout << "Number of trucks: " << howManyTrucks << endl;
+    cout << "Number of packages: " << totalPackages << endl;
 }

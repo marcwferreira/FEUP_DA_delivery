@@ -16,7 +16,8 @@ private:
 public:
     MailSystem();
     void statistics();
-    void case1();
+    void case1_ByVolume();
+    void case1_ByWeight();
 };
 
 #endif /* MAIL_SYSTEM */

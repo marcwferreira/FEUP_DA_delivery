@@ -33,7 +33,7 @@ unsigned int Truck::getCost() const
     return this->cost;
 }
 
-vector<Package> Truck::getPackages() const
+list<Package> Truck::getPackages() const
 {
     return this->listOfPackages;
 }

@@ -6,6 +6,6 @@ int main()
 {
   MailSystem mailSystem = MailSystem();
   //mailSystem.statistics();
-  mailSystem.case1();
+  mailSystem.case1_ByWeight();
   return 0;
 }
