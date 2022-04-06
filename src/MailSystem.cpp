@@ -8,22 +8,32 @@ MailSystem::MailSystem()
 
 void MailSystem::scene1()
 {
-    sortTrucks();
-    sortPackages();
+    trucks.sort([](const Truck &a, const Truck &b)
+                { return a.getMaxVolume() < b.getMaxVolume(); });
+    packages.sort([](const Package &a, const Package &b)
+                  { return a.getVolume() < b.getVolume(); });
 
     for (auto t : trucks)
     {
-        cout << t;
+        for (auto it = packages.begin(); it != packages.end(); ++it)
+        {
+            if ((*it).getVolume() + t.getActualVolume() <= t.getMaxVolume() && (*it).getWeight() + t.getActualWeight() <= t.getMaxWeight())
+            {
+                t.addPackage(*it);
+                packages.erase(it);
+            }
+        }
     }
 }
 
-/** Auxiliar fuctions **/
-void MailSystem::sortTrucks()
+void MailSystem::printResults()
 {
-    sort(trucks.begin(), trucks.end());
-}
-
-void MailSystem::sortPackages()
-{
-    sort(packages.begin(), packages.end());
+    for (auto t : trucks)
+    {
+        cout << "Truck: " << t.getLicencePlate();
+        for (auto p : t.getPackages())
+        {
+            cout << "\tPackage: " << p;
+        }
+    }
 }

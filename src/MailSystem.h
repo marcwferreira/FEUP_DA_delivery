@@ -3,7 +3,6 @@
 
 #include "FileReader.h"
 #include "Truck.h"
-#include "Package.h"
 
 #define TRUCKS_FILE "../data/carrinhas.txt"
 #define PACKAGES_FILE "../data/encomendas.txt"
@@ -11,14 +10,13 @@
 class MailSystem
 {
 private:
-    vector<Truck> trucks;
-    vector<Package> packages;
-    void sortTrucks();
-    void sortPackages();
+    list<Truck> trucks;
+    list<Package> packages;
 
 public:
     MailSystem();
     void scene1();
+    void printResults();
 };
 
 #endif /* MAIL_SYSTEM */

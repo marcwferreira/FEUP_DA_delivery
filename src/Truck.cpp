@@ -18,9 +18,24 @@ unsigned int Truck::getMaxWeight() const
     return this->maxWeight;
 }
 
+unsigned int Truck::getActualVolume() const
+{
+    return this->actualVolume;
+}
+
+unsigned int Truck::getActualWeight() const
+{
+    return this->actualWeight;
+}
+
 unsigned int Truck::getCost() const
 {
     return this->cost;
+}
+
+vector<Package> Truck::getPackages() const
+{
+    return this->listOfPackages;
 }
 
 bool Truck::operator==(const Truck &truck) const

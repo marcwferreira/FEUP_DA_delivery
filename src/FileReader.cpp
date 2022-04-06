@@ -1,9 +1,8 @@
 #include "FileReader.h"
-#include <string>
 
-vector<Truck> FileReader::getTrucks(string filename)
+list<Truck> FileReader::getTrucks(string filename)
 {
-    vector<Truck> trucks = {};
+    list<Truck> trucks = {};
     string licencePlate, maxVolume, maxWeight, cost;
 
     fstream file;
@@ -30,9 +29,9 @@ vector<Truck> FileReader::getTrucks(string filename)
     return trucks;
 }
 
-vector<Package> FileReader::getPackages(string filename)
+list<Package> FileReader::getPackages(string filename)
 {
-    vector<Package> packages = {};
+    list<Package> packages = {};
     string expresso, volume, peso, recompensa, duracao;
 
     fstream file;
