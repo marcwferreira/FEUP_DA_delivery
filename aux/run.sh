@@ -1,3 +1,5 @@
+# Script que funciona dentro da pasta build #
+# Para outros ficheiros de encomendas, trocar aqui o nome #
 
 cmake .. && cmake --build .                                     # compila o sistema
 rm -r lines.csv                                                 # remove o ficheiro lines antigo
