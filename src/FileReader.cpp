@@ -32,7 +32,7 @@ list<Truck> FileReader::getTrucks(string filename)
 list<Package> FileReader::getPackages(string filename)
 {
     list<Package> packages = {};
-    string expresso, volume, peso, recompensa, duracao;
+    string expresso, priority, volume, peso, recompensa, duracao;
 
     fstream file;
     file.open(filename, std::ios::in);
@@ -47,14 +47,13 @@ list<Package> FileReader::getPackages(string filename)
         while (!file.eof())
         {
             getline(file, expresso, ' ');
-            if (expresso.empty())
-                break;
+            getline(file, priority, ' ');
             getline(file, volume, ' ');
             getline(file, peso, ' ');
             getline(file, recompensa, ' ');
             getline(file, duracao);
 
-            packages.push_back(Package(expresso == "1", stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
+            packages.push_back(Package(expresso == "1", stoi(priority), stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
         }
         file.close();
     }

@@ -1,11 +1,16 @@
 #include "Package.h"
 
-Package::Package(bool express, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration)
-    : express(express), volume(volume), weight(weight), reward(reward), duration(duration) {}
+Package::Package(bool express, unsigned int priority, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration)
+    : express(express), priority(priority), volume(volume), weight(weight), reward(reward), duration(duration) {}
 
 bool Package::isExpress() const
 {
     return this->express;
+}
+
+unsigned int Package::getPriority() const 
+{
+    return this->priority;
 }
 
 unsigned int Package::getVolume() const
@@ -30,7 +35,7 @@ unsigned int Package::getDuration() const
 
 bool Package::operator==(const Package &package) const
 {
-    return this->express == package.express && this->volume == package.volume && this->weight == package.weight &&
+    return this->express == package.express && this->priority == package.priority && this->volume == package.volume && this->weight == package.weight &&
            this->reward == package.reward && this->duration == package.duration;
 }
 
@@ -41,6 +46,7 @@ bool Package::operator<(const Package &package) const
 
 ostream &operator<<(ostream &os, const Package &package)
 {
-    os << package.express << " " << package.volume << " " << package.weight << " " << package.reward << " " << package.duration << endl;
+    os << package.express << " " << package.priority << " "<< package.volume << " " << package.weight
+            << " " << package.reward << " " << package.duration << endl;
     return os;
 }

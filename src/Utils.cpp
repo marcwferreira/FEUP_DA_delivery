@@ -8,6 +8,14 @@ bool byVolumeDesc(const Package &p1, const Package &p2) {
     return p1.getVolume() > p2.getVolume();
 }
 
+bool byPriorityAsc(const Package &p1, const Package &p2) {
+    return p1.getPriority() < p2.getPriority();
+}
+
+bool byPriorityDesc(const Package &p1, const Package &p2) {
+    return p1.getPriority() > p2.getPriority();
+}
+
 bool byWeightAsc(const Package &p1, const Package &p2) {
     return p1.getWeight() < p2.getWeight();
 }

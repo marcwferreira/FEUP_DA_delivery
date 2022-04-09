@@ -4,8 +4,8 @@
 #include "FileReader.h"
 #include "Utils.h"
 
-#define TRUCKS_FILE "../data/carrinhas.txt"
-#define PACKAGES_FILE "../data/encomendas.txt"
+#define TRUCKS_FILE "../data/carrinhas50.txt"
+#define PACKAGES_FILE "../data/encomendas3000.txt"
 
 class MailSystem
 {

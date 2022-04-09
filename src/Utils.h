@@ -8,6 +8,10 @@ bool byVolumeAsc(const Package &p1, const Package &p2);
 
 bool byVolumeDesc(const Package &p1, const Package &p2);
 
+bool byPriorityAsc(const Package &p1, const Package &p2);
+
+bool byPriorityDesc(const Package &p1, const Package &p2);
+
 bool byWeightAsc(const Package &p1, const Package &p2);
 
 bool byWeightDesc(const Package &p1, const Package &p2);
