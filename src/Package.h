@@ -23,6 +23,7 @@ public:
     unsigned int getWeight() const;
     unsigned int getReward() const;
     unsigned int getDuration() const;
+    void addPriority();
     bool operator==(const Package &package) const;
     bool operator<(const Package &package) const;
     friend ostream &operator<<(ostream &os, const Package &package);

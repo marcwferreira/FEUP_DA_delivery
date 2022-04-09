@@ -8,7 +8,7 @@ bool Package::isExpress() const
     return this->express;
 }
 
-unsigned int Package::getPriority() const 
+unsigned int Package::getPriority() const
 {
     return this->priority;
 }
@@ -33,6 +33,11 @@ unsigned int Package::getDuration() const
     return this->duration;
 }
 
+void Package::addPriority()
+{
+    priority += 1;
+}
+
 bool Package::operator==(const Package &package) const
 {
     return this->express == package.express && this->priority == package.priority && this->volume == package.volume && this->weight == package.weight &&
@@ -46,7 +51,7 @@ bool Package::operator<(const Package &package) const
 
 ostream &operator<<(ostream &os, const Package &package)
 {
-    os << package.express << " " << package.priority << " "<< package.volume << " " << package.weight
-            << " " << package.reward << " " << package.duration << endl;
+    os << package.priority << " " << package.volume << " " << package.weight
+       << " " << package.reward << " " << package.duration << endl;
     return os;
 }

@@ -1,6 +1,6 @@
 #include "FileReader.h"
 
-list<Truck> FileReader::getTrucks(string filename)
+list<Truck> FileReader::getTrucks(const string &filename)
 {
     list<Truck> trucks = {};
     string licencePlate, maxVolume, maxWeight, cost;
@@ -9,7 +9,7 @@ list<Truck> FileReader::getTrucks(string filename)
     file.open(filename, ios::in);
     if (!file)
     {
-        cout << "O ficheiro " << filename << " nao existe!" << endl;
+        cerr << "Error: file " << filename << " not found" << endl;
         return trucks;
     }
     if (file.is_open())
@@ -29,7 +29,7 @@ list<Truck> FileReader::getTrucks(string filename)
     return trucks;
 }
 
-list<Package> FileReader::getPackages(string filename)
+list<Package> FileReader::getPackages(const string &filename)
 {
     list<Package> packages = {};
     string expresso, priority, volume, peso, recompensa, duracao;
@@ -38,7 +38,7 @@ list<Package> FileReader::getPackages(string filename)
     file.open(filename, std::ios::in);
     if (!file)
     {
-        cout << "O ficheiro " << filename << " nao existe!" << endl;
+        cerr << "Error: file " << filename << " not found" << endl;
         return packages;
     }
     if (file.is_open())

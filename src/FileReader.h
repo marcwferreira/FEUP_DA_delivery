@@ -11,8 +11,8 @@
 class FileReader
 {
 public:
-    static std::list<Truck> getTrucks(string filename);
-    static std::list<Package> getPackages(string filename);
+    static std::list<Truck> getTrucks(const string &filename);
+    static std::list<Package> getPackages(const string &filename);
 };
 
 #endif
