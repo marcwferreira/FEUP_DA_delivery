@@ -5,7 +5,7 @@
 #include "Utils.h"
 
 #define TRUCKS_FILE "../data/carrinhas50.txt"
-#define PACKAGES_FILE "../data/encomendas3000.txt"
+#define PACKAGES_FILE "../data/encomendas450.txt"
 
 class MailSystem
 {
@@ -15,10 +15,9 @@ private:
 
 public:
     MailSystem();
-    void statistics();
-    void case1_ByVolume(); // volume
+    void case1();
+    bool statistics();
     void reset();
-    void case1_ByWeight(); // peso
 };
 
 #endif /* MAIL_SYSTEM */
