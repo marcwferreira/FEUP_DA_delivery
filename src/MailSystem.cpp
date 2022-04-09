@@ -2,17 +2,32 @@
 
 MailSystem::MailSystem(const string &trucks_filename, const string &packages_filename)
 {
+    this->packages_filename = packages_filename;
     this->trucks = FileReader::getTrucks(trucks_filename);
     this->packages = FileReader::getPackages(packages_filename);
 }
 
+void MailSystem::setPackages(const string &packages_filename)
+{
+}
+
 bool MailSystem::case1(const string &filename, const unsigned int day)
 {
-    fstream file;
-    file.open(filename, ios::ate);
+    fstream file, notDeliveredFile;
+    file.open(filename, ios::ate | ios::out);
+    notDeliveredFile.open("../data/NotDelivered", ios::out);
+
     if (!file.is_open())
     {
-        cout << "ERROR: Unable to open file";
+        cout << "ERROR: Unable to open the file " << filename << "." << endl;
+        return false;
+    }
+
+    if (!notDeliveredFile.is_open())
+    {
+        cout << "ERROR: Unable to open the file "
+             << "../data/NotDelivered"
+             << "." << endl;
         return false;
     }
 
@@ -43,13 +58,12 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
                 if ((*j).addPackage(*i))
                 {
                     flagNotSent = false;
-                    packages.erase(i--);
                     break;
                 }
             }
             if (flagNotSent)
             {
-                (*i).addPriority();
+                notDeliveredFile << (*i);
             }
             else
             {
@@ -83,6 +97,7 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
     file << "\tNumber of packages (total, !express): " << totalPackages << endl;
 
     file.close();
+    notDeliveredFile.close();
     return true;
 }
 

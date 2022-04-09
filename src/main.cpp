@@ -25,11 +25,9 @@ int main(int argc, char *argv[])
     fileTrucks = TRUCKS_FILE;
   }
 
-  string outFile = argv[1];
-
   do
   {
-    if (!mailSystem.case1(outFile, day))
+    if (!mailSystem.case1(argv[1], day))
     {
       break;
     }
