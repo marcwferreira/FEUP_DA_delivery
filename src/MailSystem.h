@@ -4,9 +4,6 @@
 #include "FileReader.h"
 #include "Utils.h"
 
-#define TRUCKS_FILE "../data/carrinhas50.txt"
-#define PACKAGES_FILE "../data/encomendas3000.txt"
-
 class MailSystem
 {
 private:
@@ -15,8 +12,8 @@ private:
     string packages_filename;
 
 public:
-    MailSystem(const string &trucks_filename = TRUCKS_FILE, const string &packages_filename = PACKAGES_FILE);
-    void setPackages(const string &packages_filename = PACKAGES_FILE);
+    MailSystem(const string &trucks_filename, const string &packages_filename);
+    void setPackages(const string &packages_filename);
     bool case1(const string &filename, const unsigned int day);
     bool statistics();
     void reset();

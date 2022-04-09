@@ -15,4 +15,4 @@ public:
     static std::list<Package> getPackages(const string &filename);
 };
 
-#endif
+#endif /* FILES_READER */

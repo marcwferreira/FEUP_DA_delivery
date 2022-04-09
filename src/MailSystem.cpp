@@ -9,13 +9,14 @@ MailSystem::MailSystem(const string &trucks_filename, const string &packages_fil
 
 void MailSystem::setPackages(const string &packages_filename)
 {
+    this->packages_filename = packages_filename;
 }
 
 bool MailSystem::case1(const string &filename, const unsigned int day)
 {
     fstream file, notDeliveredFile;
     file.open(filename, ios::ate | ios::out);
-    notDeliveredFile.open("../data/NotDelivered", ios::out);
+    notDeliveredFile.open("../input/NotDelivered.txt", ios::out);
 
     if (!file.is_open())
     {
@@ -26,7 +27,7 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
     if (!notDeliveredFile.is_open())
     {
         cout << "ERROR: Unable to open the file "
-             << "../data/NotDelivered"
+             << "../input/NotDelivered.txt"
              << "." << endl;
         return false;
     }
