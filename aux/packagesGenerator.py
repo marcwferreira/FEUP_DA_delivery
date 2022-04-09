@@ -1,6 +1,6 @@
+import sys
 from random import randint as rd
-from string import ascii_uppercase
-from math import ceil, floor, round
+from math import ceil as c
 
 '''
 Script que gera N novas packages de acordo com os limites do dataset original
@@ -25,25 +25,48 @@ def getBounds():
                             for line in file.readlines()[1:]               ]
         file.close()
     
-    minVolume, minWeight, minReward, minDuration = MAXIMUM
-    maxVolume, maxWeight, maxReward, maxDuration = MINIMUM
-    parameters = [minVolume, maxVolume, minWeight, maxWeight, minReward, maxReward, minDuration, maxDuration]
+    minVolume, minWeight, minReward, minDuration = MAXIMUM, MAXIMUM, MAXIMUM, MAXIMUM
+    maxVolume, maxWeight, maxReward, maxDuration = MINIMUM, MINIMUM, MINIMUM, MINIMUM
 
-    for line in allData:
-        for index in range (0, len(parameters) // 2, 1):
-            parameters[index] = line[index+2] if line[index+2] < parameters[index] else parameters[index]
-            parameters[index+1] = line[index+2] if line[index+2] > parameters[index+1] else parameters[index+1]
+    for (express, priority, volume, weight, reward, duration) in allData:
+        minVolume = min(minVolume, volume)
+        minWeight = min(minWeight, weight)
+        minReward = min(minReward, reward)
+        minDuration = min(minDuration, duration)
+        maxVolume = max(maxVolume, volume) 
+        maxWeight = max(maxWeight, weight)
+        maxReward = max(maxReward, reward)
+        maxDuration = max(maxDuration, duration)
 
-    return [max(floor(parameter), ceil(parameter), round(parameter), 0) for parameter in parameters]
+    return [minVolume, maxVolume, minWeight, maxWeight, minReward, maxReward, minDuration, maxDuration]
 
-def generate():
+def generate(total):
 
-    #total = int(input("Quantas packages gerar? "))
-    #print("total is: {}".format(total))
+    minVolume, maxVolume, minWeight, maxWeight, minReward, maxReward, minDuration, maxDuration = getBounds()
 
-    print(getBounds())
-    #minVolume, maxVolume, minWeight, maxWeight, minReward, maxReward = getBounds()
+    express = [0] * total
+    qtdExpress = c(total * (EXPRESS_PERCENTAGE / 100))
 
+    while (qtdExpress):
+        index = rd(0, len(express)-1)
+        if express[index] == 0: 
+            express[index] = 1
+            qtdExpress -= 1
+
+    allData = [ 
+            " ".join (
+            str(element) for element in [
+                express[x], DEFAULT_PRIORITY, rd(minVolume, maxVolume), rd(minWeight, maxWeight), rd(minReward, maxReward), rd(minDuration, maxDuration)
+            ]
+        ) for x in range(total) 
+    ]
+
+    with open("../data/encomendas" + str(total) + ".txt", "w") as file:
+        
+        file.write(HEADER + "\n")
+        for line in allData[:-1]: file.write(line + "\n")
+        file.write(allData[-1])
+        file.close()
 
 if __name__ == "__main__":
-    generate()
+    generate(int(sys.argv[1]))
