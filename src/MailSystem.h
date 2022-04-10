@@ -4,23 +4,22 @@
 #include <algorithm> 
 
 #include "FileReader.h"
-#include "Truck.h"
-#include "Package.h"
+#include "Utils.h"
 
-#define TRUCKS_FILE "../data/carrinhas.txt"
-#define PACKAGES_FILE "../data/encomendas.txt"
+#define INPUT_FOLDER "../input/"
 
 class MailSystem
 {
 private:
-    vector<Truck> trucks;
-    vector<Package> packages;
-    void sortTrucks();
-    void sortPackages();
+    list<Truck> trucks;
+    list<Package> packages;
 
 public:
-    MailSystem();
-    void scene1();
+    MailSystem(const string &trucks_filename, const string &packages_filename);
+    void setPackages(const string &packages_filename);
+    void case1(const string &filename, const unsigned int day);
+    bool statistics();
+    void reset();
 };
 
 #endif /* MAIL_SYSTEM */

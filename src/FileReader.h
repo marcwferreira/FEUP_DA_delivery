@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include <list>
 #include <string>
 #include <limits>
 #include "Truck.h"
@@ -12,8 +12,8 @@
 class FileReader
 {
 public:
-    static std::vector<Truck> getTrucks(string filename);
-    static std::vector<Package> getPackages(string filename);
+    static std::list<Truck> getTrucks(const string &filename);
+    static std::list<Package> getPackages(const string &filename);
 };
 
-#endif
+#endif /* FILES_READER */

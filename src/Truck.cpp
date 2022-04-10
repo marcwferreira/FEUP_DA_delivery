@@ -18,9 +18,43 @@ unsigned int Truck::getMaxWeight() const
     return this->maxWeight;
 }
 
+unsigned int Truck::getActualVolume() const
+{
+    return this->actualVolume;
+}
+
+unsigned int Truck::getActualWeight() const
+{
+    return this->actualWeight;
+}
+
 unsigned int Truck::getCost() const
 {
     return this->cost;
+}
+
+list<Package> Truck::getPackages() const
+{
+    return this->listOfPackages;
+}
+
+void Truck::clearPackages()
+{
+    this->listOfPackages.clear();
+    this->actualVolume = 0;
+    this->actualWeight = 0;
+}
+
+bool Truck::addPackage(Package p)
+{
+    if (p.getVolume() + this->actualVolume <= this->maxVolume && p.getWeight() + this->actualWeight <= this->maxWeight)
+    {
+        this->actualWeight += p.getWeight();
+        this->actualVolume += p.getVolume();
+        this->listOfPackages.push_back(p);
+        return true;
+    }
+    return false;
 }
 
 bool Truck::operator==(const Truck &truck) const

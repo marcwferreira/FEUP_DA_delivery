@@ -1,16 +1,15 @@
 #include "FileReader.h"
-#include <string>
 
-vector<Truck> FileReader::getTrucks(string filename)
+list<Truck> FileReader::getTrucks(const string &filename)
 {
-    vector<Truck> trucks = {};
+    list<Truck> trucks = {};
     string licencePlate, maxVolume, maxWeight, cost;
 
     fstream file;
     file.open(filename, ios::in);
     if (!file)
     {
-        cout << "O ficheiro " << filename << " nao existe!" << endl;
+        cerr << "Error: file " << filename << " not found" << endl;
         return trucks;
     }
     if (file.is_open())
@@ -30,16 +29,16 @@ vector<Truck> FileReader::getTrucks(string filename)
     return trucks;
 }
 
-vector<Package> FileReader::getPackages(string filename)
+list<Package> FileReader::getPackages(const string &filename)
 {
-    vector<Package> packages = {};
-    string expresso, volume, peso, recompensa, duracao;
+    list<Package> packages = {};
+    string expresso, priority, volume, peso, recompensa, duracao;
 
     fstream file;
     file.open(filename, std::ios::in);
     if (!file)
     {
-        cout << "O ficheiro " << filename << " nao existe!" << endl;
+        cerr << "Error: file " << filename << " not found" << endl;
         return packages;
     }
     if (file.is_open())
@@ -48,14 +47,13 @@ vector<Package> FileReader::getPackages(string filename)
         while (!file.eof())
         {
             getline(file, expresso, ' ');
-            if (expresso.empty())
-                break;
+            getline(file, priority, ' ');
             getline(file, volume, ' ');
             getline(file, peso, ' ');
             getline(file, recompensa, ' ');
             getline(file, duracao);
 
-            packages.push_back(Package(expresso == "1", stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
+            packages.push_back(Package(expresso == "1", stoi(priority), stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
         }
         file.close();
     }
