@@ -1,6 +1,8 @@
 #ifndef MAIL_SYSTEM
 #define MAIL_SYSTEM
 
+#include <algorithm> 
+
 #include "FileReader.h"
 #include "Truck.h"
 #include "Package.h"
