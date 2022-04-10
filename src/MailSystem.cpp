@@ -2,26 +2,25 @@
 
 MailSystem::MailSystem(const string &trucks_filename, const string &packages_filename)
 {
-    this->packages_filename = packages_filename;
     this->trucks = FileReader::getTrucks(trucks_filename);
     this->packages = FileReader::getPackages(packages_filename);
 }
 
 void MailSystem::setPackages(const string &packages_filename)
 {
-    this->packages_filename = packages_filename;
+    this->packages = FileReader::getPackages(INPUT_FOLDER + packages_filename);
 }
 
-bool MailSystem::case1(const string &filename, const unsigned int day)
+void MailSystem::case1(const string &filename, const unsigned int day)
 {
     fstream file, notDeliveredFile;
-    file.open(filename, ios::ate | ios::out);
+    file.open(filename, ios::app);
     notDeliveredFile.open("../input/NotDelivered.txt", ios::out);
 
     if (!file.is_open())
     {
         cout << "ERROR: Unable to open the file " << filename << "." << endl;
-        return false;
+        return;
     }
 
     if (!notDeliveredFile.is_open())
@@ -29,7 +28,7 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
         cout << "ERROR: Unable to open the file "
              << "../input/NotDelivered.txt"
              << "." << endl;
-        return false;
+        return;
     }
 
     bool flagNotSent = true;
@@ -49,6 +48,10 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
          << "\tPackage: priority volume weight reward duration" << endl
          << endl;
 
+    notDeliveredFile << "Information: " << endl
+                     << "\tPackage: priority volume weight reward duration" << endl
+                     << endl;
+
     file << "Day " << day << ": " << endl;
     for (list<Package>::iterator i = packages.begin(); i != packages.end(); i++)
     {
@@ -64,7 +67,7 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
             }
             if (flagNotSent)
             {
-                notDeliveredFile << (*i);
+                notDeliveredFile << "\t" << (*i);
             }
             else
             {
@@ -99,7 +102,6 @@ bool MailSystem::case1(const string &filename, const unsigned int day)
 
     file.close();
     notDeliveredFile.close();
-    return true;
 }
 
 bool MailSystem::statistics()
