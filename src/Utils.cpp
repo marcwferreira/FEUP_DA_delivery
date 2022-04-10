@@ -2,16 +2,26 @@
 
 bool byVolumeAsc(const Package &p1, const Package &p2)
 {
-    if (p1.getVolume() == p2.getVolume())
-        return p1.getPriority() < p2.getPriority();
-    return p1.getVolume() < p2.getVolume();
+    if (p1.getPriority() == p2.getPriority())
+    {
+        return p1.getVolume() < p2.getVolume();
+    }
+    else
+    {
+        return p1.getPriority() > p2.getPriority();
+    }
 }
 
 bool byVolumeDesc(const Package &p1, const Package &p2)
 {
-    if (p1.getVolume() == p2.getVolume())
-        return p1.getPriority() > p2.getPriority();
-    return p1.getVolume() > p2.getVolume();
+    if (p1.getPriority() == p2.getPriority())
+    {
+        return p1.getVolume() > p2.getVolume();
+    }
+    else
+    {
+        return p1.getPriority() < p2.getPriority();
+    }
 }
 
 bool byPriorityAsc(const Package &p1, const Package &p2)
@@ -26,16 +36,26 @@ bool byPriorityDesc(const Package &p1, const Package &p2)
 
 bool byWeightAsc(const Package &p1, const Package &p2)
 {
-    if (p1.getWeight() == p2.getWeight())
+    if (p1.getPriority() == p2.getPriority())
+    {
+        return p1.getWeight() < p2.getWeight();
+    }
+    else
+    {
         return p1.getPriority() < p2.getPriority();
-    return p1.getWeight() < p2.getWeight();
+    }
 }
 
 bool byWeightDesc(const Package &p1, const Package &p2)
 {
-    if (p1.getWeight() == p2.getWeight())
+    if (p1.getPriority() == p2.getPriority())
+    {
+        return p1.getWeight() > p2.getWeight();
+    }
+    else
+    {
         return p1.getPriority() > p2.getPriority();
-    return p1.getWeight() > p2.getWeight();
+    }
 }
 
 bool byRewardAsc(const Package &p1, const Package &p2)

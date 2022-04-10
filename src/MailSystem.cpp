@@ -67,6 +67,7 @@ void MailSystem::case1(const string &filename, const unsigned int day)
             }
             if (flagNotSent)
             {
+                (*i).addPriority();
                 notDeliveredFile << "\t" << (*i);
             }
             else

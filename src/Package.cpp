@@ -51,7 +51,7 @@ bool Package::operator<(const Package &package) const
 
 ostream &operator<<(ostream &os, const Package &package)
 {
-    os << package.priority << " " << package.volume << " " << package.weight
+    os << package.express << " " << package.priority << " " << package.volume << " " << package.weight
        << " " << package.reward << " " << package.duration << endl;
     return os;
 }

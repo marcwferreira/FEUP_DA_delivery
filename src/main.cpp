@@ -99,6 +99,7 @@ int main(int argc, char *argv[])
         flagFirstTime = false;
       }
       mailSystem.case1(outputFile, day);
+      day++;
       break;
 
     case 2:
