@@ -29,6 +29,7 @@ public:
     unsigned int getActualWeight() const;
     unsigned int getCost() const;
     list<Package> getPackages() const;
+    bool getEmpty() const;
     void clearPackages();
     bool addPackage(Package p);
     bool operator==(const Truck &truck) const;
