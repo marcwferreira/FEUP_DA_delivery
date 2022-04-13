@@ -3,8 +3,6 @@
 #include "MailSystem.h"
 using namespace std;
 
-#define DEFAULT_OUTPUT "../output.txt"
-
 void error()
 {
   cerr << "\tInvalid arguments" << endl

@@ -6,23 +6,56 @@ MailSystem::MailSystem(const string &trucks_filename, const string &packages_fil
     this->packages = FileReader::getPackages(packages_filename);
 }
 
+void MailSystem::writeNotDelivered(const string &filename, const list<Package> &notDelivered) {
+
+    fstream notDeliveredFile;
+    notDeliveredFile.open("../input/"+filename, ios::out);
+
+    if (!notDeliveredFile.is_open()) {
+        cout << "ERROR: Unable to open the file " << filename << endl;
+        return;
+    }
+    
+    notDeliveredFile << "id express priority volume weight reward duration" << endl;
+    int newId = 0;
+    for(auto i = notDelivered.begin(); i != notDelivered.end()--; i++) {
+        notDeliveredFile << newId << ' '
+                        << (*i).isExpress() << ' '
+                        << (*i).getPriority()+1 << ' '
+                        << (*i).getVolume() << ' '
+                        << (*i).getWeight() << ' '
+                        << (*i).getReward() << ' '
+                        << (*i).getDuration() << endl;
+        newId++;
+    }
+    notDeliveredFile << newId << ' '
+                    << notDelivered.back().isExpress() << ' '
+                    << notDelivered.back().getPriority()+1 << ' '
+                    << notDelivered.back().getVolume() << ' '
+                    << notDelivered.back().getWeight() << ' '
+                    << notDelivered.back().getReward() << ' '
+                    << notDelivered.back().getDuration();
+    notDeliveredFile.close();
+}
+
+string MailSystem::fileNameGenerator(int mode) {
+    time_t now = time(0);
+    tm *ltm = localtime(&now);
+    string outputFileName = "../output/case" + to_string(mode) + "_"+to_string(1900+ltm->tm_year)+"-"+to_string(1+ltm->tm_mon);
+    outputFileName+= "-"+to_string(ltm->tm_mday)+"_"+to_string(ltm->tm_hour)+"-"+to_string(ltm->tm_min)+".txt";
+    return outputFileName;
+}
+
 void MailSystem::case1(const string &filename)
 {
-    fstream file, notDeliveredFile; //file = output -> filename
-    file.open(filename, ios::app);
-    notDeliveredFile.open(NOT_DELIVERED_FILE, ios::out);
+    string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(1) : filename;
+    
+    fstream file;
+    file.open(outputFileName, ios::app);
 
     if (!file.is_open())
     {
         cout << "ERROR: Unable to open the file " << filename << "." << endl;
-        return;
-    }
-
-    if (!notDeliveredFile.is_open())
-    {
-        cout << "ERROR: Unable to open the file "
-             << "../input/NotDelivered.txt"
-             << "." << endl;
         return;
     }
 
@@ -47,27 +80,8 @@ void MailSystem::case1(const string &filename)
     time (&tt);
     ti = localtime(&tt);
     file << asctime(ti) << endl;
-
-    notDeliveredFile << "id priority volume weight reward duration" << endl;
     
-
-    /* O(n+m) */
-    auto i = packages.begin();
-    auto j = trucks.begin();
-    while (i != packages.end() && j != trucks.end()) {
-        if (!(*i).isExpress() && (*j).addPackage(*i)) {
-            advance(i, 1);
-        }
-        else advance(j, 1);
-    }
-
-    for (auto element : packages) {
-        notDeliveredFile << element << endl;
-    }
-    
-
-    /** O(n.m)
-    
+    list<Package> notDelivered = {};
     for (list<Package>::iterator i = packages.begin(); i != packages.end(); i++)
     {
         if (!(*i).isExpress())
@@ -84,14 +98,14 @@ void MailSystem::case1(const string &filename)
             if (flagNotSent)
             {
                 (*i).addPriority();
-                notDeliveredFile << (*i);
+                notDelivered.push_back(*i);
             }
         }
     }
 
-    */
+    if (!notDelivered.empty()) writeNotDelivered("Case1NotDelivered.txt", notDelivered);
 
-    int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
+    int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0, deliveredPackages = 0;
     for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
     {
         list<Package> p = (*j).getPackages();
@@ -107,15 +121,16 @@ void MailSystem::case1(const string &filename)
             file << "\tNumber of Packages: " << howManyPackages << endl
                  << endl;
             howManyTrucks++;
+            deliveredPackages += howManyPackages;
             howManyPackages = 0;
         }
     }
 
     file << "\tNumber of trucks: " << howManyTrucks << endl;
     file << "\tNumber of packages (total, !express): " << totalPackages << endl;
+    file << "\tPercentage of delivered packages: " << deliveredPackages / (float) (0.9 * packages.size()) * 100 << "%";
 
     file.close();
-    notDeliveredFile.close();
 }
 
 bool MailSystem::statistics()
@@ -156,6 +171,8 @@ void MailSystem::reset()
 
 void MailSystem::case2(const string &filename) {
 
+    string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(2) : filename;
+
     this->trucks.sort(byCostAsc); // ascending
     this->packages.sort(byRewardDesc); 
 
@@ -164,6 +181,7 @@ void MailSystem::case2(const string &filename) {
         if(!elem.isExpress())
             normalPackages.push_back(elem);
     }
+    const int NormalPackageSize = normalPackages.size();
 
     bool statisticVolume = statistics();
     for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
@@ -181,14 +199,14 @@ void MailSystem::case2(const string &filename) {
     }
 
     fstream outputFile;
-    outputFile.open(filename, ios::app);
+    outputFile.open(outputFileName, ios::app);
 
     if (!outputFile.is_open()) {
         cout << "ERROR: Unable to open the file " << filename << "." << endl;
         return;
     }
     else {
-        int money = 0;
+        int money = 0,usedTrucks = 0;
         for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
             if(j->getEmpty()) continue;
             int moneyTemp = 0;
@@ -206,39 +224,25 @@ void MailSystem::case2(const string &filename) {
                            << " Weight: " << elem.getWeight()
                            << " Volume: " << elem.getVolume() << endl;
             }
-            outputFile << "Profit from truck: " << moneyTemp << endl;
+            outputFile << "Profit from truck: " << moneyTemp << endl << endl;
             money += moneyTemp;
+            usedTrucks++;
         }
 
-        float efficiency = ( (float)packages.size()-(float)normalPackages.size() ) / ( (float)packages.size() );
+        float efficiency = (( (float)NormalPackageSize-(float)normalPackages.size() ) / ( (float)NormalPackageSize ))*100;
 
         outputFile << endl << "Total profit for the day: " << money << endl;
-        outputFile << "Number of used Trucks: " << endl;
-        outputFile << "Number of delivered packages: " << packages.size() 
-                   << "Number of packagesin total: "   << packages.size()-normalPackages.size() << endl;
-        outputFile << "Efficiency for the day: " << efficiency << "%" << endl;
+        outputFile << "Number of used Trucks: " << usedTrucks << endl;
+        outputFile << "Number of delivered packages: " << packages.size()-normalPackages.size() << endl
+                   << "Number of packages in total: "   << NormalPackageSize << endl;
+        outputFile << "Percentage of delivered packages: " << efficiency << "%";
 
         outputFile.close();
     }
     
-    fstream notDeliveredFile;
-    notDeliveredFile.open(NOT_DELIVERED_FILE, ios::out);
-
-    if (!notDeliveredFile.is_open()) {
-        cout << "ERROR: Unable to open the file "
-             << "../input/NotDelivered.txt"
-             << "." << endl;
-        return;
+    if(!normalPackages.empty()) {
+        writeNotDelivered("Case2NotDelivered.txt",normalPackages);
     }
-    else {
-        notDeliveredFile << "id express priority volume weight reward duration" << endl;
-        for(list<Package>::iterator i = normalPackages.begin(); i != normalPackages.end()--; i++) {
-            notDeliveredFile << *i;
-        }
-        notDeliveredFile << normalPackages.back();
-        outputFile.close();
-    }
-
 }
 
 bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPackages) {

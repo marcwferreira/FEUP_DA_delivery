@@ -18,6 +18,7 @@ list<Truck> FileReader::getTrucks(const string &filename)
         while (!file.eof())
         {
             getline(file, licencePlate, ' ');
+            if (licencePlate.empty()) break;
             getline(file, maxVolume, ' ');
             getline(file, maxWeight, ' ');
             getline(file, cost);
@@ -47,6 +48,7 @@ list<Package> FileReader::getPackages(const string &filename)
         while (!file.eof())
         {   
             getline(file, id, ' ');
+            if (id.empty()) break;
             getline(file, expresso, ' ');
             getline(file, priority, ' ');
             getline(file, volume, ' ');

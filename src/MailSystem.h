@@ -4,12 +4,14 @@
 #include <algorithm>
 #include <vector>
 #include <ctime>
+#include <sstream>
 
 #include "FileReader.h"
 #include "Utils.h"
 
 #define INPUT_FOLDER "../input/"
-#define NOT_DELIVERED_FILE "../input/NotDelivered.txt"
+#define OUTPUT_FOLDER "../output/"
+#define DEFAULT_OUTPUT "../output/output.txt"
 
 class MailSystem
 {
@@ -22,7 +24,8 @@ public:
     void case1(const string &filename);
     bool statistics();
     void reset();
-    
+    void writeNotDelivered(const string &filename, const list<Package> &notDelivered);
+    string fileNameGenerator(int mode);
     //Second case
     void case2(const string &filename);
     bool knapsackWeight(Truck &currentTruck, list<Package> &packages);
