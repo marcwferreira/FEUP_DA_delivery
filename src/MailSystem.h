@@ -1,7 +1,8 @@
 #ifndef MAIL_SYSTEM
 #define MAIL_SYSTEM
 
-#include <algorithm> 
+#include <algorithm>
+#include <vector>
 
 #include "FileReader.h"
 #include "Utils.h"
