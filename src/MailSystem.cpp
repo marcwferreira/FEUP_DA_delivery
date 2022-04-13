@@ -34,13 +34,13 @@ void MailSystem::case1(const string &filename, const unsigned int day)
     bool flagNotSent = true;
     if (statistics())
     {
-        this->trucks.sort(byMaxVolumeDesc); // descending
-        this->packages.sort(byVolumeAsc);   // ascending -> na carrinha maior cabem mais packages menores
+        this->trucks.sort(byMaxVolumeDesc); 
+        this->packages.sort(byVolumeAsc);  
     }
     else
     {
-        this->trucks.sort(byMaxWeightDesc); // descending
-        this->packages.sort(byWeightAsc);   // ascending -> na carrinha que pode levar mais peso cabem mais packages menos pesados
+        this->trucks.sort(byMaxWeightDesc);
+        this->packages.sort(byWeightAsc); 
     }
 
     file << "Information: " << endl
@@ -77,7 +77,6 @@ void MailSystem::case1(const string &filename, const unsigned int day)
         }
     }
 
-    // results
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
     for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
     {
@@ -97,7 +96,7 @@ void MailSystem::case1(const string &filename, const unsigned int day)
             howManyPackages = 0;
         }
     }
-    // cout << howManyTrucks << ",";
+
     file << "\tNumber of trucks: " << howManyTrucks << endl;
     file << "\tNumber of packages (total, !express): " << totalPackages << endl;
 

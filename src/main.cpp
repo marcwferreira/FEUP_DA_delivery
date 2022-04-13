@@ -14,7 +14,7 @@ void error()
 
 void helper()
 {
-  cout << "\n\t./main <TRUCKS> <PACKAGES> <MODE> [OUTPUT]\n"
+  cout << "\n\t./main <MODE> <PACKAGES> [TRUCKS] [OUTPUT]\n"
        << endl;
   cout << "\t\t<TRUCKS>\n\t\t   Name of Trucks dataset in input folder\n"
        << endl;
@@ -47,32 +47,35 @@ int main(int argc, char *argv[])
 {
   if (argv[1] == NULL)
     error();
-  string fileTrucks = argv[1];
-  if (fileTrucks == "--help" && argc == 2)
+  string modeString = argv[1];
+  if (modeString == "--help" && argc == 2)
     helper();
-  if (argc < 4 || argc > 5)
-    error();
-
-  string filePackages = argv[2];
-  string outputFile;
-  string c = argv[3];
-  string inputMode;
-  int mode = c[0] - '0';
-  bool flagFirstTime = true;
-
+  int mode = stoi(modeString);
   if (mode > 3 || mode < 1)
   {
     cerr << "Invalid mode" << endl;
     return -1;
   }
-
-  if (argv[4] == NULL)
-  {
-    outputFile = DEFAULT_OUTPUT;
+  if ( (mode == 1 || mode == 2) && argc != 3 && argc !=4 )
+    error();
+  if ( mode == 3 && argc != 2 && argc != 3 )
+    error();
+  
+  string filePackages = argv[2];
+  string fileTrucks;
+  string outputFile;
+  if (mode != 3){
+    fileTrucks = argv[3];
+    if (argv[4] == NULL)
+      outputFile = DEFAULT_OUTPUT;
+    else
+      outputFile = argv[4];
   }
-  else
-  {
-    outputFile = argv[4];
+  else {
+    if (argv[3] == NULL)
+      outputFile = DEFAULT_OUTPUT;
+    else
+      outputFile = argv[3];
   }
 
   if (!(exists(INPUT_FOLDER + fileTrucks) && exists(INPUT_FOLDER + filePackages)))
@@ -80,44 +83,27 @@ int main(int argc, char *argv[])
     return -1;
   }
 
-  int day = 1;
   MailSystem mailSystem = MailSystem(INPUT_FOLDER + fileTrucks, INPUT_FOLDER + filePackages);
 
-  do
+
+  switch (mode)
   {
-    switch (mode)
-    {
-    case 1:
-      if (!flagFirstTime)
-      {
-        cout << "New file name of package: ";
-        cin >> filePackages;
-        mailSystem.setPackages(filePackages);
-      }
-      else
-      {
-        flagFirstTime = false;
-      }
-      mailSystem.case1(outputFile, day);
-      day++;
-      break;
+  case 1:
+    mailSystem.case1(outputFile, 1);
+    break;
 
-    case 2:
-      cout << "Modo 2 brevemente" << endl;
-      break;
+  case 2:
+    cout << "Modo 2 brevemente" << endl;
+    break;
 
-    case 3:
-      cout << "Modo 3 brevemente" << endl;
-      break;
+  case 3:
+    cout << "Modo 3 brevemente" << endl;
+    break;
 
-    default:
-      cout << "Error: Mode invalid" << endl;
-      break;
-    }
+  default:
+    cout << "Error: Mode invalid" << endl;
+    break;
+  }
 
-    cout << "Mode (to leave type 'quit'): ";
-    cin >> inputMode;
-    mode = inputMode[0] - '0';
-  } while (inputMode.compare("quit") != 0);
   return 0;
 }
