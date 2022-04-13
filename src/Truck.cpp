@@ -57,6 +57,10 @@ bool Truck::addPackage(Package p)
     return false;
 }
 
+bool Truck::getEmpty() const {
+    return !(listOfPackages.size() > 0);
+};
+
 bool Truck::operator==(const Truck &truck) const
 {
     return this->licencePlate == truck.licencePlate && this->maxWeight == truck.maxWeight &&
