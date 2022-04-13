@@ -12,18 +12,19 @@ void error()
 
 void helper()
 {
-  cout << "\n\t./main <MODE> <PACKAGES> [TRUCKS] [OUTPUT]\n"
-       << endl;
-  cout << "\t\t<TRUCKS>\n\t\t   Name of Trucks dataset in input folder\n"
+  cout << "\n\t\t<MODE>\n";
+  cout << "\t\t   1: Optimization of the number of trucks" << endl;
+  cout << "\t\t\t  ./project <MODE> <PACKAGES> <TRUCKS> [OUTPUT]" << endl;
+  cout << "\t\t   2: Optimization of the profit" << endl;
+  cout << "\t\t\t  ./project <MODE> <PACKAGES> <TRUCKS> [OUTPUT]" << endl;
+  cout << "\t\t   3: Optimization of the express deliveries" << endl;
+  cout << "\t\t\t  ./project <MODE> <PACKAGES> [OUTPUT]" << endl
        << endl;
   cout << "\t\t<PACKAGES>\n\t\t   Name of Packages dataset in input folder\n"
        << endl;
-  cout << "\t\t<MODE>\n";
-  cout << "\t\t   1: Otimização do número de estafetas" << endl;
-  cout << "\t\t   2: Otimização do lucro da empresa" << endl;
-  cout << "\t\t   3: Otimização das entregas expresso\n"
+  cout << "\t\t[TRUCKS]\n\t\t   Name of Trucks dataset in input folder\n"
        << endl;
-  cout << "\t\t[OUTPUT]\n\t\t   Name of output file\n"
+  cout << "\t\t[OUTPUT]\n\t\t   Name of output file. Always optional\n"
        << endl;
   exit(-1);
 }
