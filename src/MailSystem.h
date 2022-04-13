@@ -3,11 +3,13 @@
 
 #include <algorithm>
 #include <vector>
+#include <ctime>
 
 #include "FileReader.h"
 #include "Utils.h"
 
 #define INPUT_FOLDER "../input/"
+#define NOT_DELIVERED_FILE "../input/NotDelivered.txt"
 
 class MailSystem
 {
@@ -17,13 +19,12 @@ private:
 
 public:
     MailSystem(const string &trucks_filename, const string &packages_filename);
-    void setPackages(const string &packages_filename);
-    void case1(const string &filename, const unsigned int day);
+    void case1(const string &filename);
     bool statistics();
     void reset();
     
     //Second case
-    void case2();
+    void case2(const string &filename);
     bool knapsackWeight(Truck &currentTruck, list<Package> &packages);
     bool knapsackVolume(Truck &currentTruck, list<Package> &packages);
 

@@ -89,11 +89,11 @@ int main(int argc, char *argv[])
   switch (mode)
   {
   case 1:
-    mailSystem.case1(outputFile, 1);
+    mailSystem.case1(outputFile);
     break;
 
   case 2:
-    cout << "Modo 2 brevemente" << endl;
+    mailSystem.case2(outputFile);
     break;
 
   case 3:

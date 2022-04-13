@@ -6,16 +6,11 @@ MailSystem::MailSystem(const string &trucks_filename, const string &packages_fil
     this->packages = FileReader::getPackages(packages_filename);
 }
 
-void MailSystem::setPackages(const string &packages_filename)
+void MailSystem::case1(const string &filename)
 {
-    this->packages = FileReader::getPackages(INPUT_FOLDER + packages_filename);
-}
-
-void MailSystem::case1(const string &filename, const unsigned int day)
-{
-    fstream file, notDeliveredFile;
+    fstream file, notDeliveredFile; //file = output -> filename
     file.open(filename, ios::app);
-    notDeliveredFile.open("../input/NotDelivered.txt", ios::out);
+    notDeliveredFile.open(NOT_DELIVERED_FILE, ios::out);
 
     if (!file.is_open())
     {
@@ -31,7 +26,6 @@ void MailSystem::case1(const string &filename, const unsigned int day)
         return;
     }
 
-    bool flagNotSent = true;
     if (statistics())
     {
         this->trucks.sort(byMaxVolumeDesc); 
@@ -44,19 +38,41 @@ void MailSystem::case1(const string &filename, const unsigned int day)
     }
 
     file << "Information: " << endl
-         << "\tTruck: matricula volMax pesoMax custo" << endl
-         << "\tPackage: priority volume weight reward duration" << endl
+         << "\tTruck: licencePlate volMax weightMax cost" << endl
+         << "\tPackage: id priority volume weight reward duration" << endl
          << endl;
+         
+    time_t tt;
+    struct tm * ti;
+    time (&tt);
+    ti = localtime(&tt);
+    file << asctime(ti) << endl;
 
-    notDeliveredFile << "Information: " << endl
-                     << "\tPackage: priority volume weight reward duration" << endl
-                     << endl;
+    notDeliveredFile << "id priority volume weight reward duration" << endl;
+    
 
-    file << "Day " << day << ": " << endl;
+    /* O(n+m) */
+    auto i = packages.begin();
+    auto j = trucks.begin();
+    while (i != packages.end() && j != trucks.end()) {
+        if (!(*i).isExpress() && (*j).addPackage(*i)) {
+            advance(i, 1);
+        }
+        else advance(j, 1);
+    }
+
+    for (auto element : packages) {
+        notDeliveredFile << element << endl;
+    }
+    
+
+    /** O(n.m)
+    
     for (list<Package>::iterator i = packages.begin(); i != packages.end(); i++)
     {
         if (!(*i).isExpress())
-        {
+        {   
+            bool flagNotSent = true;
             for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
             {
                 if ((*j).addPackage(*i))
@@ -68,14 +84,12 @@ void MailSystem::case1(const string &filename, const unsigned int day)
             if (flagNotSent)
             {
                 (*i).addPriority();
-                notDeliveredFile << "\t" << (*i);
-            }
-            else
-            {
-                flagNotSent = true;
+                notDeliveredFile << (*i);
             }
         }
     }
+
+    */
 
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0;
     for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
@@ -140,7 +154,7 @@ void MailSystem::reset()
     this->packages.sort();
 }
 
-void MailSystem::case2() {
+void MailSystem::case2(const string &filename) {
 
     this->trucks.sort(byCostAsc); // ascending
     this->packages.sort(byRewardDesc); 
@@ -166,26 +180,65 @@ void MailSystem::case2() {
         else break;
     }
 
-    int money = 0;
-    for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
-        if(j->getEmpty()) continue;
-        int moneyTemp = 0;
+    fstream outputFile;
+    outputFile.open(filename, ios::app);
 
-        cout << endl << "Carrinha: " << j->getLicencePlate() << endl;
-        cout << "capacidade total (peso): " << j->getMaxWeight() <<" capacidade atigida (peso): " << j->getActualWeight() << endl;
-        cout << "capacidade total (volume): " << j->getMaxVolume() <<" capacidade atigida (volume): " << j->getActualVolume() << endl;
-        if( j->getPackages().empty()) continue;
-        moneyTemp -= j->getCost();
-        cout << "custo dela: " << j->getCost() << endl;
-        for(auto elem: j->getPackages()){
-            moneyTemp += elem.getReward();
-            cout << "Custo do pacote: " << elem.getReward() << " peso do elemento: " << elem.getWeight() << " volume do elemento: " << elem.getVolume() << endl;
+    if (!outputFile.is_open()) {
+        cout << "ERROR: Unable to open the file " << filename << "." << endl;
+        return;
+    }
+    else {
+        int money = 0;
+        for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
+            if(j->getEmpty()) continue;
+            int moneyTemp = 0;
+
+            outputFile << "Truck lincense plate: " << j->getLicencePlate() << endl;
+            outputFile << "Total weight capacity: " << j->getMaxWeight() <<" Filled weight capacity: " << j->getActualWeight() << endl;
+            outputFile << "Total volume capacity: " << j->getMaxVolume() <<" Filled volume capacity: " << j->getActualVolume() << endl;
+            if( j->getPackages().empty()) continue;
+            moneyTemp -= j->getCost();
+            outputFile << "Cost of truck delivery: " << j->getCost() << endl;
+            for(auto elem: j->getPackages()){
+                moneyTemp += elem.getReward();
+                outputFile << "Id: " << elem.getId()
+                           << " Profit before shipping: " << elem.getReward()
+                           << " Weight: " << elem.getWeight()
+                           << " Volume: " << elem.getVolume() << endl;
+            }
+            outputFile << "Profit from truck: " << moneyTemp << endl;
+            money += moneyTemp;
         }
-        cout << "O ganho total foi: " << moneyTemp << endl;
-        money += moneyTemp;
+
+        float efficiency = ( (float)packages.size()-(float)normalPackages.size() ) / ( (float)packages.size() );
+
+        outputFile << endl << "Total profit for the day: " << money << endl;
+        outputFile << "Number of used Trucks: " << endl;
+        outputFile << "Number of delivered packages: " << packages.size() 
+                   << "Number of packagesin total: "   << packages.size()-normalPackages.size() << endl;
+        outputFile << "Efficiency for the day: " << efficiency << "%" << endl;
+
+        outputFile.close();
+    }
+    
+    fstream notDeliveredFile;
+    notDeliveredFile.open(NOT_DELIVERED_FILE, ios::out);
+
+    if (!notDeliveredFile.is_open()) {
+        cout << "ERROR: Unable to open the file "
+             << "../input/NotDelivered.txt"
+             << "." << endl;
+        return;
+    }
+    else {
+        notDeliveredFile << "id express priority volume weight reward duration" << endl;
+        for(list<Package>::iterator i = normalPackages.begin(); i != normalPackages.end()--; i++) {
+            notDeliveredFile << *i;
+        }
+        notDeliveredFile << normalPackages.back();
+        outputFile.close();
     }
 
-    cout << endl << "O ganho total foi final: " << money << endl;
 }
 
 bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPackages) {
