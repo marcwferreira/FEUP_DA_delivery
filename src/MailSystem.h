@@ -20,6 +20,12 @@ public:
     void case1(const string &filename, const unsigned int day);
     bool statistics();
     void reset();
+    
+    //Second case
+    void case2();
+    bool knapsackWeight(Truck &currentTruck, list<Package> &packages);
+    bool knapsackVolume(Truck &currentTruck, list<Package> &packages);
+
 };
 
 #endif /* MAIL_SYSTEM */
