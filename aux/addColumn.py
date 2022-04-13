@@ -3,10 +3,10 @@ Script que adiciona ao ficheiro DIRECTORY uma nova columa chamada COLUMN
 na posição POSITION com valor DEFAULT_VALUE
 '''
 
-DIRECTORY = "../data/encomendas450.txt"
-COLUMN = "priority"
-POSITION = 1
-DEFAULT_VALUE = 0
+DIRECTORY = "../input/encomendas3000.txt"
+COLUMN = "id"
+POSITION = 0
+DEFAULT_VALUE = "increment"
 
 def addColumn():
 
@@ -25,9 +25,11 @@ def addColumn():
     newHeader.insert(POSITION, COLUMN)
     newData = [" ".join(newHeader)]
     
+    id = 0
     for element in oldData:
-        element.insert(POSITION, DEFAULT_VALUE)
+        element.insert(POSITION, id)
         newData.append(" ".join(str(number) for number in element))
+        id += 1
 
     with open(DIRECTORY, "w") as file:
 
