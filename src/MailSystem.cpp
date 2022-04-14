@@ -1,109 +1,114 @@
 #include "MailSystem.h"
 
+#define WORK_TIME 28800
+
 MailSystem::MailSystem(const string &trucks_filename, const string &packages_filename)
 {
+
     this->trucks = FileReader::getTrucks(trucks_filename);
-    this->packages = FileReader::getPackages(packages_filename);
+    this->packages = FileReader::getPackages(packages_filename, this->expressoPackages);
 }
 
-void MailSystem::writeNotDelivered(const string &filename, const list<Package> &notDelivered) {
+void MailSystem::writeNotDelivered(const string &filename, const list<Package> &notDelivered)
+{
 
     fstream notDeliveredFile;
-    notDeliveredFile.open("../input/"+filename, ios::out);
+    notDeliveredFile.open("../input/" + filename, ios::out);
 
-    if (!notDeliveredFile.is_open()) {
+    if (!notDeliveredFile.is_open())
+    {
         cout << "ERROR: Unable to open the file " << filename << endl;
         return;
     }
-    
+
     notDeliveredFile << "id express priority volume weight reward duration" << endl;
     int newId = 0;
-    for(auto i = notDelivered.begin(); i != notDelivered.end()--; i++) {
+    for (auto i = notDelivered.begin(); i != notDelivered.end()--; i++)
+    {
         notDeliveredFile << newId << ' '
-                        << (*i).isExpress() << ' '
-                        << (*i).getPriority()+1 << ' '
-                        << (*i).getVolume() << ' '
-                        << (*i).getWeight() << ' '
-                        << (*i).getReward() << ' '
-                        << (*i).getDuration() << endl;
+                         << "0" << ' '
+                         << (*i).getPriority() + 1 << ' '
+                         << (*i).getVolume() << ' '
+                         << (*i).getWeight() << ' '
+                         << (*i).getReward() << ' '
+                         << (*i).getDuration() << endl;
         newId++;
     }
     notDeliveredFile << newId << ' '
-                    << notDelivered.back().isExpress() << ' '
-                    << notDelivered.back().getPriority()+1 << ' '
-                    << notDelivered.back().getVolume() << ' '
-                    << notDelivered.back().getWeight() << ' '
-                    << notDelivered.back().getReward() << ' '
-                    << notDelivered.back().getDuration();
+                     << "0" << ' '
+                     << notDelivered.back().getPriority() + 1 << ' '
+                     << notDelivered.back().getVolume() << ' '
+                     << notDelivered.back().getWeight() << ' '
+                     << notDelivered.back().getReward() << ' '
+                     << notDelivered.back().getDuration();
     notDeliveredFile.close();
 }
 
-string MailSystem::fileNameGenerator(int mode) {
+string MailSystem::fileNameGenerator(int mode)
+{
     time_t now = time(0);
     tm *ltm = localtime(&now);
-    string outputFileName = "../output/case" + to_string(mode) + "_"+to_string(1900+ltm->tm_year)+"-"+to_string(1+ltm->tm_mon);
-    outputFileName+= "-"+to_string(ltm->tm_mday)+"_"+to_string(ltm->tm_hour)+"-"+to_string(ltm->tm_min)+".txt";
+    string outputFileName = "../output/case" + to_string(mode) + "_" + to_string(1900 + ltm->tm_year) + "-" + to_string(1 + ltm->tm_mon);
+    outputFileName += "-" + to_string(ltm->tm_mday) + "_" + to_string(ltm->tm_hour) + "-" + to_string(ltm->tm_min) + ".txt";
     return outputFileName;
 }
 
 void MailSystem::case1(const string &filename)
 {
     string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(1) : filename;
-    
+
     fstream file;
     file.open(outputFileName, ios::app);
 
     if (!file.is_open())
     {
-        cout << "ERROR: Unable to open the file " << filename << "." << endl;
+        cout << "ERROR: Unable to open the file " << outputFileName << "." << endl;
         return;
     }
 
     if (statistics())
     {
-        this->trucks.sort(byMaxVolumeDesc); 
-        this->packages.sort(byVolumeAsc);  
+        this->trucks.sort(byMaxVolumeDesc);
+        this->packages.sort(byVolumeAsc);
     }
     else
     {
         this->trucks.sort(byMaxWeightDesc);
-        this->packages.sort(byWeightAsc); 
+        this->packages.sort(byWeightAsc);
     }
 
     file << "Information: " << endl
          << "\tTruck: licencePlate volMax weightMax cost" << endl
          << "\tPackage: id priority volume weight reward duration" << endl
          << endl;
-         
+
     time_t tt;
-    struct tm * ti;
-    time (&tt);
+    struct tm *ti;
+    time(&tt);
     ti = localtime(&tt);
     file << asctime(ti) << endl;
-    
+
     list<Package> notDelivered = {};
     for (list<Package>::iterator i = packages.begin(); i != packages.end(); i++)
     {
-        if (!(*i).isExpress())
-        {   
-            bool flagNotSent = true;
-            for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
+        bool flagNotSent = true;
+        for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
+        {
+            if ((*j).addPackage(*i))
             {
-                if ((*j).addPackage(*i))
-                {
-                    flagNotSent = false;
-                    break;
-                }
+                flagNotSent = false;
+                break;
             }
-            if (flagNotSent)
-            {
-                (*i).addPriority();
-                notDelivered.push_back(*i);
-            }
+        }
+        if (flagNotSent)
+        {
+            (*i).addPriority();
+            notDelivered.push_back(*i);
         }
     }
 
-    if (!notDelivered.empty()) writeNotDelivered("Case1NotDelivered.txt", notDelivered);
+    if (!notDelivered.empty())
+        writeNotDelivered("Case1NotDelivered.txt", notDelivered);
 
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0, deliveredPackages = 0;
     for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
@@ -128,7 +133,7 @@ void MailSystem::case1(const string &filename)
 
     file << "\tNumber of trucks: " << howManyTrucks << endl;
     file << "\tNumber of packages (total, !express): " << totalPackages << endl;
-    file << "\tPercentage of delivered packages: " << deliveredPackages / (float) (0.9 * packages.size()) * 100 << "%";
+    file << "\tPercentage of delivered packages: " << deliveredPackages / (float)(0.9 * packages.size()) * 100 << "%";
 
     file.close();
 }
@@ -169,88 +174,101 @@ void MailSystem::reset()
     this->packages.sort();
 }
 
-void MailSystem::case2(const string &filename) {
+void MailSystem::case2(const string &filename)
+{
 
     string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(2) : filename;
 
     this->trucks.sort(byCostAsc); // ascending
-    this->packages.sort(byRewardDesc); 
+    this->packages.sort(byRewardDesc);
 
     list<Package> normalPackages;
-    for(auto elem: packages) {
-        if(!elem.isExpress())
-            normalPackages.push_back(elem);
+    for (auto elem : packages)
+    {
+        normalPackages.push_back(elem);
     }
     const int NormalPackageSize = normalPackages.size();
 
     bool statisticVolume = statistics();
-    for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
+    for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
+    {
         bool TruckPositive;
-        if (!normalPackages.empty()) {
+        if (!normalPackages.empty())
+        {
             j->clearPackages();
-            if(statisticVolume)
-                TruckPositive = knapsackVolume( (*j) , normalPackages);
+            if (statisticVolume)
+                TruckPositive = knapsackVolume((*j), normalPackages);
             else
-                TruckPositive = knapsackWeight((*j) , normalPackages);
+                TruckPositive = knapsackWeight((*j), normalPackages);
             if (!TruckPositive)
                 break;
         }
-        else break;
+        else
+            break;
     }
 
     fstream outputFile;
     outputFile.open(outputFileName, ios::app);
 
-    if (!outputFile.is_open()) {
-        cout << "ERROR: Unable to open the file " << filename << "." << endl;
+    if (!outputFile.is_open())
+    {
+        cout << "ERROR: Unable to open the file " << outputFileName << "." << endl;
         return;
     }
-    else {
-        int money = 0,usedTrucks = 0;
-        for (list<Truck>::iterator j = trucks.begin() ; j != trucks.end() ; j++) {
-            if(j->getEmpty()) continue;
-            int moneyTemp = 0;
 
-            outputFile << "Truck lincense plate: " << j->getLicencePlate() << endl;
-            outputFile << "Total weight capacity: " << j->getMaxWeight() <<" Filled weight capacity: " << j->getActualWeight() << endl;
-            outputFile << "Total volume capacity: " << j->getMaxVolume() <<" Filled volume capacity: " << j->getActualVolume() << endl;
-            if( j->getPackages().empty()) continue;
-            moneyTemp -= j->getCost();
-            outputFile << "Cost of truck delivery: " << j->getCost() << endl;
-            for(auto elem: j->getPackages()){
-                moneyTemp += elem.getReward();
-                outputFile << "Id: " << elem.getId()
-                           << " Profit before shipping: " << elem.getReward()
-                           << " Weight: " << elem.getWeight()
-                           << " Volume: " << elem.getVolume() << endl;
-            }
-            outputFile << "Profit from truck: " << moneyTemp << endl << endl;
-            money += moneyTemp;
-            usedTrucks++;
+    int money = 0, usedTrucks = 0;
+    for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
+    {
+        if (j->getEmpty())
+            continue;
+        int moneyTemp = 0;
+
+        outputFile << "Truck lincense plate: " << j->getLicencePlate() << endl;
+        outputFile << "Total weight capacity: " << j->getMaxWeight() << " Filled weight capacity: " << j->getActualWeight() << endl;
+        outputFile << "Total volume capacity: " << j->getMaxVolume() << " Filled volume capacity: " << j->getActualVolume() << endl;
+        if (j->getPackages().empty())
+            continue;
+        moneyTemp -= j->getCost();
+        outputFile << "Cost of truck delivery: " << j->getCost() << endl;
+        for (auto elem : j->getPackages())
+        {
+            moneyTemp += elem.getReward();
+            outputFile << "Id: " << elem.getId()
+                       << " Profit before shipping: " << elem.getReward()
+                       << " Weight: " << elem.getWeight()
+                       << " Volume: " << elem.getVolume() << endl;
         }
-
-        float efficiency = (( (float)NormalPackageSize-(float)normalPackages.size() ) / ( (float)NormalPackageSize ))*100;
-
-        outputFile << endl << "Total profit for the day: " << money << endl;
-        outputFile << "Number of used Trucks: " << usedTrucks << endl;
-        outputFile << "Number of delivered packages: " << packages.size()-normalPackages.size() << endl
-                   << "Number of packages in total: "   << NormalPackageSize << endl;
-        outputFile << "Percentage of delivered packages: " << efficiency << "%";
-
-        outputFile.close();
+        outputFile << "Profit from truck: " << moneyTemp << endl
+                   << endl;
+        money += moneyTemp;
+        usedTrucks++;
     }
-    
-    if(!normalPackages.empty()) {
-        writeNotDelivered("Case2NotDelivered.txt",normalPackages);
+
+    float efficiency = (((float)NormalPackageSize - (float)normalPackages.size()) / ((float)NormalPackageSize)) * 100;
+
+    outputFile << endl
+               << "Total profit for the day: " << money << endl;
+    outputFile << "Number of used Trucks: " << usedTrucks << endl;
+    outputFile << "Number of delivered packages: " << packages.size() - normalPackages.size() << endl
+               << "Number of packages in total: " << NormalPackageSize << endl;
+    outputFile << "Percentage of delivered packages: " << efficiency << "%";
+
+    outputFile.close();
+
+    if (!normalPackages.empty())
+    {
+        writeNotDelivered("Case2NotDelivered.txt", normalPackages);
     }
 }
 
-bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPackages) {
+bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPackages)
+{
 
     //table to calculate the reward values
     std::vector<std::vector<int>> knapsack;
-    knapsack.resize(currentPackages.size()+1);
-    for (unsigned int i = 0; i < currentPackages.size() + 1; i++) {
+    knapsack.resize(currentPackages.size() + 1);
+    for (unsigned int i = 0; i < currentPackages.size() + 1; i++)
+    {
         knapsack[i].resize(currentTruck.getMaxWeight() + 1);
         knapsack[i][0] = 0;
     }
@@ -259,18 +277,20 @@ bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPacka
 
     list<Package>::iterator pIt = currentPackages.begin();
     // Computes the maximum value that can be reached varying the number of elements and the capacity
-    for (unsigned int n = 1; n <= currentPackages.size(); n++) {
-        for (unsigned int capacity = 1; capacity <= currentTruck.getMaxWeight(); capacity++) {
-            if ( pIt->getWeight() <= capacity) {
-                if ( ( (int)(( *pIt).getWeight()) + knapsack[n-1][capacity - (int)(( *pIt).getWeight())] ) > knapsack[n-1][capacity])
-                    knapsack[n][capacity] = pIt->getReward()+knapsack[n-1][capacity - pIt->getWeight()];
+    for (unsigned int n = 1; n <= currentPackages.size(); n++)
+    {
+        for (unsigned int capacity = 1; capacity <= currentTruck.getMaxWeight(); capacity++)
+        {
+            if (pIt->getWeight() <= capacity)
+            {
+                if (((int)((*pIt).getWeight()) + knapsack[n - 1][capacity - (int)((*pIt).getWeight())]) > knapsack[n - 1][capacity])
+                    knapsack[n][capacity] = pIt->getReward() + knapsack[n - 1][capacity - pIt->getWeight()];
                 else
                     knapsack[n][capacity] = knapsack[n - 1][capacity];
-            } 
+            }
         }
-        advance(pIt,1);
+        advance(pIt, 1);
     }
-
 
     list<list<Package>::iterator> selectedIt; //TEMPORARY - list of iterators just to erase from list
     int weight = currentTruck.getMaxWeight();
@@ -278,12 +298,15 @@ bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPacka
     pIt = currentPackages.end();
     int packagesGain = 0;
 
-    for( int i = currentPackages.size(); i > 0 && res > 0; i--){
+    for (int i = currentPackages.size(); i > 0 && res > 0; i--)
+    {
         --pIt;
-        if ( res == knapsack[i-1][weight])
+        if (res == knapsack[i - 1][weight])
             continue;
-        else {
-           if ( (*pIt).getVolume() + currentTruck.getActualVolume() <= currentTruck.getMaxVolume() && (*pIt).getWeight() + currentTruck.getActualWeight() <= currentTruck.getMaxWeight()) {
+        else
+        {
+            if ((*pIt).getVolume() + currentTruck.getActualVolume() <= currentTruck.getMaxVolume() && (*pIt).getWeight() + currentTruck.getActualWeight() <= currentTruck.getMaxWeight())
+            {
                 currentTruck.addPackage(*pIt);
                 selectedIt.push_back(pIt);
                 packagesGain += (int)((*pIt).getReward());
@@ -291,28 +314,32 @@ bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPacka
                 res -= pIt->getReward();
                 weight -= pIt->getWeight();
             }
-            else 
+            else
                 break;
         }
     }
 
-    if( (packagesGain- (int)currentTruck.getCost()) >= 0) {
-        for(auto it: selectedIt) currentPackages.erase(it); //TEMPORARY - deleteing items from list
+    if ((packagesGain - (int)currentTruck.getCost()) >= 0)
+    {
+        for (auto it : selectedIt)
+            currentPackages.erase(it); //TEMPORARY - deleteing items from list
         return true;
     }
-    else {
+    else
+    {
         currentTruck.clearPackages();
         return false;
     }
-
 }
 
-bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPackages) {
+bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPackages)
+{
 
     //table to calculate the reward values
     std::vector<std::vector<int>> knapsack;
-    knapsack.resize(currentPackages.size()+1);
-    for (unsigned int i = 0; i < currentPackages.size() + 1; i++) {
+    knapsack.resize(currentPackages.size() + 1);
+    for (unsigned int i = 0; i < currentPackages.size() + 1; i++)
+    {
         knapsack[i].resize(currentTruck.getMaxVolume() + 1);
         knapsack[i][0] = 0;
     }
@@ -321,16 +348,19 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
 
     list<Package>::iterator pIt = currentPackages.begin();
     // Computes the maximum value that can be reached varying the number of elements and the capacity
-    for (unsigned int n = 1; n <= currentPackages.size(); n++) {
-        for (unsigned int capacity = 1; capacity <= currentTruck.getMaxVolume(); capacity++) {
-            if ( pIt->getVolume() <= capacity) {
-                if ( ( (int)(( *pIt).getVolume()) + knapsack[n-1][capacity - (int)(( *pIt).getVolume())] ) > knapsack[n-1][capacity])
-                    knapsack[n][capacity] = pIt->getReward()+knapsack[n-1][capacity - pIt->getVolume()];
+    for (unsigned int n = 1; n <= currentPackages.size(); n++)
+    {
+        for (unsigned int capacity = 1; capacity <= currentTruck.getMaxVolume(); capacity++)
+        {
+            if (pIt->getVolume() <= capacity)
+            {
+                if (((int)((*pIt).getVolume()) + knapsack[n - 1][capacity - (int)((*pIt).getVolume())]) > knapsack[n - 1][capacity])
+                    knapsack[n][capacity] = pIt->getReward() + knapsack[n - 1][capacity - pIt->getVolume()];
                 else
                     knapsack[n][capacity] = knapsack[n - 1][capacity];
-            } 
+            }
         }
-        advance(pIt,1);
+        advance(pIt, 1);
     }
 
     list<list<Package>::iterator> selectedIt; //TEMPORARY - list of iterators just to erase from list
@@ -339,12 +369,15 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
     pIt = currentPackages.end();
     int packagesGain = 0;
 
-    for( int i = currentPackages.size(); i > 0 && res > 0; i--){
+    for (int i = currentPackages.size(); i > 0 && res > 0; i--)
+    {
         --pIt;
-        if ( res == knapsack[i-1][volume])
+        if (res == knapsack[i - 1][volume])
             continue;
-        else {
-           if ( (*pIt).getVolume() + currentTruck.getActualVolume() <= currentTruck.getMaxVolume() && (*pIt).getWeight() + currentTruck.getActualWeight() <= currentTruck.getMaxWeight()) {
+        else
+        {
+            if ((*pIt).getVolume() + currentTruck.getActualVolume() <= currentTruck.getMaxVolume() && (*pIt).getWeight() + currentTruck.getActualWeight() <= currentTruck.getMaxWeight())
+            {
                 currentTruck.addPackage(*pIt);
                 selectedIt.push_back(pIt);
                 packagesGain += (int)((*pIt).getReward());
@@ -352,18 +385,60 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
                 res -= pIt->getReward();
                 volume -= pIt->getVolume();
             }
-            else 
+            else
                 break;
         }
     }
 
-    if( (packagesGain- (int)currentTruck.getCost()) >= 0) {
-        for(auto it: selectedIt) currentPackages.erase(it); //TEMPORARY - deleteing items from list
+    if ((packagesGain - (int)currentTruck.getCost()) >= 0)
+    {
+        for (auto it : selectedIt)
+            currentPackages.erase(it); //TEMPORARY - deleteing items from list
         return true;
     }
-    else {
+    else
+    {
         currentTruck.clearPackages();
         return false;
     }
+}
 
+void MailSystem::case3(const string &filename)
+{
+    string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(3) : filename;
+
+    fstream file;
+    file.open(outputFileName, ios::app);
+    if (!file.is_open())
+    {
+        cout << "ERROR: Unable to open the file " << outputFileName << "." << endl;
+        return;
+    }
+
+    if (expressoPackages.empty())
+    {
+        return;
+    }
+
+    this->expressoPackages.sort(byDurationAsc);
+
+    int timeLeft = WORK_TIME;
+    unsigned int averageTime = 0;
+    unsigned int numberOfPackagesDelivered = 0;
+    for (auto p : expressoPackages)
+    {
+        if (timeLeft - p.getDuration() >= 0)
+        {
+            file << "\tPackage " << p.getId() << endl;
+            timeLeft -= p.getDuration();
+            averageTime += p.getDuration();
+            numberOfPackagesDelivered++;
+        }
+    }
+
+    file << "Average time to make a delivery: " << (averageTime / numberOfPackagesDelivered) << " seconds." << endl;
+    file << "Number of packages to be delivered: " << expressoPackages.size() << endl;
+    file << "Number of packages delivered: " << numberOfPackagesDelivered << endl;
+    file << "Percentage of delivered packages: " << (static_cast<double>(numberOfPackagesDelivered) / static_cast<double>(expressoPackages.size())) * 100 << "%" << endl;
+    file.close();
 }

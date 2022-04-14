@@ -55,22 +55,24 @@ int main(int argc, char *argv[])
     cerr << "Invalid mode" << endl;
     return -1;
   }
-  if ( (mode == 1 || mode == 2) && argc != 3 && argc !=4 )
+  if ((mode == 1 || mode == 2) && argc != 3 && argc != 4)
     error();
-  if ( mode == 3 && argc != 2 && argc != 3 )
+  if (mode == 3 && argc != 2 && argc != 3)
     error();
-  
+
   string filePackages = argv[2];
   string fileTrucks;
   string outputFile;
-  if (mode != 3){
+  if (mode != 3)
+  {
     fileTrucks = argv[3];
     if (argv[4] == NULL)
       outputFile = DEFAULT_OUTPUT;
     else
       outputFile = argv[4];
   }
-  else {
+  else
+  {
     if (argv[3] == NULL)
       outputFile = DEFAULT_OUTPUT;
     else
@@ -84,7 +86,6 @@ int main(int argc, char *argv[])
 
   MailSystem mailSystem = MailSystem(INPUT_FOLDER + fileTrucks, INPUT_FOLDER + filePackages);
 
-
   switch (mode)
   {
   case 1:
@@ -96,7 +97,7 @@ int main(int argc, char *argv[])
     break;
 
   case 3:
-    cout << "Modo 3 brevemente" << endl;
+    mailSystem.case3(outputFile);
     break;
 
   default:

@@ -9,7 +9,6 @@ class Package
 
 private:
     int id;
-    bool express;
     unsigned int priority;
     unsigned int volume;
     unsigned int weight;
@@ -17,8 +16,7 @@ private:
     unsigned int duration;
 
 public:
-    Package(int id, bool express, unsigned int priority, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration);
-    bool isExpress() const;
+    Package(int id, unsigned int priority, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration);
     int getId() const;
     unsigned int getPriority() const;
     unsigned int getVolume() const;

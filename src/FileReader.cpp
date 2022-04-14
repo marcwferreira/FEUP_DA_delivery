@@ -18,7 +18,8 @@ list<Truck> FileReader::getTrucks(const string &filename)
         while (!file.eof())
         {
             getline(file, licencePlate, ' ');
-            if (licencePlate.empty()) break;
+            if (licencePlate.empty())
+                break;
             getline(file, maxVolume, ' ');
             getline(file, maxWeight, ' ');
             getline(file, cost);
@@ -30,7 +31,7 @@ list<Truck> FileReader::getTrucks(const string &filename)
     return trucks;
 }
 
-list<Package> FileReader::getPackages(const string &filename)
+list<Package> FileReader::getPackages(const string &filename, list<Package> &expressoPackage)
 {
     list<Package> packages = {};
     string id, expresso, priority, volume, peso, recompensa, duracao;
@@ -46,17 +47,24 @@ list<Package> FileReader::getPackages(const string &filename)
     {
         file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         while (!file.eof())
-        {   
+        {
             getline(file, id, ' ');
-            if (id.empty()) break;
+            if (id.empty())
+                break;
             getline(file, expresso, ' ');
             getline(file, priority, ' ');
             getline(file, volume, ' ');
             getline(file, peso, ' ');
             getline(file, recompensa, ' ');
             getline(file, duracao);
-
-            packages.push_back(Package(stoi(id), expresso == "1", stoi(priority), stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
+            if (expresso[0] == '1')
+            {
+                expressoPackage.push_back(Package(stoi(id), stoi(priority), stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
+            }
+            else
+            {
+                packages.push_back(Package(stoi(id), stoi(priority), stoi(volume), stoi(peso), stoi(recompensa), stoi(duracao)));
+            }
         }
         file.close();
     }

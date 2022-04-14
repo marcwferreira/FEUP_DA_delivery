@@ -18,9 +18,11 @@ class MailSystem
 private:
     list<Truck> trucks;
     list<Package> packages;
+    list<Package> expressoPackages = {};
 
 public:
     MailSystem(const string &trucks_filename, const string &packages_filename);
+    //First case
     void case1(const string &filename);
     bool statistics();
     void reset();
@@ -30,7 +32,8 @@ public:
     void case2(const string &filename);
     bool knapsackWeight(Truck &currentTruck, list<Package> &packages);
     bool knapsackVolume(Truck &currentTruck, list<Package> &packages);
-
+    //Third case
+    void case3(const string &filename);
 };
 
 #endif /* MAIL_SYSTEM */
