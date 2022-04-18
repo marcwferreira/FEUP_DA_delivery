@@ -18,11 +18,13 @@ void helper()
   cout << "\t\t   2: Optimization of the profit" << endl;
   cout << "\t\t\t  ./project <MODE> <PACKAGES> <TRUCKS> [OUTPUT]" << endl;
   cout << "\t\t   3: Optimization of the express deliveries" << endl;
-  cout << "\t\t\t  ./project <MODE> <PACKAGES> [OUTPUT]" << endl
+  cout << "\t\t\t  ./project <MODE> <PACKAGES> [TIME] [OUTPUT]" << endl
        << endl;
   cout << "\t\t<PACKAGES>\n\t\t   Name of Packages dataset in input folder\n"
        << endl;
-  cout << "\t\t[TRUCKS]\n\t\t   Name of Trucks dataset in input folder\n"
+  cout << "\t\t<TRUCKS>\n\t\t   Name of Trucks dataset in input folder\n"
+       << endl;
+  cout << "\t\t[TIME]\n\t\t   Number of seconds of work time. Must be always be positive\n"
        << endl;
   cout << "\t\t[OUTPUT]\n\t\t   Name of output file. Always optional\n"
        << endl;
@@ -48,21 +50,31 @@ int main(int argc, char *argv[])
     error();
   string modeString = argv[1];
   if (modeString == "--help" && argc == 2)
+  {
     helper();
-  int mode = stoi(modeString);
+  }
+  int mode = modeString[0] - '0';
   if (mode > 3 || mode < 1)
   {
-    cerr << "Invalid mode" << endl;
-    return -1;
+    cerr << "Invalid mode" << endl
+         << "\tIf you need help use '--help'" << endl;
+    exit(-1);
   }
-  if ((mode == 1 || mode == 2) && argc != 3 && argc != 4)
+
+  if ((mode == 1 || mode == 2) && (argc == 3 || argc > 5))
+  {
     error();
-  if (mode == 3 && argc != 2 && argc != 3)
+  }
+
+  if (mode == 3 && argc > 5)
+  {
     error();
+  }
 
   string filePackages = argv[2];
   string fileTrucks;
   string outputFile;
+  int numberOfSeconds = 0;
   if (mode != 3)
   {
     fileTrucks = argv[3];
@@ -74,9 +86,26 @@ int main(int argc, char *argv[])
   else
   {
     if (argv[3] == NULL)
-      outputFile = DEFAULT_OUTPUT;
+    {
+      numberOfSeconds = WORK_TIME;
+    }
     else
-      outputFile = argv[3];
+    {
+      numberOfSeconds = stoi(argv[3]);
+    }
+
+    if (numberOfSeconds <= 0)
+    {
+      error();
+    }
+    if (argv[4] == NULL)
+    {
+      outputFile = DEFAULT_OUTPUT;
+    }
+    else
+    {
+      outputFile = argv[4];
+    }
   }
 
   if (!(exists(INPUT_FOLDER + fileTrucks) && exists(INPUT_FOLDER + filePackages)))
@@ -97,7 +126,7 @@ int main(int argc, char *argv[])
     break;
 
   case 3:
-    mailSystem.case3(outputFile);
+    mailSystem.case3(outputFile, numberOfSeconds);
     break;
 
   default:

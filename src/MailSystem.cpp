@@ -1,7 +1,5 @@
 #include "MailSystem.h"
 
-#define WORK_TIME 28800
-
 MailSystem::MailSystem(const string &trucks_filename, const string &packages_filename)
 {
 
@@ -9,11 +7,11 @@ MailSystem::MailSystem(const string &trucks_filename, const string &packages_fil
     this->packages = FileReader::getPackages(packages_filename, this->expressoPackages);
 }
 
-void MailSystem::writeNotDelivered(const string &filename, const list<Package> &notDelivered)
+void MailSystem::writeNotDelivered(const string &filename, const list<Package> &notDelivered, bool express)
 {
 
     fstream notDeliveredFile;
-    notDeliveredFile.open("../input/" + filename, ios::out);
+    notDeliveredFile.open(INPUT_FOLDER + filename, ios::out);
 
     if (!notDeliveredFile.is_open())
     {
@@ -23,10 +21,10 @@ void MailSystem::writeNotDelivered(const string &filename, const list<Package> &
 
     notDeliveredFile << "id express priority volume weight reward duration" << endl;
     int newId = 0;
-    for (auto i = notDelivered.begin(); i != notDelivered.end()--; i++)
+    for (auto i = notDelivered.begin(); i != notDelivered.end(); i++)
     {
         notDeliveredFile << newId << ' '
-                         << "0" << ' '
+                         << express << ' '
                          << (*i).getPriority() + 1 << ' '
                          << (*i).getVolume() << ' '
                          << (*i).getWeight() << ' '
@@ -34,13 +32,7 @@ void MailSystem::writeNotDelivered(const string &filename, const list<Package> &
                          << (*i).getDuration() << endl;
         newId++;
     }
-    notDeliveredFile << newId << ' '
-                     << "0" << ' '
-                     << notDelivered.back().getPriority() + 1 << ' '
-                     << notDelivered.back().getVolume() << ' '
-                     << notDelivered.back().getWeight() << ' '
-                     << notDelivered.back().getReward() << ' '
-                     << notDelivered.back().getDuration();
+    notDeliveredFile.close();
     notDeliveredFile.close();
 }
 
@@ -58,7 +50,7 @@ void MailSystem::case1(const string &filename)
     string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(1) : filename;
 
     fstream file;
-    file.open(outputFileName, ios::app);
+    file.open(outputFileName, ios::out);
 
     if (!file.is_open())
     {
@@ -108,7 +100,7 @@ void MailSystem::case1(const string &filename)
     }
 
     if (!notDelivered.empty())
-        writeNotDelivered("Case1NotDelivered.txt", notDelivered);
+        writeNotDelivered("Case1NotDelivered.txt", notDelivered, false);
 
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0, deliveredPackages = 0;
     for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
@@ -208,7 +200,7 @@ void MailSystem::case2(const string &filename)
     }
 
     fstream outputFile;
-    outputFile.open(outputFileName, ios::app);
+    outputFile.open(outputFileName, ios::out);
 
     if (!outputFile.is_open())
     {
@@ -257,14 +249,14 @@ void MailSystem::case2(const string &filename)
 
     if (!normalPackages.empty())
     {
-        writeNotDelivered("Case2NotDelivered.txt", normalPackages);
+        writeNotDelivered("Case2NotDelivered.txt", normalPackages, false);
     }
 }
 
 bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPackages)
 {
 
-    //table to calculate the reward values
+    // table to calculate the reward values
     std::vector<std::vector<int>> knapsack;
     knapsack.resize(currentPackages.size() + 1);
     for (unsigned int i = 0; i < currentPackages.size() + 1; i++)
@@ -292,7 +284,7 @@ bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPacka
         advance(pIt, 1);
     }
 
-    list<list<Package>::iterator> selectedIt; //TEMPORARY - list of iterators just to erase from list
+    list<list<Package>::iterator> selectedIt; // TEMPORARY - list of iterators just to erase from list
     int weight = currentTruck.getMaxWeight();
     int res = knapsack[currentPackages.size()][currentTruck.getMaxWeight()];
     pIt = currentPackages.end();
@@ -322,7 +314,7 @@ bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPacka
     if ((packagesGain - (int)currentTruck.getCost()) >= 0)
     {
         for (auto it : selectedIt)
-            currentPackages.erase(it); //TEMPORARY - deleteing items from list
+            currentPackages.erase(it); // TEMPORARY - deleteing items from list
         return true;
     }
     else
@@ -335,7 +327,7 @@ bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPacka
 bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPackages)
 {
 
-    //table to calculate the reward values
+    // table to calculate the reward values
     std::vector<std::vector<int>> knapsack;
     knapsack.resize(currentPackages.size() + 1);
     for (unsigned int i = 0; i < currentPackages.size() + 1; i++)
@@ -363,7 +355,7 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
         advance(pIt, 1);
     }
 
-    list<list<Package>::iterator> selectedIt; //TEMPORARY - list of iterators just to erase from list
+    list<list<Package>::iterator> selectedIt; // TEMPORARY - list of iterators just to erase from list
     int volume = currentTruck.getMaxVolume();
     int res = knapsack[currentPackages.size()][currentTruck.getMaxVolume()];
     pIt = currentPackages.end();
@@ -393,7 +385,7 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
     if ((packagesGain - (int)currentTruck.getCost()) >= 0)
     {
         for (auto it : selectedIt)
-            currentPackages.erase(it); //TEMPORARY - deleteing items from list
+            currentPackages.erase(it); // TEMPORARY - deleteing items from list
         return true;
     }
     else
@@ -403,12 +395,12 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
     }
 }
 
-void MailSystem::case3(const string &filename)
+void MailSystem::case3(const string &filename, int numberOfSeconds)
 {
     string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(3) : filename;
 
     fstream file;
-    file.open(outputFileName, ios::app);
+    file.open(outputFileName, ios::out);
     if (!file.is_open())
     {
         cout << "ERROR: Unable to open the file " << outputFileName << "." << endl;
@@ -417,26 +409,47 @@ void MailSystem::case3(const string &filename)
 
     if (expressoPackages.empty())
     {
+        file.close();
         return;
     }
 
+    file << "Information: " << endl
+         << "\tPackage: id priority volume weight reward duration" << endl
+         << endl;
+
     this->expressoPackages.sort(byDurationAsc);
 
-    int timeLeft = WORK_TIME;
+    int timeLeft = numberOfSeconds;
     unsigned int averageTime = 0;
     unsigned int numberOfPackagesDelivered = 0;
+    list<Package> notDelivered = {};
     for (auto p : expressoPackages)
     {
-        if (timeLeft - p.getDuration() >= 0)
+        if (timeLeft - static_cast<int>(p.getDuration()) >= 0)
         {
-            file << "\tPackage " << p.getId() << endl;
+            file << "\tPackage " << p;
             timeLeft -= p.getDuration();
             averageTime += p.getDuration();
             numberOfPackagesDelivered++;
         }
+        else
+        {
+            notDelivered.push_back(p);
+        }
     }
 
-    file << "Average time to make a delivery: " << (averageTime / numberOfPackagesDelivered) << " seconds." << endl;
+    writeNotDelivered("Case3NotDelivered.txt", notDelivered, true);
+
+    file << endl;
+    if (numberOfPackagesDelivered > 0)
+    {
+        file << "Average time to make a delivery: " << (averageTime / numberOfPackagesDelivered) << " seconds." << endl;
+    }
+    else
+    {
+        file << "Average time to make a delivery: 0 seconds." << endl;
+    }
+
     file << "Number of packages to be delivered: " << expressoPackages.size() << endl;
     file << "Number of packages delivered: " << numberOfPackagesDelivered << endl;
     file << "Percentage of delivered packages: " << (static_cast<double>(numberOfPackagesDelivered) / static_cast<double>(expressoPackages.size())) * 100 << "%" << endl;

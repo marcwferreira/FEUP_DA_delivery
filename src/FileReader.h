@@ -1,3 +1,12 @@
+/**
+ * @file FileReader
+ * @brief This contains the implementation of the reader for the user files (the file containing the trucks and the packages).
+ *
+ * @author Fábio Araújo de Sá, Francisco João Gonçalves Calado Araújo, Marcos William Ferreira Pinto
+ *
+ * @date 04/02/2022
+ */
+
 #ifndef FILES_READER
 #define FILES_READER
 

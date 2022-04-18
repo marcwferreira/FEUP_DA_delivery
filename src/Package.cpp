@@ -8,6 +8,11 @@ int Package::getId() const
     return this->id;
 }
 
+void Package::setId(int id)
+{
+    this->id = id;
+}
+
 unsigned int Package::getPriority() const
 {
     return this->priority;

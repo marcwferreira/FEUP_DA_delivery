@@ -1,3 +1,13 @@
+/**
+ * @file Package
+ * @brief This contains the implementation and organization of a package, it stores the necessary
+ * information about it and the functions to access the information
+ *
+ * @author Fábio Araújo de Sá, Francisco João Gonçalves Calado Araújo, Marcos William Ferreira Pinto
+ *
+ * @date 04/02/2022
+ */
+
 #ifndef PACKAGE_H
 #define PACKAGE_H
 
@@ -18,6 +28,7 @@ private:
 public:
     Package(int id, unsigned int priority, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration);
     int getId() const;
+    void setId(int id);
     unsigned int getPriority() const;
     unsigned int getVolume() const;
     unsigned int getWeight() const;
