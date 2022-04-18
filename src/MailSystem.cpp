@@ -81,21 +81,16 @@ void MailSystem::case1(const string &filename)
     file << asctime(ti) << endl;
 
     list<Package> notDelivered = {};
+    list<Truck>::iterator j = trucks.begin();
     for (list<Package>::iterator i = packages.begin(); i != packages.end(); i++)
-    {
-        bool flagNotSent = true;
-        for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
-        {
-            if ((*j).addPackage(*i))
-            {
-                flagNotSent = false;
-                break;
-            }
-        }
-        if (flagNotSent)
-        {
+    {   
+        if ((*j).addPackage(*i));
+        else if (j == trucks.end()) {
             (*i).addPriority();
             notDelivered.push_back(*i);
+        } else {
+            j++;
+            i--;
         }
     }
 
@@ -125,7 +120,7 @@ void MailSystem::case1(const string &filename)
 
     file << "\tNumber of trucks: " << howManyTrucks << endl;
     file << "\tNumber of packages (total, !express): " << totalPackages << endl;
-    file << "\tPercentage of delivered packages: " << deliveredPackages / (float)(0.9 * packages.size()) * 100 << "%";
+    file << "\tPercentage of delivered packages: " << (deliveredPackages / (float) packages.size()) * 100 << "%";
 
     file.close();
 }
