@@ -397,6 +397,7 @@ bool MailSystem::knapsackVolume(Truck &currentTruck, list<Package> &currentPacka
 
 void MailSystem::case3(const string &filename, int numberOfSeconds)
 {
+
     string outputFileName = filename == DEFAULT_OUTPUT ? fileNameGenerator(3) : filename;
 
     fstream file;
@@ -439,6 +440,7 @@ void MailSystem::case3(const string &filename, int numberOfSeconds)
     }
 
     writeNotDelivered("Case3NotDelivered.txt", notDelivered, true);
+
 
     file << endl;
     if (numberOfPackagesDelivered > 0)

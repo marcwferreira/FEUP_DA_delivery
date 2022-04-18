@@ -88,23 +88,24 @@ int main(int argc, char *argv[])
     if (argv[3] == NULL)
     {
       numberOfSeconds = WORK_TIME;
+      outputFile = DEFAULT_OUTPUT;
     }
     else
     {
       numberOfSeconds = stoi(argv[3]);
+      if (argv[4] == NULL)
+      {
+        outputFile = DEFAULT_OUTPUT;
+      }
+      else
+      {
+        outputFile = argv[4];
+      }
     }
 
     if (numberOfSeconds <= 0)
     {
       error();
-    }
-    if (argv[4] == NULL)
-    {
-      outputFile = DEFAULT_OUTPUT;
-    }
-    else
-    {
-      outputFile = argv[4];
     }
   }
 
