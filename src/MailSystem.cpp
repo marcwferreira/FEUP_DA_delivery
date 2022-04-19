@@ -441,7 +441,6 @@ void MailSystem::case3(const string &filename, int numberOfSeconds)
 
     writeNotDelivered("Case3NotDelivered.txt", notDelivered, true);
 
-
     file << endl;
     if (numberOfPackagesDelivered > 0)
     {

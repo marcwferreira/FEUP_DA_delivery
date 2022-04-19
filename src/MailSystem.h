@@ -29,7 +29,7 @@ class MailSystem
 private:
     list<Truck> trucks;
     list<Package> packages;
-    list<Package> expressoPackages = {};
+    list<Package> expressoPackages;
 
 public:
     MailSystem(const string &trucks_filename, const string &packages_filename);
