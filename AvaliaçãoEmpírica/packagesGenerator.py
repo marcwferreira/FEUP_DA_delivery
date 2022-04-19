@@ -8,7 +8,7 @@ Coloca o resultado na pasta ./data, em formato "encomendas<N>.txt"
 Garante que EXPRESS_PERCENTAGE % de todas as encomendas geradas são expresso
 '''
 
-ORIGINAL = "../data/encomendas450.txt"
+ORIGINAL = "../input/encomendas450.txt"
 HEADER = "express priority volume weight reward duration"
 MAXIMUM = 100000
 MINIMUM = -1
@@ -21,7 +21,7 @@ def getBounds():
     with open(ORIGINAL, 'r') as file:
 
         allData = [     [   int(element) 
-                            for element in line.strip().split(" ")  ] 
+                            for element in line.strip().split(" ")[1:]  ] 
                             for line in file.readlines()[1:]               ]
         file.close()
     
@@ -56,12 +56,12 @@ def generate(total):
     allData = [ 
             " ".join (
             str(element) for element in [
-                express[x], DEFAULT_PRIORITY, rd(minVolume, maxVolume), rd(minWeight, maxWeight), rd(minReward, maxReward), rd(minDuration, maxDuration)
+                x, express[x], DEFAULT_PRIORITY, rd(minVolume, maxVolume), rd(minWeight, maxWeight), rd(minReward, maxReward), rd(minDuration, maxDuration)
             ]
         ) for x in range(total) 
     ]
 
-    with open("../data/encomendas" + str(total) + ".txt", "w") as file:
+    with open("../input/encomendas" + str(total) + ".txt", "w") as file:
         
         file.write(HEADER + "\n")
         for line in allData[:-1]: file.write(line + "\n")
