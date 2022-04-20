@@ -44,7 +44,7 @@ void helper()
        << endl;
   cout << "\t\t<TRUCKS>\n\t\t   Name of Trucks dataset in input folder\n"
        << endl;
-  cout << "\t\t[TIME]\n\t\t   Number of seconds of work time. Must be always be positive\n"
+  cout << "\t\t[TIME]\n\t\t   Number of seconds of work time. Must be always be positive (Optional)\n"
        << endl;
   cout << "\t\t[OUTPUT]\n\t\t   Name of output file. Always optional\n"
        << endl;
