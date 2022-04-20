@@ -1,0 +1,221 @@
+\hypertarget{class_mail_system}{}\doxysection{Mail\+System Class Reference}
+\label{class_mail_system}\index{MailSystem@{MailSystem}}
+
+
+{\ttfamily \#include $<$Mail\+System.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mail_system_a9a045d96828081efee5e6b43ace0e7cb}{Mail\+System}} (const string \&trucks\+\_\+filename, const string \&packages\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mail_system_ae430beb4184d5f4021d7704123bc0e50}{write\+Not\+Delivered}} (const string \&filename, const list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&not\+Delivered, bool express)
+\begin{DoxyCompactList}\small\item\em This function writes the data of undelivered packages in a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mail_system_a7bc1f27cc96e04e07a773fd7857372b0}{case1}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em This function calculates the best way of organizing the packages into the trucks taking into account the number of packages per truck if all packages fit in the trucks, or the number of trucks if all packages can be delivered. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mail_system_a79ab93e077cb98a7cf9f7bf625509f90}{statistics}} ()
+\begin{DoxyCompactList}\small\item\em This function calculates the maximum absolute deviation (volume, weight) of all packages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mail_system_a762a82371ceeea0590511290490498b0}{reset}} ()
+\begin{DoxyCompactList}\small\item\em This function clears all packages in trucks. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_mail_system_afb8a1451532eb058fdac71b1004bca0f}{file\+Name\+Generator}} (int mode)
+\begin{DoxyCompactList}\small\item\em This function calculates the maximum absolute deviation (volume, weight) of packages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mail_system_a68893dabde2f817b29d2f2772d1ac5be}{case2}} (const string \&filename)
+\begin{DoxyCompactList}\small\item\em This function calculates the best way of organizing the packages into the trucks taking into account the profit for the deliveries. Even though the function has no return it generates a file with the information of the trucks, which packages goes into which trucks, the total profit. the profit per truck, and etc. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mail_system_a8880926589bdc706208428d66cc10e43}{knapsack\+Weight}} (\mbox{\hyperlink{class_truck}{Truck}} \&current\+Truck, list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&packages)
+\begin{DoxyCompactList}\small\item\em This function uses the Knapsack algorithm to determine the best way of allocating packages in to a truck, using the weight as measure to what is put into the truck and the profit of the package as reward for the algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_mail_system_a0f220b5f193c0a4b07915801be2e836e}{knapsack\+Volume}} (\mbox{\hyperlink{class_truck}{Truck}} \&current\+Truck, list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&packages)
+\begin{DoxyCompactList}\small\item\em This function used the Knapsack algorithm to determine the best way of allocating packages in to a truck, using the volume as measure to what is put into the truck and the profit of the package as reward for the algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mail_system_aa8254bada68c4d9f9e4d8422e7756093}{case3}} (const string \&filename, int number\+Of\+Seconds)
+\begin{DoxyCompactList}\small\item\em This function tried to allocate the maximum amount of packages flagged for express delivery into the company truck. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a Mail System 
+\begin{DoxyParams}{Parameters}
+{\em trucks} & A list containing all trucks of the system \\
+\hline
+{\em packages} & A list containing all non express packages of the system \\
+\hline
+{\em expresso\+Packages} & A list containing all express packages of the system \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mail_system_a9a045d96828081efee5e6b43ace0e7cb}\label{class_mail_system_a9a045d96828081efee5e6b43ace0e7cb}} 
+\index{MailSystem@{MailSystem}!MailSystem@{MailSystem}}
+\index{MailSystem@{MailSystem}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{MailSystem()}{MailSystem()}}
+{\footnotesize\ttfamily Mail\+System\+::\+Mail\+System (\begin{DoxyParamCaption}\item[{const string \&}]{trucks\+\_\+filename,  }\item[{const string \&}]{packages\+\_\+filename }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trucks\+\_\+filename} & file containing Trucks attributes \\
+\hline
+{\em packages\+\_\+filename} & file containing Packages attributes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mail_system_a7bc1f27cc96e04e07a773fd7857372b0}\label{class_mail_system_a7bc1f27cc96e04e07a773fd7857372b0}} 
+\index{MailSystem@{MailSystem}!case1@{case1}}
+\index{case1@{case1}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{case1()}{case1()}}
+{\footnotesize\ttfamily void Mail\+System\+::case1 (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+This function calculates the best way of organizing the packages into the trucks taking into account the number of packages per truck if all packages fit in the trucks, or the number of trucks if all packages can be delivered. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & file to be written \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mail_system_a68893dabde2f817b29d2f2772d1ac5be}\label{class_mail_system_a68893dabde2f817b29d2f2772d1ac5be}} 
+\index{MailSystem@{MailSystem}!case2@{case2}}
+\index{case2@{case2}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{case2()}{case2()}}
+{\footnotesize\ttfamily void Mail\+System\+::case2 (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+This function calculates the best way of organizing the packages into the trucks taking into account the profit for the deliveries. Even though the function has no return it generates a file with the information of the trucks, which packages goes into which trucks, the total profit. the profit per truck, and etc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file to save the output \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mail_system_aa8254bada68c4d9f9e4d8422e7756093}\label{class_mail_system_aa8254bada68c4d9f9e4d8422e7756093}} 
+\index{MailSystem@{MailSystem}!case3@{case3}}
+\index{case3@{case3}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{case3()}{case3()}}
+{\footnotesize\ttfamily void Mail\+System\+::case3 (\begin{DoxyParamCaption}\item[{const string \&}]{filename,  }\item[{int}]{number\+Of\+Seconds }\end{DoxyParamCaption})}
+
+
+
+This function tried to allocate the maximum amount of packages flagged for express delivery into the company truck. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file to save the output \\
+\hline
+{\em number\+Of\+Seconds} & Time available to make all deliveries in a day (for a function call) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mail_system_afb8a1451532eb058fdac71b1004bca0f}\label{class_mail_system_afb8a1451532eb058fdac71b1004bca0f}} 
+\index{MailSystem@{MailSystem}!fileNameGenerator@{fileNameGenerator}}
+\index{fileNameGenerator@{fileNameGenerator}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{fileNameGenerator()}{fileNameGenerator()}}
+{\footnotesize\ttfamily string Mail\+System\+::file\+Name\+Generator (\begin{DoxyParamCaption}\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+This function calculates the maximum absolute deviation (volume, weight) of packages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode of the problem (1, 2 or 3) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new file name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mail_system_a0f220b5f193c0a4b07915801be2e836e}\label{class_mail_system_a0f220b5f193c0a4b07915801be2e836e}} 
+\index{MailSystem@{MailSystem}!knapsackVolume@{knapsackVolume}}
+\index{knapsackVolume@{knapsackVolume}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{knapsackVolume()}{knapsackVolume()}}
+{\footnotesize\ttfamily bool Mail\+System\+::knapsack\+Volume (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_truck}{Truck}} \&}]{current\+Truck,  }\item[{list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&}]{packages }\end{DoxyParamCaption})}
+
+
+
+This function used the Knapsack algorithm to determine the best way of allocating packages in to a truck, using the volume as measure to what is put into the truck and the profit of the package as reward for the algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Truck} & The current truck tried to be filled with packages \\
+\hline
+{\em packages} & The list of packages still not allocated to any truck \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the truck generated profit 
+
+false if truck genereated no profit or ended with negative balance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mail_system_a8880926589bdc706208428d66cc10e43}\label{class_mail_system_a8880926589bdc706208428d66cc10e43}} 
+\index{MailSystem@{MailSystem}!knapsackWeight@{knapsackWeight}}
+\index{knapsackWeight@{knapsackWeight}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{knapsackWeight()}{knapsackWeight()}}
+{\footnotesize\ttfamily bool Mail\+System\+::knapsack\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_truck}{Truck}} \&}]{current\+Truck,  }\item[{list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&}]{packages }\end{DoxyParamCaption})}
+
+
+
+This function uses the Knapsack algorithm to determine the best way of allocating packages in to a truck, using the weight as measure to what is put into the truck and the profit of the package as reward for the algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Truck} & The current truck tried to be filled with packages \\
+\hline
+{\em packages} & The list of packages still not allocated to any truck \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the truck generated profit 
+
+false if truck genereated no profit or ended with negative balance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mail_system_a762a82371ceeea0590511290490498b0}\label{class_mail_system_a762a82371ceeea0590511290490498b0}} 
+\index{MailSystem@{MailSystem}!reset@{reset}}
+\index{reset@{reset}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Mail\+System\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function clears all packages in trucks. 
+
+\mbox{\Hypertarget{class_mail_system_a79ab93e077cb98a7cf9f7bf625509f90}\label{class_mail_system_a79ab93e077cb98a7cf9f7bf625509f90}} 
+\index{MailSystem@{MailSystem}!statistics@{statistics}}
+\index{statistics@{statistics}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{statistics()}{statistics()}}
+{\footnotesize\ttfamily bool Mail\+System\+::statistics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calculates the maximum absolute deviation (volume, weight) of all packages. 
+
+\begin{DoxyReturn}{Returns}
+if the maximum absolute deviation of weight is less than or equal the maximum absolute deviation of volume 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mail_system_ae430beb4184d5f4021d7704123bc0e50}\label{class_mail_system_ae430beb4184d5f4021d7704123bc0e50}} 
+\index{MailSystem@{MailSystem}!writeNotDelivered@{writeNotDelivered}}
+\index{writeNotDelivered@{writeNotDelivered}!MailSystem@{MailSystem}}
+\doxysubsubsection{\texorpdfstring{writeNotDelivered()}{writeNotDelivered()}}
+{\footnotesize\ttfamily void Mail\+System\+::write\+Not\+Delivered (\begin{DoxyParamCaption}\item[{const string \&}]{filename,  }\item[{const list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&}]{not\+Delivered,  }\item[{bool}]{express }\end{DoxyParamCaption})}
+
+
+
+This function writes the data of undelivered packages in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & file to be written \\
+\hline
+{\em not\+Delivered} & a list containing Packages objects that will be written to the file \\
+\hline
+{\em express} & indicates if a list contains express packages \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mail_system_8h}{Mail\+System.\+h}}\item 
+\mbox{\hyperlink{_mail_system_8cpp}{Mail\+System.\+cpp}}\end{DoxyCompactItemize}

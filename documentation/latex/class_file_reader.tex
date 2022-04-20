@@ -1,0 +1,52 @@
+\hypertarget{class_file_reader}{}\doxysection{File\+Reader Class Reference}
+\label{class_file_reader}\index{FileReader@{FileReader}}
+
+
+{\ttfamily \#include $<$File\+Reader.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::list$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ \mbox{\hyperlink{class_file_reader_a9241055508ade806b4f0b77c6cbfa567}{get\+Trucks}} (const string \&filename)
+\item 
+static std\+::list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \mbox{\hyperlink{class_file_reader_a77ed987f2693bc41641a9e402856c502}{get\+Packages}} (const string \&filename, list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&expresso\+Package)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_reader_a77ed987f2693bc41641a9e402856c502}\label{class_file_reader_a77ed987f2693bc41641a9e402856c502}} 
+\index{FileReader@{FileReader}!getPackages@{getPackages}}
+\index{getPackages@{getPackages}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{getPackages()}{getPackages()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ File\+Reader\+::get\+Packages (\begin{DoxyParamCaption}\item[{const string \&}]{filename,  }\item[{list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \&}]{expresso\+Package }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static function that read a file and build the objects of the class \mbox{\hyperlink{class_package}{Package}} 
+\begin{DoxyParams}{Parameters}
+{\em filename} & file containing \mbox{\hyperlink{class_package}{Package}} attributes \\
+\hline
+{\em expresso\+Package} & a list that will be filled with express packages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list, containing \mbox{\hyperlink{class_package}{Package}} objects 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_file_reader_a9241055508ade806b4f0b77c6cbfa567}\label{class_file_reader_a9241055508ade806b4f0b77c6cbfa567}} 
+\index{FileReader@{FileReader}!getTrucks@{getTrucks}}
+\index{getTrucks@{getTrucks}!FileReader@{FileReader}}
+\doxysubsubsection{\texorpdfstring{getTrucks()}{getTrucks()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_truck}{Truck}} $>$ File\+Reader\+::get\+Trucks (\begin{DoxyParamCaption}\item[{const string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static function that read a file and build the objects of the class \mbox{\hyperlink{class_truck}{Truck}} 
+\begin{DoxyParams}{Parameters}
+{\em filename} & file containing \mbox{\hyperlink{class_truck}{Truck}} attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list, containing \mbox{\hyperlink{class_truck}{Truck}} objects 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_file_reader_8h}{File\+Reader.\+h}}\item 
+\mbox{\hyperlink{_file_reader_8cpp}{File\+Reader.\+cpp}}\end{DoxyCompactItemize}

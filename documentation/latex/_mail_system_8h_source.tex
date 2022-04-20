@@ -1,0 +1,44 @@
+\hypertarget{_mail_system_8h_source}{}\doxysection{Mail\+System.\+h}
+\mbox{\hyperlink{_mail_system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef MAIL\_SYSTEM}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define MAIL\_SYSTEM}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_reader_8h}{FileReader.h}}"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_utils_8h}{Utils.h}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define INPUT\_FOLDER "{}../input/"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define OUTPUT\_FOLDER "{}../output/"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define DEFAULT\_OUTPUT "{}../output/output.txt"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define WORK\_TIME 28800}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{33 \textcolor{keyword}{class }\mbox{\hyperlink{class_mail_system}{MailSystem}}}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     list<Truck> trucks;}
+\DoxyCodeLine{37     list<Package> packages;}
+\DoxyCodeLine{38     list<Package> expressoPackages;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{48     \mbox{\hyperlink{class_mail_system_a9a045d96828081efee5e6b43ace0e7cb}{MailSystem}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&trucks\_filename, \textcolor{keyword}{const} \textcolor{keywordtype}{string} \&packages\_filename);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mail_system_ae430beb4184d5f4021d7704123bc0e50}{writeNotDelivered}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&filename, \textcolor{keyword}{const} list<Package> \&notDelivered, \textcolor{keywordtype}{bool} express);}
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mail_system_a7bc1f27cc96e04e07a773fd7857372b0}{case1}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&filename);}
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_mail_system_a79ab93e077cb98a7cf9f7bf625509f90}{statistics}}();}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mail_system_a762a82371ceeea0590511290490498b0}{reset}}();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_mail_system_afb8a1451532eb058fdac71b1004bca0f}{fileNameGenerator}}(\textcolor{keywordtype}{int} mode);}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mail_system_a68893dabde2f817b29d2f2772d1ac5be}{case2}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&filename);}
+\DoxyCodeLine{98     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_mail_system_a8880926589bdc706208428d66cc10e43}{knapsackWeight}}(\mbox{\hyperlink{class_truck}{Truck}} \&currentTruck, list<Package> \&packages);}
+\DoxyCodeLine{108     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_mail_system_a0f220b5f193c0a4b07915801be2e836e}{knapsackVolume}}(\mbox{\hyperlink{class_truck}{Truck}} \&currentTruck, list<Package> \&packages);}
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mail_system_aa8254bada68c4d9f9e4d8422e7756093}{case3}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&filename, \textcolor{keywordtype}{int} numberOfSeconds);}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* MAIL\_SYSTEM */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
