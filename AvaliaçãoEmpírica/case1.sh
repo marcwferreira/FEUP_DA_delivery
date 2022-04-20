@@ -4,5 +4,5 @@ time {
     cd build/
     ./project 1 encomendas$1.txt carrinhas50.txt
     cd ..
-    cd empírica/
+    cd AvaliaçãoEmpírica/
 }
