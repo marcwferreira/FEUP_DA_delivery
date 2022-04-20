@@ -1,3 +1,23 @@
+/*! \mainpage DA Delivery System - Calculating and organizing the best way of delivering packages using the least amount of resources possible
+ *
+ * This project uses Alrogithm conception studies in order to calculate the best way of organinzing deliveries for a ficticional company with the goal of 
+ * delivering the maximum amount of packages in a day using the least amount of resources, specified by the different functions provided.
+ *
+ * This work was done within the scope of the Algorithms Development curricular course,
+ * and aimed at deepening the knowledge about conception of algorithms and dynamic programming.
+ *
+ * With this simple program you can select load a list of packages to be delivered and a list of trucks, in which
+ * after you select from 3 possible cases:
+ *  - Least amount of trucks 
+ *  - Maximize profit (even in detriment of customer satisfaction by an small amount)
+ *  - Maximize number of express deliveries
+ *
+ * This project was made by:
+ * @author Fábio Araújo de Sá, Francisco João Gonçalves Calado Araújo, Marcos William Ferreira Pinto
+ *
+ * @date 04/02/2022
+ */
+
 #include <iostream>
 #include <string>
 #include "MailSystem.h"
