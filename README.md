@@ -25,7 +25,7 @@ cmake --build .
 ```
 ./project --help
 
-				<MODE>
+		 <MODE>
                    1: Optimization of the number of trucks
                           ./project <MODE> <PACKAGES> <TRUCKS> [OUTPUT]
                    2: Optimization of the profit
