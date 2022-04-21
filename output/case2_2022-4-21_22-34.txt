@@ -1,0 +1,821 @@
+Truck lincense plate: RF-24-KE
+Total weight capacity: 275 Filled weight capacity: 51
+Total volume capacity: 255 Filled volume capacity: 253
+Cost of truck delivery: 13025
+Id: 2945 Profit before shipping: 1675 Weight: 3 Volume: 14
+Id: 2787 Profit before shipping: 1687 Weight: 3 Volume: 6
+Id: 1698 Profit before shipping: 1712 Weight: 3 Volume: 17
+Id: 4903 Profit before shipping: 1725 Weight: 3 Volume: 20
+Id: 4758 Profit before shipping: 1725 Weight: 4 Volume: 19
+Id: 4251 Profit before shipping: 1725 Weight: 3 Volume: 6
+Id: 5580 Profit before shipping: 1733 Weight: 4 Volume: 7
+Id: 616 Profit before shipping: 1733 Weight: 3 Volume: 25
+Id: 1996 Profit before shipping: 1735 Weight: 4 Volume: 24
+Id: 421 Profit before shipping: 1735 Weight: 3 Volume: 13
+Id: 1702 Profit before shipping: 1746 Weight: 4 Volume: 26
+Id: 4900 Profit before shipping: 1756 Weight: 4 Volume: 29
+Id: 1778 Profit before shipping: 1756 Weight: 4 Volume: 16
+Id: 1455 Profit before shipping: 1756 Weight: 3 Volume: 23
+Id: 4676 Profit before shipping: 1763 Weight: 3 Volume: 8
+Profit from truck: 12937
+
+Truck lincense plate: IN-49-NR
+Total weight capacity: 258 Filled weight capacity: 76
+Total volume capacity: 285 Filled volume capacity: 276
+Cost of truck delivery: 13044
+Id: 3884 Profit before shipping: 1573 Weight: 3 Volume: 12
+Id: 1008 Profit before shipping: 1577 Weight: 3 Volume: 16
+Id: 2843 Profit before shipping: 1611 Weight: 4 Volume: 5
+Id: 3911 Profit before shipping: 1615 Weight: 3 Volume: 14
+Id: 759 Profit before shipping: 1624 Weight: 4 Volume: 12
+Id: 3260 Profit before shipping: 1630 Weight: 3 Volume: 7
+Id: 2836 Profit before shipping: 1649 Weight: 3 Volume: 14
+Id: 348 Profit before shipping: 1652 Weight: 3 Volume: 3
+Id: 2719 Profit before shipping: 1706 Weight: 4 Volume: 16
+Id: 4703 Profit before shipping: 1723 Weight: 4 Volume: 28
+Id: 2963 Profit before shipping: 1763 Weight: 3 Volume: 6
+Id: 1191 Profit before shipping: 1766 Weight: 3 Volume: 7
+Id: 3289 Profit before shipping: 1769 Weight: 3 Volume: 22
+Id: 2200 Profit before shipping: 1776 Weight: 4 Volume: 12
+Id: 1566 Profit before shipping: 1778 Weight: 4 Volume: 7
+Id: 5009 Profit before shipping: 1783 Weight: 4 Volume: 29
+Id: 3438 Profit before shipping: 1787 Weight: 6 Volume: 22
+Id: 4960 Profit before shipping: 1788 Weight: 3 Volume: 27
+Id: 276 Profit before shipping: 1797 Weight: 3 Volume: 3
+Id: 919 Profit before shipping: 1798 Weight: 4 Volume: 3
+Id: 499 Profit before shipping: 1798 Weight: 5 Volume: 11
+Profit from truck: 22919
+
+Truck lincense plate: LX-78-FE
+Total weight capacity: 379 Filled weight capacity: 92
+Total volume capacity: 394 Filled volume capacity: 383
+Cost of truck delivery: 13241
+Id: 2360 Profit before shipping: 1517 Weight: 3 Volume: 15
+Id: 4796 Profit before shipping: 1529 Weight: 4 Volume: 14
+Id: 1988 Profit before shipping: 1529 Weight: 3 Volume: 18
+Id: 1288 Profit before shipping: 1534 Weight: 3 Volume: 16
+Id: 3738 Profit before shipping: 1536 Weight: 7 Volume: 20
+Id: 3243 Profit before shipping: 1536 Weight: 5 Volume: 13
+Id: 502 Profit before shipping: 1536 Weight: 4 Volume: 26
+Id: 5159 Profit before shipping: 1540 Weight: 4 Volume: 27
+Id: 3244 Profit before shipping: 1546 Weight: 3 Volume: 13
+Id: 158 Profit before shipping: 1557 Weight: 4 Volume: 21
+Id: 2390 Profit before shipping: 1558 Weight: 4 Volume: 6
+Id: 682 Profit before shipping: 1561 Weight: 3 Volume: 7
+Id: 3905 Profit before shipping: 1573 Weight: 4 Volume: 10
+Id: 4566 Profit before shipping: 1581 Weight: 4 Volume: 29
+Id: 996 Profit before shipping: 1589 Weight: 4 Volume: 27
+Id: 231 Profit before shipping: 1605 Weight: 4 Volume: 26
+Id: 5495 Profit before shipping: 1609 Weight: 4 Volume: 6
+Id: 2618 Profit before shipping: 1649 Weight: 5 Volume: 9
+Id: 5496 Profit before shipping: 1655 Weight: 4 Volume: 9
+Id: 5683 Profit before shipping: 1670 Weight: 4 Volume: 20
+Id: 5313 Profit before shipping: 1674 Weight: 4 Volume: 29
+Id: 289 Profit before shipping: 1677 Weight: 4 Volume: 7
+Id: 5944 Profit before shipping: 1682 Weight: 4 Volume: 15
+Profit from truck: 23202
+
+Truck lincense plate: YQ-74-FN
+Total weight capacity: 354 Filled weight capacity: 64
+Total volume capacity: 259 Filled volume capacity: 253
+Cost of truck delivery: 13356
+Id: 3121 Profit before shipping: 1359 Weight: 3 Volume: 7
+Id: 2598 Profit before shipping: 1361 Weight: 3 Volume: 22
+Id: 4042 Profit before shipping: 1395 Weight: 3 Volume: 22
+Id: 5473 Profit before shipping: 1407 Weight: 3 Volume: 8
+Id: 2392 Profit before shipping: 1419 Weight: 3 Volume: 4
+Id: 1561 Profit before shipping: 1427 Weight: 3 Volume: 18
+Id: 4764 Profit before shipping: 1442 Weight: 3 Volume: 7
+Id: 4325 Profit before shipping: 1445 Weight: 3 Volume: 18
+Id: 2868 Profit before shipping: 1446 Weight: 3 Volume: 12
+Id: 4257 Profit before shipping: 1451 Weight: 4 Volume: 10
+Id: 524 Profit before shipping: 1461 Weight: 3 Volume: 29
+Id: 2416 Profit before shipping: 1467 Weight: 3 Volume: 8
+Id: 956 Profit before shipping: 1472 Weight: 6 Volume: 11
+Id: 2127 Profit before shipping: 1473 Weight: 3 Volume: 8
+Id: 619 Profit before shipping: 1484 Weight: 3 Volume: 5
+Id: 473 Profit before shipping: 1485 Weight: 4 Volume: 18
+Id: 3649 Profit before shipping: 1486 Weight: 3 Volume: 10
+Id: 3998 Profit before shipping: 1494 Weight: 5 Volume: 10
+Id: 3424 Profit before shipping: 1508 Weight: 3 Volume: 26
+Profit from truck: 14126
+
+Truck lincense plate: ZK-08-LJ
+Total weight capacity: 316 Filled weight capacity: 81
+Total volume capacity: 325 Filled volume capacity: 315
+Cost of truck delivery: 13378
+Id: 965 Profit before shipping: 1357 Weight: 3 Volume: 12
+Id: 5657 Profit before shipping: 1451 Weight: 4 Volume: 23
+Id: 4609 Profit before shipping: 1452 Weight: 3 Volume: 17
+Id: 1847 Profit before shipping: 1456 Weight: 3 Volume: 13
+Id: 220 Profit before shipping: 1456 Weight: 5 Volume: 18
+Id: 4932 Profit before shipping: 1457 Weight: 3 Volume: 8
+Id: 2319 Profit before shipping: 1467 Weight: 5 Volume: 14
+Id: 1230 Profit before shipping: 1515 Weight: 3 Volume: 7
+Id: 4924 Profit before shipping: 1687 Weight: 4 Volume: 21
+Id: 2047 Profit before shipping: 1713 Weight: 5 Volume: 25
+Id: 4023 Profit before shipping: 1728 Weight: 5 Volume: 21
+Id: 5100 Profit before shipping: 1733 Weight: 5 Volume: 10
+Id: 5794 Profit before shipping: 1739 Weight: 5 Volume: 24
+Id: 4770 Profit before shipping: 1752 Weight: 5 Volume: 17
+Id: 655 Profit before shipping: 1754 Weight: 5 Volume: 7
+Id: 3239 Profit before shipping: 1780 Weight: 5 Volume: 3
+Id: 1652 Profit before shipping: 1801 Weight: 3 Volume: 23
+Id: 493 Profit before shipping: 1801 Weight: 3 Volume: 19
+Id: 4535 Profit before shipping: 1802 Weight: 4 Volume: 27
+Id: 935 Profit before shipping: 1803 Weight: 3 Volume: 6
+Profit from truck: 19326
+
+Truck lincense plate: QV-09-KU
+Total weight capacity: 301 Filled weight capacity: 96
+Total volume capacity: 365 Filled volume capacity: 363
+Cost of truck delivery: 13406
+Id: 4881 Profit before shipping: 1268 Weight: 6 Volume: 10
+Id: 4985 Profit before shipping: 1270 Weight: 4 Volume: 22
+Id: 4371 Profit before shipping: 1271 Weight: 3 Volume: 6
+Id: 1396 Profit before shipping: 1272 Weight: 3 Volume: 20
+Id: 5916 Profit before shipping: 1273 Weight: 3 Volume: 3
+Id: 5759 Profit before shipping: 1277 Weight: 4 Volume: 7
+Id: 3197 Profit before shipping: 1279 Weight: 3 Volume: 20
+Id: 3060 Profit before shipping: 1281 Weight: 4 Volume: 8
+Id: 5391 Profit before shipping: 1282 Weight: 3 Volume: 3
+Id: 5672 Profit before shipping: 1284 Weight: 3 Volume: 10
+Id: 5021 Profit before shipping: 1286 Weight: 3 Volume: 3
+Id: 2507 Profit before shipping: 1291 Weight: 3 Volume: 19
+Id: 4337 Profit before shipping: 1295 Weight: 3 Volume: 9
+Id: 821 Profit before shipping: 1298 Weight: 3 Volume: 28
+Id: 1949 Profit before shipping: 1303 Weight: 3 Volume: 3
+Id: 3655 Profit before shipping: 1322 Weight: 3 Volume: 5
+Id: 4533 Profit before shipping: 1327 Weight: 3 Volume: 7
+Id: 1537 Profit before shipping: 1341 Weight: 3 Volume: 9
+Id: 5599 Profit before shipping: 1343 Weight: 3 Volume: 12
+Id: 1203 Profit before shipping: 1343 Weight: 3 Volume: 4
+Id: 3143 Profit before shipping: 1806 Weight: 4 Volume: 27
+Id: 5821 Profit before shipping: 1807 Weight: 3 Volume: 12
+Id: 3787 Profit before shipping: 1808 Weight: 3 Volume: 19
+Id: 1215 Profit before shipping: 1808 Weight: 4 Volume: 10
+Id: 4677 Profit before shipping: 1810 Weight: 4 Volume: 19
+Id: 4526 Profit before shipping: 1812 Weight: 3 Volume: 22
+Id: 5390 Profit before shipping: 1816 Weight: 3 Volume: 14
+Id: 4113 Profit before shipping: 1816 Weight: 3 Volume: 14
+Id: 4097 Profit before shipping: 1816 Weight: 3 Volume: 18
+Profit from truck: 28799
+
+Truck lincense plate: KV-72-RO
+Total weight capacity: 346 Filled weight capacity: 75
+Total volume capacity: 288 Filled volume capacity: 276
+Cost of truck delivery: 13476
+Id: 5030 Profit before shipping: 1250 Weight: 3 Volume: 9
+Id: 1341 Profit before shipping: 1410 Weight: 4 Volume: 9
+Id: 1859 Profit before shipping: 1413 Weight: 5 Volume: 29
+Id: 92 Profit before shipping: 1425 Weight: 4 Volume: 18
+Id: 5236 Profit before shipping: 1672 Weight: 5 Volume: 4
+Id: 3849 Profit before shipping: 1672 Weight: 5 Volume: 27
+Id: 5861 Profit before shipping: 1678 Weight: 5 Volume: 29
+Id: 3118 Profit before shipping: 1689 Weight: 5 Volume: 16
+Id: 2697 Profit before shipping: 1810 Weight: 6 Volume: 4
+Id: 4661 Profit before shipping: 1814 Weight: 6 Volume: 14
+Id: 3110 Profit before shipping: 1816 Weight: 3 Volume: 11
+Id: 5929 Profit before shipping: 1818 Weight: 3 Volume: 19
+Id: 1182 Profit before shipping: 1821 Weight: 3 Volume: 17
+Id: 4774 Profit before shipping: 1827 Weight: 4 Volume: 10
+Id: 5990 Profit before shipping: 1839 Weight: 4 Volume: 20
+Id: 1026 Profit before shipping: 1840 Weight: 6 Volume: 22
+Id: 4998 Profit before shipping: 1841 Weight: 4 Volume: 18
+Profit from truck: 15159
+
+Truck lincense plate: AO-76-GQ
+Total weight capacity: 386 Filled weight capacity: 77
+Total volume capacity: 253 Filled volume capacity: 246
+Cost of truck delivery: 13481
+Id: 3079 Profit before shipping: 1841 Weight: 8 Volume: 24
+Id: 186 Profit before shipping: 1841 Weight: 3 Volume: 17
+Id: 4151 Profit before shipping: 1842 Weight: 3 Volume: 5
+Id: 354 Profit before shipping: 1842 Weight: 5 Volume: 13
+Id: 2826 Profit before shipping: 1843 Weight: 6 Volume: 11
+Id: 2958 Profit before shipping: 1844 Weight: 3 Volume: 25
+Id: 776 Profit before shipping: 1845 Weight: 6 Volume: 19
+Id: 5807 Profit before shipping: 1847 Weight: 6 Volume: 16
+Id: 843 Profit before shipping: 1853 Weight: 7 Volume: 8
+Id: 5304 Profit before shipping: 1855 Weight: 6 Volume: 26
+Id: 2624 Profit before shipping: 1855 Weight: 5 Volume: 12
+Id: 4886 Profit before shipping: 1856 Weight: 4 Volume: 11
+Id: 2939 Profit before shipping: 1856 Weight: 4 Volume: 28
+Id: 1106 Profit before shipping: 1857 Weight: 4 Volume: 22
+Id: 669 Profit before shipping: 1857 Weight: 7 Volume: 9
+Profit from truck: 14253
+
+Truck lincense plate: LR-49-BH
+Total weight capacity: 366 Filled weight capacity: 103
+Total volume capacity: 370 Filled volume capacity: 370
+Cost of truck delivery: 13618
+Id: 3710 Profit before shipping: 1191 Weight: 4 Volume: 19
+Id: 4610 Profit before shipping: 1199 Weight: 3 Volume: 4
+Id: 5386 Profit before shipping: 1201 Weight: 4 Volume: 28
+Id: 2561 Profit before shipping: 1201 Weight: 6 Volume: 16
+Id: 5342 Profit before shipping: 1202 Weight: 3 Volume: 6
+Id: 69 Profit before shipping: 1204 Weight: 3 Volume: 4
+Id: 267 Profit before shipping: 1215 Weight: 4 Volume: 25
+Id: 861 Profit before shipping: 1225 Weight: 3 Volume: 14
+Id: 2621 Profit before shipping: 1228 Weight: 4 Volume: 4
+Id: 1589 Profit before shipping: 1228 Weight: 3 Volume: 14
+Id: 1886 Profit before shipping: 1241 Weight: 4 Volume: 10
+Id: 2746 Profit before shipping: 1246 Weight: 3 Volume: 27
+Id: 2847 Profit before shipping: 1247 Weight: 3 Volume: 7
+Id: 1500 Profit before shipping: 1372 Weight: 4 Volume: 28
+Id: 3078 Profit before shipping: 1382 Weight: 5 Volume: 18
+Id: 1997 Profit before shipping: 1387 Weight: 4 Volume: 24
+Id: 3684 Profit before shipping: 1826 Weight: 5 Volume: 20
+Id: 5071 Profit before shipping: 1827 Weight: 5 Volume: 11
+Id: 4708 Profit before shipping: 1859 Weight: 5 Volume: 22
+Id: 1841 Profit before shipping: 1861 Weight: 6 Volume: 12
+Id: 2088 Profit before shipping: 1862 Weight: 7 Volume: 20
+Id: 4492 Profit before shipping: 1863 Weight: 4 Volume: 13
+Id: 3159 Profit before shipping: 1866 Weight: 5 Volume: 20
+Id: 3682 Profit before shipping: 1868 Weight: 6 Volume: 4
+Profit from truck: 21183
+
+Truck lincense plate: VY-82-LI
+Total weight capacity: 322 Filled weight capacity: 112
+Total volume capacity: 355 Filled volume capacity: 353
+Cost of truck delivery: 13718
+Id: 865 Profit before shipping: 1341 Weight: 4 Volume: 22
+Id: 5359 Profit before shipping: 1358 Weight: 4 Volume: 26
+Id: 2228 Profit before shipping: 1620 Weight: 5 Volume: 25
+Id: 2051 Profit before shipping: 1620 Weight: 5 Volume: 8
+Id: 1714 Profit before shipping: 1625 Weight: 5 Volume: 19
+Id: 3596 Profit before shipping: 1631 Weight: 5 Volume: 18
+Id: 1329 Profit before shipping: 1636 Weight: 5 Volume: 21
+Id: 632 Profit before shipping: 1660 Weight: 5 Volume: 13
+Id: 3519 Profit before shipping: 1670 Weight: 5 Volume: 26
+Id: 753 Profit before shipping: 1818 Weight: 5 Volume: 29
+Id: 1780 Profit before shipping: 1823 Weight: 5 Volume: 23
+Id: 3573 Profit before shipping: 1859 Weight: 6 Volume: 13
+Id: 4580 Profit before shipping: 1873 Weight: 4 Volume: 11
+Id: 2831 Profit before shipping: 1873 Weight: 5 Volume: 4
+Id: 3261 Profit before shipping: 1877 Weight: 3 Volume: 13
+Id: 4110 Profit before shipping: 1884 Weight: 4 Volume: 11
+Id: 5739 Profit before shipping: 1889 Weight: 6 Volume: 7
+Id: 1881 Profit before shipping: 1892 Weight: 3 Volume: 13
+Id: 4065 Profit before shipping: 1894 Weight: 5 Volume: 26
+Id: 4261 Profit before shipping: 1896 Weight: 5 Volume: 4
+Id: 3612 Profit before shipping: 1896 Weight: 7 Volume: 4
+Id: 1029 Profit before shipping: 1896 Weight: 3 Volume: 3
+Id: 1539 Profit before shipping: 1898 Weight: 3 Volume: 7
+Id: 1930 Profit before shipping: 1900 Weight: 5 Volume: 7
+Profit from truck: 28611
+
+Truck lincense plate: XE-51-DP
+Total weight capacity: 271 Filled weight capacity: 101
+Total volume capacity: 296 Filled volume capacity: 290
+Cost of truck delivery: 13742
+Id: 5226 Profit before shipping: 1562 Weight: 8 Volume: 5
+Id: 2681 Profit before shipping: 1564 Weight: 5 Volume: 5
+Id: 4412 Profit before shipping: 1570 Weight: 5 Volume: 12
+Id: 5613 Profit before shipping: 1573 Weight: 5 Volume: 20
+Id: 4167 Profit before shipping: 1582 Weight: 5 Volume: 15
+Id: 5331 Profit before shipping: 1595 Weight: 6 Volume: 22
+Id: 4666 Profit before shipping: 1604 Weight: 6 Volume: 24
+Id: 4297 Profit before shipping: 1604 Weight: 6 Volume: 8
+Id: 3398 Profit before shipping: 1604 Weight: 5 Volume: 6
+Id: 4857 Profit before shipping: 1610 Weight: 6 Volume: 20
+Id: 167 Profit before shipping: 1613 Weight: 5 Volume: 24
+Id: 39 Profit before shipping: 1809 Weight: 6 Volume: 24
+Id: 726 Profit before shipping: 1901 Weight: 3 Volume: 3
+Id: 3353 Profit before shipping: 1905 Weight: 4 Volume: 12
+Id: 2692 Profit before shipping: 1905 Weight: 4 Volume: 12
+Id: 1468 Profit before shipping: 1905 Weight: 4 Volume: 25
+Id: 2439 Profit before shipping: 1909 Weight: 6 Volume: 5
+Id: 185 Profit before shipping: 1911 Weight: 4 Volume: 14
+Id: 5179 Profit before shipping: 1912 Weight: 3 Volume: 19
+Id: 3593 Profit before shipping: 1914 Weight: 5 Volume: 15
+Profit from truck: 20810
+
+Truck lincense plate: AK-43-SE
+Total weight capacity: 395 Filled weight capacity: 108
+Total volume capacity: 391 Filled volume capacity: 379
+Cost of truck delivery: 13796
+Id: 1495 Profit before shipping: 1108 Weight: 3 Volume: 17
+Id: 2033 Profit before shipping: 1114 Weight: 3 Volume: 14
+Id: 568 Profit before shipping: 1127 Weight: 3 Volume: 10
+Id: 5010 Profit before shipping: 1130 Weight: 4 Volume: 7
+Id: 673 Profit before shipping: 1131 Weight: 6 Volume: 16
+Id: 1003 Profit before shipping: 1133 Weight: 6 Volume: 5
+Id: 5716 Profit before shipping: 1134 Weight: 3 Volume: 25
+Id: 2379 Profit before shipping: 1139 Weight: 3 Volume: 4
+Id: 2663 Profit before shipping: 1141 Weight: 5 Volume: 22
+Id: 5233 Profit before shipping: 1143 Weight: 5 Volume: 9
+Id: 2094 Profit before shipping: 1148 Weight: 4 Volume: 27
+Id: 3572 Profit before shipping: 1149 Weight: 5 Volume: 23
+Id: 4152 Profit before shipping: 1152 Weight: 5 Volume: 27
+Id: 2551 Profit before shipping: 1152 Weight: 4 Volume: 19
+Id: 19 Profit before shipping: 1153 Weight: 4 Volume: 20
+Id: 3482 Profit before shipping: 1157 Weight: 5 Volume: 22
+Id: 761 Profit before shipping: 1165 Weight: 6 Volume: 8
+Id: 5674 Profit before shipping: 1168 Weight: 3 Volume: 6
+Id: 2656 Profit before shipping: 1173 Weight: 3 Volume: 12
+Id: 3933 Profit before shipping: 1178 Weight: 4 Volume: 5
+Id: 1800 Profit before shipping: 1183 Weight: 3 Volume: 16
+Id: 2765 Profit before shipping: 1185 Weight: 3 Volume: 6
+Id: 4841 Profit before shipping: 1195 Weight: 3 Volume: 16
+Id: 5405 Profit before shipping: 1339 Weight: 4 Volume: 10
+Id: 1653 Profit before shipping: 1542 Weight: 5 Volume: 19
+Id: 3001 Profit before shipping: 1722 Weight: 6 Volume: 14
+Profit from truck: 17265
+
+Truck lincense plate: NG-16-SY
+Total weight capacity: 371 Filled weight capacity: 61
+Total volume capacity: 308 Filled volume capacity: 291
+Cost of truck delivery: 13865
+Id: 870 Profit before shipping: 766 Weight: 5 Volume: 28
+Id: 894 Profit before shipping: 779 Weight: 3 Volume: 22
+Id: 2283 Profit before shipping: 802 Weight: 3 Volume: 15
+Id: 4022 Profit before shipping: 804 Weight: 3 Volume: 5
+Id: 1432 Profit before shipping: 821 Weight: 4 Volume: 14
+Id: 5256 Profit before shipping: 822 Weight: 3 Volume: 4
+Id: 2614 Profit before shipping: 857 Weight: 3 Volume: 6
+Id: 4775 Profit before shipping: 862 Weight: 3 Volume: 9
+Id: 5583 Profit before shipping: 863 Weight: 3 Volume: 13
+Id: 4401 Profit before shipping: 863 Weight: 3 Volume: 29
+Id: 4070 Profit before shipping: 864 Weight: 3 Volume: 21
+Id: 1630 Profit before shipping: 887 Weight: 4 Volume: 23
+Id: 5959 Profit before shipping: 892 Weight: 4 Volume: 23
+Id: 1862 Profit before shipping: 907 Weight: 3 Volume: 4
+Id: 4160 Profit before shipping: 918 Weight: 4 Volume: 23
+Id: 1598 Profit before shipping: 919 Weight: 4 Volume: 21
+Id: 2138 Profit before shipping: 923 Weight: 3 Volume: 16
+Id: 4480 Profit before shipping: 928 Weight: 3 Volume: 15
+Profit from truck: 1612
+
+Truck lincense plate: OM-91-SI
+Total weight capacity: 321 Filled weight capacity: 84
+Total volume capacity: 397 Filled volume capacity: 395
+Cost of truck delivery: 13931
+Id: 2652 Profit before shipping: 867 Weight: 4 Volume: 14
+Id: 1840 Profit before shipping: 877 Weight: 4 Volume: 20
+Id: 3826 Profit before shipping: 901 Weight: 3 Volume: 5
+Id: 5750 Profit before shipping: 934 Weight: 3 Volume: 29
+Id: 1267 Profit before shipping: 946 Weight: 4 Volume: 20
+Id: 1967 Profit before shipping: 963 Weight: 3 Volume: 29
+Id: 4271 Profit before shipping: 972 Weight: 3 Volume: 16
+Id: 2232 Profit before shipping: 972 Weight: 4 Volume: 12
+Id: 2500 Profit before shipping: 975 Weight: 3 Volume: 3
+Id: 1408 Profit before shipping: 979 Weight: 4 Volume: 29
+Id: 4773 Profit before shipping: 981 Weight: 3 Volume: 4
+Id: 958 Profit before shipping: 981 Weight: 4 Volume: 15
+Id: 2251 Profit before shipping: 992 Weight: 4 Volume: 5
+Id: 4403 Profit before shipping: 993 Weight: 3 Volume: 20
+Id: 5149 Profit before shipping: 999 Weight: 4 Volume: 19
+Id: 2433 Profit before shipping: 1002 Weight: 5 Volume: 29
+Id: 4049 Profit before shipping: 1008 Weight: 3 Volume: 9
+Id: 1222 Profit before shipping: 1010 Weight: 4 Volume: 8
+Id: 4604 Profit before shipping: 1013 Weight: 3 Volume: 27
+Id: 1317 Profit before shipping: 1014 Weight: 3 Volume: 23
+Id: 1575 Profit before shipping: 1025 Weight: 3 Volume: 17
+Id: 4090 Profit before shipping: 1026 Weight: 4 Volume: 11
+Id: 82 Profit before shipping: 1028 Weight: 3 Volume: 21
+Id: 5934 Profit before shipping: 1030 Weight: 3 Volume: 10
+Profit from truck: 9557
+
+Truck lincense plate: MT-28-IH
+Total weight capacity: 398 Filled weight capacity: 105
+Total volume capacity: 328 Filled volume capacity: 317
+Cost of truck delivery: 13956
+Id: 5370 Profit before shipping: 1098 Weight: 3 Volume: 26
+Id: 431 Profit before shipping: 1387 Weight: 5 Volume: 12
+Id: 3016 Profit before shipping: 1394 Weight: 5 Volume: 12
+Id: 4559 Profit before shipping: 1398 Weight: 5 Volume: 13
+Id: 3650 Profit before shipping: 1403 Weight: 6 Volume: 22
+Id: 3315 Profit before shipping: 1405 Weight: 5 Volume: 14
+Id: 3809 Profit before shipping: 1408 Weight: 7 Volume: 26
+Id: 71 Profit before shipping: 1410 Weight: 6 Volume: 9
+Id: 5461 Profit before shipping: 1426 Weight: 6 Volume: 14
+Id: 1992 Profit before shipping: 1428 Weight: 7 Volume: 29
+Id: 430 Profit before shipping: 1436 Weight: 5 Volume: 15
+Id: 343 Profit before shipping: 1442 Weight: 5 Volume: 4
+Id: 4182 Profit before shipping: 1511 Weight: 6 Volume: 9
+Id: 5665 Profit before shipping: 1517 Weight: 6 Volume: 22
+Id: 2711 Profit before shipping: 1517 Weight: 5 Volume: 28
+Id: 4867 Profit before shipping: 1522 Weight: 5 Volume: 5
+Id: 3533 Profit before shipping: 1525 Weight: 7 Volume: 26
+Id: 2378 Profit before shipping: 1525 Weight: 5 Volume: 28
+Id: 2914 Profit before shipping: 1710 Weight: 6 Volume: 3
+Profit from truck: 13506
+
+Truck lincense plate: AW-41-BS
+Total weight capacity: 306 Filled weight capacity: 105
+Total volume capacity: 344 Filled volume capacity: 318
+Cost of truck delivery: 14015
+Id: 5950 Profit before shipping: 1339 Weight: 4 Volume: 26
+Id: 5471 Profit before shipping: 1339 Weight: 4 Volume: 24
+Id: 3891 Profit before shipping: 1436 Weight: 5 Volume: 3
+Id: 5519 Profit before shipping: 1716 Weight: 6 Volume: 18
+Id: 1115 Profit before shipping: 1725 Weight: 6 Volume: 18
+Id: 283 Profit before shipping: 1730 Weight: 6 Volume: 21
+Id: 3683 Profit before shipping: 1752 Weight: 6 Volume: 11
+Id: 4814 Profit before shipping: 1786 Weight: 6 Volume: 15
+Id: 1690 Profit before shipping: 1803 Weight: 6 Volume: 26
+Id: 5651 Profit before shipping: 1905 Weight: 8 Volume: 20
+Id: 4833 Profit before shipping: 1906 Weight: 7 Volume: 4
+Id: 5409 Profit before shipping: 1915 Weight: 3 Volume: 29
+Id: 1176 Profit before shipping: 1915 Weight: 6 Volume: 6
+Id: 5307 Profit before shipping: 1916 Weight: 6 Volume: 12
+Id: 1627 Profit before shipping: 1916 Weight: 7 Volume: 16
+Id: 5660 Profit before shipping: 1917 Weight: 3 Volume: 17
+Id: 608 Profit before shipping: 1917 Weight: 3 Volume: 4
+Id: 1939 Profit before shipping: 1918 Weight: 3 Volume: 22
+Id: 4125 Profit before shipping: 1923 Weight: 4 Volume: 9
+Id: 4069 Profit before shipping: 1930 Weight: 6 Volume: 17
+Profit from truck: 21689
+
+Truck lincense plate: EP-92-PV
+Total weight capacity: 387 Filled weight capacity: 94
+Total volume capacity: 310 Filled volume capacity: 299
+Cost of truck delivery: 14105
+Id: 3505 Profit before shipping: 1228 Weight: 5 Volume: 10
+Id: 442 Profit before shipping: 1228 Weight: 5 Volume: 26
+Id: 5809 Profit before shipping: 1238 Weight: 5 Volume: 17
+Id: 3813 Profit before shipping: 1253 Weight: 5 Volume: 11
+Id: 3698 Profit before shipping: 1258 Weight: 4 Volume: 9
+Id: 5664 Profit before shipping: 1262 Weight: 5 Volume: 27
+Id: 5287 Profit before shipping: 1264 Weight: 5 Volume: 26
+Id: 1585 Profit before shipping: 1279 Weight: 4 Volume: 12
+Id: 5920 Profit before shipping: 1294 Weight: 5 Volume: 10
+Id: 4203 Profit before shipping: 1299 Weight: 5 Volume: 7
+Id: 5884 Profit before shipping: 1300 Weight: 6 Volume: 20
+Id: 2002 Profit before shipping: 1301 Weight: 6 Volume: 13
+Id: 476 Profit before shipping: 1309 Weight: 6 Volume: 28
+Id: 5885 Profit before shipping: 1313 Weight: 4 Volume: 7
+Id: 2130 Profit before shipping: 1313 Weight: 6 Volume: 17
+Id: 1975 Profit before shipping: 1316 Weight: 4 Volume: 5
+Id: 1034 Profit before shipping: 1317 Weight: 5 Volume: 22
+Id: 5760 Profit before shipping: 1318 Weight: 5 Volume: 13
+Id: 3700 Profit before shipping: 1320 Weight: 4 Volume: 19
+Profit from truck: 10305
+
+Truck lincense plate: AJ-19-FO
+Total weight capacity: 345 Filled weight capacity: 137
+Total volume capacity: 336 Filled volume capacity: 329
+Cost of truck delivery: 14342
+Id: 923 Profit before shipping: 1336 Weight: 4 Volume: 12
+Id: 3131 Profit before shipping: 1430 Weight: 5 Volume: 25
+Id: 4321 Profit before shipping: 1433 Weight: 5 Volume: 23
+Id: 3286 Profit before shipping: 1644 Weight: 7 Volume: 19
+Id: 1989 Profit before shipping: 1650 Weight: 6 Volume: 16
+Id: 3419 Profit before shipping: 1652 Weight: 8 Volume: 29
+Id: 3394 Profit before shipping: 1655 Weight: 7 Volume: 6
+Id: 336 Profit before shipping: 1655 Weight: 6 Volume: 16
+Id: 2934 Profit before shipping: 1659 Weight: 6 Volume: 18
+Id: 4726 Profit before shipping: 1660 Weight: 6 Volume: 5
+Id: 5170 Profit before shipping: 1668 Weight: 7 Volume: 12
+Id: 292 Profit before shipping: 1669 Weight: 6 Volume: 11
+Id: 4752 Profit before shipping: 1681 Weight: 6 Volume: 7
+Id: 5394 Profit before shipping: 1699 Weight: 6 Volume: 17
+Id: 5888 Profit before shipping: 1821 Weight: 7 Volume: 29
+Id: 2456 Profit before shipping: 1860 Weight: 7 Volume: 9
+Id: 196 Profit before shipping: 1887 Weight: 8 Volume: 23
+Id: 5722 Profit before shipping: 1888 Weight: 8 Volume: 5
+Id: 3144 Profit before shipping: 1891 Weight: 10 Volume: 11
+Id: 4046 Profit before shipping: 1905 Weight: 7 Volume: 14
+Id: 1121 Profit before shipping: 1924 Weight: 5 Volume: 22
+Profit from truck: 21325
+
+Truck lincense plate: NO-53-SB
+Total weight capacity: 268 Filled weight capacity: 137
+Total volume capacity: 388 Filled volume capacity: 369
+Cost of truck delivery: 14521
+Id: 5873 Profit before shipping: 1583 Weight: 6 Volume: 14
+Id: 2915 Profit before shipping: 1593 Weight: 6 Volume: 8
+Id: 952 Profit before shipping: 1594 Weight: 6 Volume: 16
+Id: 1932 Profit before shipping: 1614 Weight: 7 Volume: 4
+Id: 2653 Profit before shipping: 1618 Weight: 6 Volume: 11
+Id: 376 Profit before shipping: 1622 Weight: 6 Volume: 17
+Id: 2955 Profit before shipping: 1625 Weight: 6 Volume: 23
+Id: 1884 Profit before shipping: 1627 Weight: 6 Volume: 23
+Id: 2357 Profit before shipping: 1634 Weight: 6 Volume: 6
+Id: 5975 Profit before shipping: 1639 Weight: 6 Volume: 13
+Id: 3094 Profit before shipping: 1639 Weight: 6 Volume: 29
+Id: 2264 Profit before shipping: 1931 Weight: 3 Volume: 29
+Id: 2196 Profit before shipping: 1931 Weight: 6 Volume: 28
+Id: 1437 Profit before shipping: 1932 Weight: 5 Volume: 5
+Id: 2495 Profit before shipping: 1940 Weight: 7 Volume: 6
+Id: 657 Profit before shipping: 1941 Weight: 6 Volume: 4
+Id: 2609 Profit before shipping: 1945 Weight: 8 Volume: 21
+Id: 5985 Profit before shipping: 1946 Weight: 4 Volume: 4
+Id: 4209 Profit before shipping: 1946 Weight: 7 Volume: 19
+Id: 3927 Profit before shipping: 1946 Weight: 6 Volume: 27
+Id: 4582 Profit before shipping: 1950 Weight: 7 Volume: 25
+Id: 5211 Profit before shipping: 1951 Weight: 3 Volume: 19
+Id: 2018 Profit before shipping: 1951 Weight: 3 Volume: 11
+Id: 1987 Profit before shipping: 1952 Weight: 5 Volume: 7
+Profit from truck: 28529
+
+Truck lincense plate: KO-82-SW
+Total weight capacity: 289 Filled weight capacity: 90
+Total volume capacity: 292 Filled volume capacity: 288
+Cost of truck delivery: 14548
+Id: 5991 Profit before shipping: 1064 Weight: 3 Volume: 12
+Id: 3214 Profit before shipping: 1075 Weight: 3 Volume: 13
+Id: 5746 Profit before shipping: 1077 Weight: 3 Volume: 8
+Id: 4310 Profit before shipping: 1079 Weight: 4 Volume: 7
+Id: 2502 Profit before shipping: 1083 Weight: 3 Volume: 21
+Id: 4947 Profit before shipping: 1094 Weight: 4 Volume: 28
+Id: 3148 Profit before shipping: 1097 Weight: 5 Volume: 6
+Id: 736 Profit before shipping: 1097 Weight: 4 Volume: 12
+Id: 2538 Profit before shipping: 1098 Weight: 5 Volume: 24
+Id: 637 Profit before shipping: 1100 Weight: 6 Volume: 20
+Id: 3604 Profit before shipping: 1102 Weight: 4 Volume: 8
+Id: 4227 Profit before shipping: 1107 Weight: 4 Volume: 13
+Id: 2437 Profit before shipping: 1186 Weight: 4 Volume: 22
+Id: 5668 Profit before shipping: 1227 Weight: 4 Volume: 26
+Id: 1240 Profit before shipping: 1323 Weight: 4 Volume: 4
+Id: 782 Profit before shipping: 1426 Weight: 5 Volume: 11
+Id: 659 Profit before shipping: 1428 Weight: 5 Volume: 12
+Id: 4013 Profit before shipping: 1556 Weight: 7 Volume: 10
+Id: 4453 Profit before shipping: 1573 Weight: 7 Volume: 23
+Id: 321 Profit before shipping: 1577 Weight: 6 Volume: 8
+Profit from truck: 9821
+
+Truck lincense plate: SW-32-OH
+Total weight capacity: 287 Filled weight capacity: 65
+Total volume capacity: 281 Filled volume capacity: 275
+Cost of truck delivery: 14581
+Id: 4159 Profit before shipping: 767 Weight: 6 Volume: 23
+Id: 3184 Profit before shipping: 773 Weight: 3 Volume: 11
+Id: 3456 Profit before shipping: 776 Weight: 3 Volume: 26
+Id: 1745 Profit before shipping: 931 Weight: 4 Volume: 22
+Id: 5784 Profit before shipping: 1031 Weight: 4 Volume: 27
+Id: 1444 Profit before shipping: 1032 Weight: 4 Volume: 12
+Id: 4898 Profit before shipping: 1035 Weight: 3 Volume: 12
+Id: 4435 Profit before shipping: 1037 Weight: 3 Volume: 9
+Id: 355 Profit before shipping: 1037 Weight: 3 Volume: 22
+Id: 4083 Profit before shipping: 1038 Weight: 3 Volume: 26
+Id: 4910 Profit before shipping: 1055 Weight: 3 Volume: 3
+Id: 4586 Profit before shipping: 1056 Weight: 3 Volume: 25
+Id: 4863 Profit before shipping: 1320 Weight: 7 Volume: 13
+Id: 1983 Profit before shipping: 1320 Weight: 6 Volume: 27
+Id: 122 Profit before shipping: 1320 Weight: 5 Volume: 10
+Id: 207 Profit before shipping: 1329 Weight: 5 Volume: 7
+Profit from truck: 2276
+
+Truck lincense plate: TO-87-EB
+Total weight capacity: 346 Filled weight capacity: 128
+Total volume capacity: 268 Filled volume capacity: 265
+Cost of truck delivery: 14777
+Id: 170 Profit before shipping: 1798 Weight: 8 Volume: 28
+Id: 2886 Profit before shipping: 1799 Weight: 9 Volume: 10
+Id: 1832 Profit before shipping: 1801 Weight: 7 Volume: 20
+Id: 5814 Profit before shipping: 1922 Weight: 9 Volume: 11
+Id: 3035 Profit before shipping: 1927 Weight: 7 Volume: 11
+Id: 3802 Profit before shipping: 1929 Weight: 8 Volume: 24
+Id: 3185 Profit before shipping: 1929 Weight: 7 Volume: 11
+Id: 1169 Profit before shipping: 1935 Weight: 8 Volume: 17
+Id: 4014 Profit before shipping: 1939 Weight: 9 Volume: 24
+Id: 5220 Profit before shipping: 1946 Weight: 10 Volume: 4
+Id: 2904 Profit before shipping: 1951 Weight: 10 Volume: 16
+Id: 5513 Profit before shipping: 1954 Weight: 7 Volume: 24
+Id: 3589 Profit before shipping: 1955 Weight: 3 Volume: 9
+Id: 1903 Profit before shipping: 1955 Weight: 3 Volume: 15
+Id: 3137 Profit before shipping: 1960 Weight: 6 Volume: 11
+Id: 1376 Profit before shipping: 1960 Weight: 7 Volume: 13
+Id: 5906 Profit before shipping: 1964 Weight: 5 Volume: 9
+Id: 4545 Profit before shipping: 1965 Weight: 5 Volume: 8
+Profit from truck: 19812
+
+Truck lincense plate: UW-05-RK
+Total weight capacity: 254 Filled weight capacity: 136
+Total volume capacity: 385 Filled volume capacity: 362
+Cost of truck delivery: 14819
+Id: 752 Profit before shipping: 739 Weight: 3 Volume: 27
+Id: 2876 Profit before shipping: 763 Weight: 3 Volume: 28
+Id: 3191 Profit before shipping: 1528 Weight: 6 Volume: 12
+Id: 5994 Profit before shipping: 1533 Weight: 6 Volume: 28
+Id: 4358 Profit before shipping: 1536 Weight: 6 Volume: 7
+Id: 531 Profit before shipping: 1539 Weight: 6 Volume: 22
+Id: 5527 Profit before shipping: 1560 Weight: 6 Volume: 29
+Id: 2846 Profit before shipping: 1966 Weight: 5 Volume: 19
+Id: 2627 Profit before shipping: 1966 Weight: 8 Volume: 19
+Id: 5305 Profit before shipping: 1968 Weight: 8 Volume: 9
+Id: 4430 Profit before shipping: 1968 Weight: 4 Volume: 28
+Id: 5128 Profit before shipping: 1969 Weight: 3 Volume: 7
+Id: 2409 Profit before shipping: 1971 Weight: 6 Volume: 5
+Id: 5849 Profit before shipping: 1972 Weight: 4 Volume: 24
+Id: 646 Profit before shipping: 1974 Weight: 8 Volume: 18
+Id: 4547 Profit before shipping: 1975 Weight: 5 Volume: 18
+Id: 1845 Profit before shipping: 1976 Weight: 9 Volume: 7
+Id: 5899 Profit before shipping: 1977 Weight: 7 Volume: 9
+Id: 4405 Profit before shipping: 1977 Weight: 6 Volume: 15
+Id: 2110 Profit before shipping: 1978 Weight: 7 Volume: 13
+Id: 5977 Profit before shipping: 1979 Weight: 7 Volume: 5
+Id: 3745 Profit before shipping: 1979 Weight: 4 Volume: 3
+Id: 1328 Profit before shipping: 1979 Weight: 9 Volume: 10
+Profit from truck: 25953
+
+Truck lincense plate: JF-79-KW
+Total weight capacity: 289 Filled weight capacity: 125
+Total volume capacity: 256 Filled volume capacity: 243
+Cost of truck delivery: 14860
+Id: 2796 Profit before shipping: 1238 Weight: 7 Volume: 6
+Id: 5253 Profit before shipping: 1240 Weight: 7 Volume: 11
+Id: 4622 Profit before shipping: 1248 Weight: 6 Volume: 5
+Id: 605 Profit before shipping: 1255 Weight: 6 Volume: 7
+Id: 5774 Profit before shipping: 1338 Weight: 6 Volume: 22
+Id: 68 Profit before shipping: 1349 Weight: 5 Volume: 28
+Id: 1086 Profit before shipping: 1355 Weight: 6 Volume: 3
+Id: 1147 Profit before shipping: 1363 Weight: 8 Volume: 21
+Id: 265 Profit before shipping: 1363 Weight: 7 Volume: 22
+Id: 1490 Profit before shipping: 1364 Weight: 9 Volume: 16
+Id: 4303 Profit before shipping: 1368 Weight: 6 Volume: 10
+Id: 4724 Profit before shipping: 1369 Weight: 11 Volume: 21
+Id: 1637 Profit before shipping: 1370 Weight: 8 Volume: 3
+Id: 5468 Profit before shipping: 1372 Weight: 5 Volume: 10
+Id: 4611 Profit before shipping: 1372 Weight: 6 Volume: 10
+Id: 2568 Profit before shipping: 1373 Weight: 9 Volume: 6
+Id: 2410 Profit before shipping: 1375 Weight: 8 Volume: 16
+Id: 492 Profit before shipping: 1377 Weight: 5 Volume: 26
+Profit from truck: 9229
+
+Truck lincense plate: HI-66-NH
+Total weight capacity: 399 Filled weight capacity: 176
+Total volume capacity: 277 Filled volume capacity: 269
+Cost of truck delivery: 14862
+Id: 4561 Profit before shipping: 710 Weight: 3 Volume: 25
+Id: 2890 Profit before shipping: 1909 Weight: 10 Volume: 5
+Id: 841 Profit before shipping: 1910 Weight: 9 Volume: 29
+Id: 2453 Profit before shipping: 1911 Weight: 12 Volume: 25
+Id: 2308 Profit before shipping: 1913 Weight: 8 Volume: 22
+Id: 2883 Profit before shipping: 1914 Weight: 12 Volume: 11
+Id: 1183 Profit before shipping: 1914 Weight: 9 Volume: 17
+Id: 1080 Profit before shipping: 1915 Weight: 8 Volume: 4
+Id: 2574 Profit before shipping: 1917 Weight: 10 Volume: 24
+Id: 445 Profit before shipping: 1917 Weight: 10 Volume: 11
+Id: 1811 Profit before shipping: 1920 Weight: 8 Volume: 12
+Id: 5514 Profit before shipping: 1925 Weight: 13 Volume: 3
+Id: 2660 Profit before shipping: 1928 Weight: 11 Volume: 14
+Id: 5581 Profit before shipping: 1935 Weight: 10 Volume: 19
+Id: 4975 Profit before shipping: 1939 Weight: 9 Volume: 17
+Id: 4007 Profit before shipping: 1939 Weight: 10 Volume: 3
+Id: 1541 Profit before shipping: 1951 Weight: 13 Volume: 17
+Id: 4525 Profit before shipping: 1955 Weight: 11 Volume: 11
+Profit from truck: 18560
+
+Truck lincense plate: PB-90-IY
+Total weight capacity: 289 Filled weight capacity: 150
+Total volume capacity: 258 Filled volume capacity: 256
+Cost of truck delivery: 14932
+Id: 4747 Profit before shipping: 1379 Weight: 5 Volume: 20
+Id: 469 Profit before shipping: 1379 Weight: 5 Volume: 6
+Id: 4748 Profit before shipping: 1381 Weight: 5 Volume: 3
+Id: 3317 Profit before shipping: 1885 Weight: 10 Volume: 9
+Id: 3955 Profit before shipping: 1886 Weight: 9 Volume: 22
+Id: 2741 Profit before shipping: 1894 Weight: 11 Volume: 12
+Id: 5117 Profit before shipping: 1898 Weight: 11 Volume: 13
+Id: 5255 Profit before shipping: 1910 Weight: 12 Volume: 27
+Id: 4872 Profit before shipping: 1921 Weight: 12 Volume: 24
+Id: 3155 Profit before shipping: 1924 Weight: 12 Volume: 10
+Id: 2071 Profit before shipping: 1965 Weight: 11 Volume: 24
+Id: 3304 Profit before shipping: 1967 Weight: 9 Volume: 23
+Id: 1616 Profit before shipping: 1969 Weight: 7 Volume: 18
+Id: 1081 Profit before shipping: 1972 Weight: 8 Volume: 28
+Id: 5744 Profit before shipping: 1973 Weight: 12 Volume: 14
+Id: 519 Profit before shipping: 1973 Weight: 11 Volume: 3
+Profit from truck: 14344
+
+Truck lincense plate: IC-18-ES
+Total weight capacity: 274 Filled weight capacity: 169
+Total volume capacity: 265 Filled volume capacity: 262
+Cost of truck delivery: 14952
+Id: 3272 Profit before shipping: 866 Weight: 4 Volume: 4
+Id: 4760 Profit before shipping: 1868 Weight: 8 Volume: 18
+Id: 1768 Profit before shipping: 1874 Weight: 9 Volume: 25
+Id: 4936 Profit before shipping: 1876 Weight: 10 Volume: 27
+Id: 5399 Profit before shipping: 1878 Weight: 10 Volume: 20
+Id: 2524 Profit before shipping: 1879 Weight: 11 Volume: 17
+Id: 535 Profit before shipping: 1880 Weight: 12 Volume: 11
+Id: 2793 Profit before shipping: 1881 Weight: 13 Volume: 28
+Id: 5284 Profit before shipping: 1885 Weight: 10 Volume: 4
+Id: 5889 Profit before shipping: 1891 Weight: 12 Volume: 5
+Id: 5048 Profit before shipping: 1895 Weight: 12 Volume: 16
+Id: 5107 Profit before shipping: 1901 Weight: 12 Volume: 22
+Id: 2635 Profit before shipping: 1906 Weight: 12 Volume: 8
+Id: 3064 Profit before shipping: 1974 Weight: 9 Volume: 4
+Id: 3485 Profit before shipping: 1976 Weight: 12 Volume: 16
+Id: 1059 Profit before shipping: 1979 Weight: 3 Volume: 27
+Id: 597 Profit before shipping: 1979 Weight: 10 Volume: 10
+Profit from truck: 16436
+
+Truck lincense plate: SR-70-GX
+Total weight capacity: 304 Filled weight capacity: 199
+Total volume capacity: 382 Filled volume capacity: 380
+Cost of truck delivery: 14967
+Id: 641 Profit before shipping: 842 Weight: 4 Volume: 19
+Id: 5777 Profit before shipping: 855 Weight: 4 Volume: 26
+Id: 2407 Profit before shipping: 1737 Weight: 9 Volume: 14
+Id: 1178 Profit before shipping: 1750 Weight: 8 Volume: 17
+Id: 1393 Profit before shipping: 1763 Weight: 7 Volume: 17
+Id: 796 Profit before shipping: 1768 Weight: 7 Volume: 23
+Id: 3742 Profit before shipping: 1783 Weight: 7 Volume: 14
+Id: 141 Profit before shipping: 1794 Weight: 7 Volume: 19
+Id: 614 Profit before shipping: 1839 Weight: 8 Volume: 20
+Id: 3686 Profit before shipping: 1846 Weight: 9 Volume: 12
+Id: 2841 Profit before shipping: 1848 Weight: 10 Volume: 5
+Id: 359 Profit before shipping: 1848 Weight: 9 Volume: 18
+Id: 3937 Profit before shipping: 1853 Weight: 9 Volume: 8
+Id: 4684 Profit before shipping: 1854 Weight: 14 Volume: 14
+Id: 5004 Profit before shipping: 1855 Weight: 9 Volume: 26
+Id: 1334 Profit before shipping: 1856 Weight: 10 Volume: 20
+Id: 5533 Profit before shipping: 1857 Weight: 12 Volume: 27
+Id: 4056 Profit before shipping: 1857 Weight: 11 Volume: 4
+Id: 840 Profit before shipping: 1857 Weight: 10 Volume: 23
+Id: 3487 Profit before shipping: 1867 Weight: 8 Volume: 17
+Id: 4493 Profit before shipping: 1978 Weight: 13 Volume: 27
+Id: 4164 Profit before shipping: 1978 Weight: 14 Volume: 10
+Profit from truck: 23518
+
+Truck lincense plate: IK-37-DL
+Total weight capacity: 378 Filled weight capacity: 199
+Total volume capacity: 398 Filled volume capacity: 392
+Cost of truck delivery: 15048
+Id: 5456 Profit before shipping: 1748 Weight: 8 Volume: 16
+Id: 4249 Profit before shipping: 1750 Weight: 7 Volume: 12
+Id: 2239 Profit before shipping: 1755 Weight: 7 Volume: 17
+Id: 5542 Profit before shipping: 1784 Weight: 10 Volume: 22
+Id: 5710 Profit before shipping: 1789 Weight: 8 Volume: 5
+Id: 2490 Profit before shipping: 1790 Weight: 8 Volume: 25
+Id: 880 Profit before shipping: 1793 Weight: 11 Volume: 3
+Id: 1991 Profit before shipping: 1794 Weight: 8 Volume: 19
+Id: 1957 Profit before shipping: 1794 Weight: 9 Volume: 17
+Id: 3321 Profit before shipping: 1802 Weight: 9 Volume: 23
+Id: 4328 Profit before shipping: 1803 Weight: 8 Volume: 3
+Id: 3556 Profit before shipping: 1803 Weight: 9 Volume: 22
+Id: 4005 Profit before shipping: 1821 Weight: 9 Volume: 22
+Id: 4300 Profit before shipping: 1823 Weight: 8 Volume: 19
+Id: 1160 Profit before shipping: 1823 Weight: 9 Volume: 23
+Id: 2099 Profit before shipping: 1826 Weight: 8 Volume: 18
+Id: 3347 Profit before shipping: 1830 Weight: 10 Volume: 27
+Id: 4555 Profit before shipping: 1831 Weight: 10 Volume: 21
+Id: 4332 Profit before shipping: 1831 Weight: 11 Volume: 21
+Id: 1623 Profit before shipping: 1832 Weight: 10 Volume: 28
+Id: 3540 Profit before shipping: 1833 Weight: 10 Volume: 15
+Id: 3108 Profit before shipping: 1833 Weight: 12 Volume: 14
+Profit from truck: 24640
+
+Truck lincense plate: HJ-38-UB
+Total weight capacity: 272 Filled weight capacity: 212
+Total volume capacity: 378 Filled volume capacity: 373
+Cost of truck delivery: 15057
+Id: 162 Profit before shipping: 684 Weight: 3 Volume: 26
+Id: 3637 Profit before shipping: 1715 Weight: 7 Volume: 5
+Id: 3746 Profit before shipping: 1716 Weight: 8 Volume: 19
+Id: 4322 Profit before shipping: 1718 Weight: 8 Volume: 3
+Id: 3917 Profit before shipping: 1718 Weight: 7 Volume: 14
+Id: 3985 Profit before shipping: 1724 Weight: 7 Volume: 27
+Id: 3076 Profit before shipping: 1732 Weight: 7 Volume: 21
+Id: 1355 Profit before shipping: 1820 Weight: 8 Volume: 13
+Id: 1978 Profit before shipping: 1826 Weight: 14 Volume: 8
+Id: 1070 Profit before shipping: 1826 Weight: 11 Volume: 10
+Id: 2889 Profit before shipping: 1831 Weight: 13 Volume: 9
+Id: 4216 Profit before shipping: 1834 Weight: 8 Volume: 19
+Id: 3081 Profit before shipping: 1834 Weight: 14 Volume: 12
+Id: 886 Profit before shipping: 1834 Weight: 10 Volume: 21
+Id: 5968 Profit before shipping: 1836 Weight: 12 Volume: 15
+Id: 3515 Profit before shipping: 1836 Weight: 8 Volume: 15
+Id: 437 Profit before shipping: 1840 Weight: 9 Volume: 26
+Id: 5388 Profit before shipping: 1973 Weight: 13 Volume: 6
+Id: 5363 Profit before shipping: 1980 Weight: 10 Volume: 17
+Id: 338 Profit before shipping: 1981 Weight: 4 Volume: 26
+Id: 2999 Profit before shipping: 1982 Weight: 9 Volume: 23
+Id: 743 Profit before shipping: 1984 Weight: 3 Volume: 3
+Id: 5395 Profit before shipping: 1985 Weight: 11 Volume: 12
+Id: 2575 Profit before shipping: 1985 Weight: 8 Volume: 23
+Profit from truck: 28137
+
+Truck lincense plate: MU-15-DY
+Total weight capacity: 389 Filled weight capacity: 133
+Total volume capacity: 262 Filled volume capacity: 261
+Cost of truck delivery: 15106
+Id: 4614 Profit before shipping: 1432 Weight: 8 Volume: 16
+Id: 5844 Profit before shipping: 1439 Weight: 7 Volume: 5
+Id: 1756 Profit before shipping: 1451 Weight: 7 Volume: 26
+Id: 5712 Profit before shipping: 1458 Weight: 7 Volume: 16
+Id: 2832 Profit before shipping: 1458 Weight: 8 Volume: 11
+Id: 5813 Profit before shipping: 1459 Weight: 9 Volume: 12
+Id: 2748 Profit before shipping: 1459 Weight: 9 Volume: 18
+Id: 3811 Profit before shipping: 1460 Weight: 8 Volume: 28
+Id: 4035 Profit before shipping: 1462 Weight: 11 Volume: 3
+Id: 3182 Profit before shipping: 1462 Weight: 6 Volume: 13
+Id: 780 Profit before shipping: 1463 Weight: 6 Volume: 16
+Id: 5869 Profit before shipping: 1464 Weight: 6 Volume: 7
+Id: 5076 Profit before shipping: 1464 Weight: 9 Volume: 29
+Id: 4821 Profit before shipping: 1466 Weight: 8 Volume: 9
+Id: 3560 Profit before shipping: 1469 Weight: 7 Volume: 22
+Id: 2654 Profit before shipping: 1469 Weight: 10 Volume: 24
+Id: 857 Profit before shipping: 1470 Weight: 7 Volume: 6
+Profit from truck: 9699
+
+
+Total profit for the day: 547538
+Number of used Trucks: 31
+Number of delivered packages: 629
+Number of packages in total: 5400
+Percentage of delivered packages: 11.6481%

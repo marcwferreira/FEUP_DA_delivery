@@ -1,0 +1,488 @@
+Information: 
+	Truck: licencePlate volMax weightMax cost
+	Package: id priority volume weight reward duration
+
+Thu Apr 21 22:30:22 2022
+
+	Truck: IK-37-DL 398 378 15048
+		Package 1: 133 0 3 3 575 287
+		Package 2: 148 0 3 3 715 977
+		Package 3: 261 0 3 3 355 869
+		Package 4: 396 0 3 3 1563 535
+		Package 5: 61 0 3 7 1565 226
+		Package 6: 53 0 3 9 1558 1056
+		Package 7: 46 0 3 10 579 103
+		Package 8: 139 0 3 10 1475 786
+		Package 9: 259 0 3 10 984 463
+		Package 10: 343 0 3 10 1791 520
+		Package 11: 36 0 3 13 472 300
+		Package 12: 97 0 3 13 633 583
+		Package 13: 143 0 3 13 1889 538
+		Package 14: 193 0 3 13 1502 270
+		Package 15: 212 0 3 13 685 443
+		Package 16: 221 0 3 13 1210 892
+		Package 17: 304 0 3 13 1313 1080
+		Package 18: 315 0 3 13 355 737
+		Package 19: 359 0 3 13 1306 202
+		Package 20: 23 0 3 16 501 692
+		Package 21: 152 0 3 16 1456 192
+		Package 22: 164 0 3 16 220 351
+		Package 23: 217 0 3 16 1796 762
+		Package 24: 415 0 3 16 1391 846
+		Package 25: 438 0 3 16 1105 256
+		Package 26: 443 0 3 16 753 124
+		Package 27: 0 0 3 19 754 984
+		Package 28: 17 0 3 19 1432 1051
+		Package 29: 51 0 3 19 600 422
+		Package 30: 206 0 3 19 1928 713
+	Number of Packages: 30
+
+	Truck: OM-91-SI 397 321 13931
+		Package 1: 312 0 3 19 901 980
+		Package 2: 19 0 3 20 1645 316
+		Package 3: 49 0 3 20 1263 905
+		Package 4: 196 0 3 20 1434 362
+		Package 5: 137 0 3 22 1662 201
+		Package 6: 240 0 3 22 940 937
+		Package 7: 437 0 3 22 1768 195
+		Package 8: 250 0 3 23 571 632
+		Package 9: 403 0 3 23 697 699
+		Package 10: 33 0 6 3 1347 609
+		Package 11: 116 0 6 3 615 970
+		Package 12: 140 0 6 3 453 537
+		Package 13: 426 0 6 3 1176 551
+		Package 14: 27 0 6 6 564 1017
+		Package 15: 165 0 6 6 631 145
+		Package 16: 218 0 6 6 1445 1014
+		Package 17: 267 0 6 6 779 122
+		Package 18: 395 0 6 6 1058 294
+		Package 19: 419 0 6 6 1921 197
+		Package 20: 434 0 6 6 442 900
+		Package 21: 123 0 6 10 1572 528
+		Package 22: 393 0 6 10 465 900
+		Package 23: 411 0 6 10 713 921
+		Package 24: 186 0 6 13 1201 715
+		Package 25: 303 0 6 13 1713 686
+		Package 26: 260 0 6 16 618 1039
+	Number of Packages: 26
+
+	Truck: BT-24-SF 395 315 16790
+		Package 1: 273 0 6 16 647 872
+		Package 2: 45 0 6 19 1591 138
+		Package 3: 135 0 6 19 486 789
+		Package 4: 239 0 6 19 1243 977
+		Package 5: 338 0 6 19 996 631
+		Package 6: 398 0 6 19 1185 822
+		Package 7: 401 0 6 19 406 430
+		Package 8: 110 0 6 22 794 783
+		Package 9: 216 0 6 22 562 614
+		Package 10: 249 0 6 22 597 540
+		Package 11: 345 0 6 22 666 504
+		Package 12: 3 0 6 26 1991 318
+		Package 13: 77 0 6 28 1820 271
+		Package 14: 144 0 6 29 1800 116
+	Number of Packages: 14
+
+	Truck: LX-78-FE 394 379 13241
+		Package 1: 147 0 6 29 1859 261
+		Package 2: 306 0 6 29 834 900
+		Package 3: 145 0 7 7 1524 189
+		Package 4: 232 0 7 7 501 800
+		Package 5: 310 0 7 7 828 643
+		Package 6: 262 0 7 10 1672 419
+		Package 7: 37 0 7 13 898 325
+		Package 8: 253 0 7 13 734 917
+		Package 9: 400 0 7 13 1210 414
+		Package 10: 247 0 7 16 789 650
+		Package 11: 382 0 7 16 764 617
+		Package 12: 70 0 7 20 1880 705
+		Package 13: 88 0 7 20 412 756
+		Package 14: 265 0 7 20 1577 1043
+		Package 15: 283 0 7 20 1241 674
+		Package 16: 52 0 7 26 634 751
+		Package 17: 271 0 7 26 1257 632
+		Package 18: 241 0 7 29 743 826
+		Package 19: 334 0 7 29 598 161
+		Package 20: 314 0 9 6 1467 681
+		Package 21: 14 0 9 9 1137 1019
+		Package 22: 341 0 9 9 427 447
+	Number of Packages: 22
+
+	Truck: WU-47-GV 394 351 15473
+		Package 1: 167 0 9 13 211 1039
+		Package 2: 233 0 9 13 1442 168
+		Package 3: 281 0 9 16 814 281
+		Package 4: 104 0 9 19 1281 241
+		Package 5: 128 0 9 19 775 997
+		Package 6: 92 0 9 22 909 192
+		Package 7: 119 0 9 22 452 901
+		Package 8: 182 0 9 25 1529 1008
+		Package 9: 248 0 9 25 849 1008
+		Package 10: 21 0 10 3 1886 632
+		Package 11: 106 0 10 3 547 766
+		Package 12: 166 0 10 3 1641 417
+		Package 13: 258 0 10 6 1765 970
+		Package 14: 351 0 10 6 542 430
+		Package 15: 387 0 10 6 1747 577
+		Package 16: 220 0 10 7 1801 301
+		Package 17: 84 0 10 10 588 654
+		Package 18: 93 0 10 10 1856 576
+		Package 19: 127 0 10 10 1285 483
+		Package 20: 441 0 10 10 553 631
+		Package 21: 190 0 10 13 419 950
+		Package 22: 295 0 10 13 414 478
+		Package 23: 346 0 10 13 1315 328
+		Package 24: 235 0 10 16 1202 634
+		Package 25: 177 0 10 19 1278 267
+		Package 26: 384 0 10 19 709 692
+	Number of Packages: 26
+
+	Truck: GY-50-KY 393 377 16543
+		Package 1: 321 0 10 22 1694 969
+		Package 2: 397 0 10 23 1205 1088
+		Package 3: 112 0 10 26 410 192
+		Package 4: 124 0 10 26 1229 237
+		Package 5: 433 0 10 26 1843 187
+		Package 6: 226 0 10 29 1488 1094
+		Package 7: 243 0 10 29 676 526
+		Package 8: 256 0 10 29 1065 111
+		Package 9: 423 0 10 29 1194 399
+		Package 10: 20 0 13 3 621 723
+		Package 11: 87 0 13 3 466 937
+		Package 12: 153 0 13 3 795 302
+		Package 13: 192 0 13 3 203 818
+		Package 14: 197 0 13 3 455 292
+		Package 15: 230 0 13 3 699 1056
+		Package 16: 298 0 13 3 690 686
+		Package 17: 203 0 13 6 223 597
+		Package 18: 282 0 13 6 1475 889
+		Package 19: 324 0 13 6 1062 195
+		Package 20: 347 0 13 6 1987 926
+		Package 21: 362 0 13 6 1699 1020
+		Package 22: 380 0 13 6 580 558
+		Package 23: 56 0 13 9 820 552
+		Package 24: 431 0 13 9 1857 1017
+		Package 25: 73 0 13 10 483 694
+		Package 26: 91 0 13 10 738 190
+		Package 27: 172 0 13 10 1614 331
+		Package 28: 288 0 13 10 629 410
+		Package 29: 405 0 13 10 606 592
+		Package 30: 149 0 13 13 1714 399
+	Number of Packages: 30
+
+	Truck: AK-43-SE 391 395 13796
+		Package 1: 154 0 13 13 1008 398
+		Package 2: 355 0 13 13 967 355
+		Package 3: 427 0 13 13 1679 146
+		Package 4: 379 0 13 16 1785 297
+		Package 5: 442 0 13 16 1894 625
+		Package 6: 76 0 13 20 1925 840
+		Package 7: 361 0 13 20 1951 729
+		Package 8: 29 0 13 22 590 660
+		Package 9: 229 0 13 23 1714 347
+		Package 10: 319 0 13 23 916 1026
+		Package 11: 364 0 13 23 560 244
+		Package 12: 125 0 13 25 1467 1058
+		Package 13: 200 0 13 25 550 100
+		Package 14: 446 0 13 25 1026 365
+		Package 15: 28 0 13 26 396 664
+		Package 16: 121 0 13 26 1253 542
+		Package 17: 126 0 13 26 1073 1066
+		Package 18: 322 0 13 26 1639 927
+	Number of Packages: 18
+
+	Truck: NO-53-SB 388 268 14521
+		Package 1: 9 0 13 29 1511 325
+		Package 2: 151 0 13 29 719 531
+		Package 3: 181 0 13 29 1255 923
+		Package 4: 331 0 13 29 626 332
+		Package 5: 138 0 16 3 262 658
+		Package 6: 270 0 16 3 279 744
+		Package 7: 279 0 16 3 477 194
+		Package 8: 329 0 16 3 704 1025
+		Package 9: 360 0 16 3 227 464
+		Package 10: 386 0 16 3 1518 1053
+		Package 11: 439 0 16 3 836 819
+		Package 12: 66 0 16 6 1332 642
+		Package 13: 102 0 16 6 755 874
+		Package 14: 228 0 16 6 1188 697
+		Package 15: 245 0 16 6 1907 397
+		Package 16: 57 0 16 10 1508 454
+		Package 17: 69 0 16 10 1081 1064
+		Package 18: 103 0 16 10 1309 888
+		Package 19: 207 0 16 10 396 514
+		Package 20: 1 0 16 13 1121 641
+		Package 21: 7 0 16 13 367 703
+		Package 22: 31 0 16 13 707 359
+		Package 23: 48 0 16 13 1718 114
+		Package 24: 136 0 16 13 654 720
+	Number of Packages: 24
+
+	Truck: UW-05-RK 385 254 14819
+		Package 1: 198 0 16 13 1477 513
+		Package 2: 201 0 16 13 671 726
+		Package 3: 305 0 16 16 1633 195
+		Package 4: 330 0 16 16 878 697
+		Package 5: 353 0 16 16 706 408
+		Package 6: 402 0 16 16 772 229
+		Package 7: 408 0 16 16 527 1100
+		Package 8: 449 0 16 16 287 918
+		Package 9: 39 0 16 19 1193 338
+		Package 10: 161 0 16 19 1873 697
+		Package 11: 189 0 16 19 234 1001
+		Package 12: 107 0 16 22 1579 619
+		Package 13: 278 0 16 22 491 581
+		Package 14: 205 0 16 23 746 416
+	Number of Packages: 14
+
+	Truck: SR-70-GX 382 304 14967
+		Package 1: 4 0 16 26 1590 728
+		Package 2: 160 0 16 26 1789 1077
+		Package 3: 71 0 16 28 1821 660
+		Package 4: 242 0 16 28 875 1094
+		Package 5: 284 0 16 28 1863 653
+		Package 6: 308 0 16 28 935 528
+		Package 7: 108 0 16 29 1694 404
+		Package 8: 129 0 16 29 1739 656
+		Package 9: 130 0 16 29 533 935
+		Package 10: 169 0 16 29 1593 882
+	Number of Packages: 10
+
+	Truck: HJ-38-UB 378 272 15057
+		Package 1: 222 0 16 29 1883 380
+		Package 2: 297 0 16 29 1142 878
+		Package 3: 309 0 16 29 1083 521
+		Package 4: 348 0 16 29 1002 441
+		Package 5: 418 0 16 29 1730 638
+		Package 6: 38 0 19 3 762 269
+		Package 7: 224 0 19 3 1814 369
+		Package 8: 225 0 19 3 784 755
+		Package 9: 254 0 19 3 1982 619
+		Package 10: 320 0 19 3 638 618
+		Package 11: 323 0 19 3 1547 279
+		Package 12: 335 0 19 3 522 1009
+		Package 13: 86 0 19 6 1204 453
+		Package 14: 234 0 19 6 217 732
+		Package 15: 294 0 19 6 324 237
+		Package 16: 425 0 19 6 1813 756
+		Package 17: 89 0 19 9 1059 580
+		Package 18: 275 0 19 9 1897 881
+		Package 19: 435 0 19 10 1820 348
+		Package 20: 81 0 19 13 1784 152
+	Number of Packages: 20
+
+	Truck: MF-13-CA 376 262 16090
+		Package 1: 114 0 19 13 1688 640
+		Package 2: 120 0 19 13 1537 614
+		Package 3: 146 0 19 13 1904 276
+		Package 4: 342 0 19 13 884 455
+		Package 5: 344 0 19 13 1040 651
+		Package 6: 357 0 19 13 1875 107
+		Package 7: 6 0 19 16 1967 865
+		Package 8: 290 0 19 16 1319 385
+		Package 9: 291 0 19 16 1012 845
+		Package 10: 326 0 19 16 1489 751
+		Package 11: 371 0 19 16 1351 615
+		Package 12: 42 0 19 19 1437 576
+		Package 13: 44 0 19 19 873 118
+		Package 14: 327 0 19 19 1990 106
+		Package 15: 333 0 19 19 1956 207
+		Package 16: 96 0 19 22 1719 159
+	Number of Packages: 16
+
+	Truck: LR-49-BH 370 366 13618
+		Package 1: 113 0 19 22 735 193
+		Package 2: 185 0 19 22 1804 622
+		Package 3: 255 0 19 22 1260 355
+		Package 4: 339 0 19 22 691 728
+		Package 5: 354 0 19 22 1897 986
+		Package 6: 366 0 19 22 1440 777
+		Package 7: 404 0 19 22 1200 449
+		Package 8: 32 0 19 25 854 790
+		Package 9: 47 0 19 25 1263 748
+		Package 10: 158 0 19 25 844 478
+		Package 11: 372 0 19 26 309 271
+		Package 12: 399 0 19 26 836 356
+		Package 13: 5 0 19 28 946 1021
+		Package 14: 269 0 19 28 486 840
+		Package 15: 299 0 19 28 213 755
+	Number of Packages: 15
+
+	Truck: PS-75-SK 368 308 16575
+		Package 1: 302 0 19 28 512 778
+		Package 2: 432 0 19 29 1523 353
+		Package 3: 307 0 20 3 1785 160
+		Package 4: 187 0 20 7 386 964
+		Package 5: 325 0 20 7 894 300
+		Package 6: 100 0 20 10 1663 207
+		Package 7: 175 0 20 10 1569 720
+		Package 8: 13 0 20 13 1542 128
+		Package 9: 286 0 20 13 848 198
+		Package 10: 337 0 20 13 1054 815
+		Package 11: 385 0 20 13 636 446
+		Package 12: 292 0 20 16 1200 991
+		Package 13: 313 0 20 16 823 524
+		Package 14: 412 0 20 16 851 446
+		Package 15: 274 0 20 20 418 893
+		Package 16: 214 0 20 23 1236 246
+		Package 17: 340 0 20 23 204 293
+		Package 18: 445 0 20 23 1325 338
+	Number of Packages: 18
+
+	Truck: NP-11-XC 366 375 15556
+		Package 1: 184 0 20 26 1863 104
+		Package 2: 90 0 22 3 480 1037
+		Package 3: 111 0 22 3 338 357
+		Package 4: 209 0 22 3 1492 283
+		Package 5: 378 0 22 3 1565 763
+		Package 6: 350 0 22 6 683 553
+		Package 7: 272 0 22 9 1805 279
+		Package 8: 410 0 22 9 1509 598
+		Package 9: 150 0 22 10 1079 154
+		Package 10: 414 0 22 10 1848 196
+		Package 11: 59 0 22 13 667 765
+		Package 12: 132 0 22 13 709 953
+		Package 13: 155 0 22 13 1897 272
+		Package 14: 174 0 22 13 226 631
+		Package 15: 18 0 22 16 982 229
+		Package 16: 98 0 22 16 1819 768
+	Number of Packages: 16
+
+	Truck: QV-09-KU 365 301 13406
+		Package 1: 105 0 22 16 644 313
+		Package 2: 141 0 22 16 1175 863
+		Package 3: 183 0 22 16 1598 841
+		Package 4: 65 0 22 19 783 277
+		Package 5: 117 0 22 19 287 752
+		Package 6: 266 0 22 19 602 291
+		Package 7: 363 0 22 19 470 470
+		Package 8: 180 0 22 22 930 324
+		Package 9: 276 0 22 22 318 898
+		Package 10: 287 0 22 22 626 1048
+		Package 11: 176 0 22 25 1227 810
+		Package 12: 215 0 22 25 914 337
+		Package 13: 440 0 22 25 224 467
+		Package 14: 263 0 22 28 1002 795
+	Number of Packages: 14
+
+	Truck: UP-77-BW 365 259 16982
+		Package 1: 317 0 22 28 1717 549
+		Package 2: 407 0 22 28 347 1058
+		Package 3: 300 0 22 29 1448 487
+		Package 4: 381 0 22 29 1500 828
+		Package 5: 388 0 23 3 1396 143
+		Package 6: 370 0 23 7 936 609
+		Package 7: 163 0 23 13 206 128
+		Package 8: 25 0 23 16 1918 1042
+		Package 9: 421 0 23 16 1936 498
+		Package 10: 64 0 23 20 1536 804
+		Package 11: 118 0 23 20 437 996
+		Package 12: 409 0 23 20 1786 1041
+		Package 13: 211 0 23 23 1382 991
+	Number of Packages: 13
+
+	Truck: JT-75-KM 360 331 15444
+		Package 1: 367 0 23 23 1366 481
+		Package 2: 424 0 23 23 881 353
+		Package 3: 58 0 23 26 1520 942
+		Package 4: 202 0 23 26 1594 1052
+		Package 5: 244 0 23 26 1913 600
+		Package 6: 178 0 23 29 1789 900
+		Package 7: 376 0 23 29 1232 389
+		Package 8: 62 0 25 6 216 182
+		Package 9: 95 0 25 6 653 107
+		Package 10: 101 0 25 6 647 415
+		Package 11: 11 0 25 13 1251 384
+		Package 12: 356 0 25 13 546 1056
+		Package 13: 413 0 25 13 609 1070
+		Package 14: 41 0 25 16 620 1002
+	Number of Packages: 14
+
+	Truck: VY-82-LI 355 322 13718
+		Package 1: 35 0 25 19 1889 468
+		Package 2: 188 0 25 22 1331 509
+		Package 3: 293 0 25 22 580 176
+		Package 4: 365 0 25 22 861 590
+		Package 5: 389 0 25 22 471 448
+		Package 6: 179 0 25 25 371 509
+		Package 7: 2 0 25 28 1370 535
+		Package 8: 26 0 25 28 724 816
+		Package 9: 74 0 25 28 221 802
+		Package 10: 80 0 25 28 521 989
+		Package 11: 83 0 25 28 1909 396
+		Package 12: 191 0 25 28 1521 284
+		Package 13: 72 0 26 6 1627 732
+		Package 14: 237 0 26 6 1156 1073
+	Number of Packages: 14
+
+	Truck: AW-41-BS 344 306 14015
+		Package 1: 369 0 26 6 774 314
+		Package 2: 109 0 26 7 738 375
+		Package 3: 204 0 26 10 574 593
+		Package 4: 219 0 26 13 1295 104
+		Package 5: 22 0 26 16 403 402
+		Package 6: 168 0 26 16 1296 524
+		Package 7: 429 0 26 16 1303 358
+		Package 8: 162 0 26 19 244 1055
+		Package 9: 231 0 26 19 1397 1043
+		Package 10: 55 0 26 20 971 308
+		Package 11: 199 0 26 20 1645 318
+		Package 12: 12 0 26 22 1628 925
+		Package 13: 60 0 26 22 1348 605
+	Number of Packages: 13
+
+	Truck: SE-25-FZ 343 277 15226
+		Package 1: 99 0 26 22 1487 269
+		Package 2: 252 0 26 22 1065 616
+		Package 3: 390 0 26 22 1513 447
+		Package 4: 79 0 26 26 716 445
+		Package 5: 264 0 26 26 1170 838
+		Package 6: 336 0 26 26 1261 1009
+		Package 7: 85 0 26 29 1233 434
+		Package 8: 268 0 26 29 267 777
+		Package 9: 68 0 28 6 1065 121
+		Package 10: 296 0 28 6 1953 299
+		Package 11: 311 0 28 6 1636 436
+		Package 12: 332 0 28 6 1208 309
+	Number of Packages: 12
+
+	Truck: AJ-19-FO 336 345 14342
+		Package 1: 428 0 28 6 707 517
+		Package 2: 134 0 28 9 1185 918
+		Package 3: 194 0 28 16 827 999
+		Package 4: 377 0 28 16 327 1010
+		Package 5: 227 0 28 19 828 888
+		Package 6: 368 0 28 19 1240 826
+		Package 7: 257 0 28 22 330 563
+		Package 8: 416 0 28 22 1166 491
+		Package 9: 383 0 28 25 952 377
+		Package 10: 142 0 29 10 1463 145
+		Package 11: 318 0 29 10 243 775
+	Number of Packages: 11
+
+	Truck: QK-18-NG 335 265 15168
+		Package 1: 358 0 29 10 1657 287
+		Package 2: 238 0 29 13 1014 130
+		Package 3: 30 0 29 16 1051 169
+		Package 4: 277 0 29 16 584 203
+		Package 5: 289 0 29 16 1442 123
+		Package 6: 444 0 29 16 1369 817
+		Package 7: 375 0 29 19 1268 1095
+		Package 8: 34 0 29 20 1991 704
+		Package 9: 43 0 29 20 1160 237
+		Package 10: 223 0 29 20 1704 502
+		Package 11: 280 0 29 20 1972 641
+	Number of Packages: 11
+
+	Truck: JG-66-ZH 335 381 15531
+		Package 1: 156 0 29 22 561 236
+		Package 2: 115 0 29 26 719 600
+		Package 3: 157 0 29 26 1724 482
+		Package 4: 63 0 29 29 763 971
+		Package 5: 78 0 29 29 1019 326
+		Package 6: 195 0 29 29 969 833
+	Number of Packages: 6
+
+	Number of trucks: 24
+	Number of packages (total, !express): 407
+	Percentage of delivered packages: 100%
