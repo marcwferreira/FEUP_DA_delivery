@@ -4,7 +4,7 @@ from math import ceil as c
 
 '''
 Script que gera N novas packages de acordo com os limites do dataset original
-Coloca o resultado na pasta ./data, em formato "encomendas<N>.txt"
+Coloca o resultado na pasta ../input, em formato "encomendas<N>.txt"
 Garante que EXPRESS_PERCENTAGE % de todas as encomendas geradas são expresso
 '''
 
