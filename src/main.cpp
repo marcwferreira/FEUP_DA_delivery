@@ -100,8 +100,11 @@ int main(int argc, char *argv[])
     fileTrucks = argv[3];
     if (argv[4] == NULL)
       outputFile = DEFAULT_OUTPUT;
-    else
-      outputFile = argv[4];
+    else 
+    {
+        outputFile = "../output/";
+        outputFile.append(argv[4]);
+    }
   }
   else
   {
@@ -119,7 +122,8 @@ int main(int argc, char *argv[])
       }
       else
       {
-        outputFile = argv[4];
+        outputFile = "../output/";
+        outputFile.append(argv[4]);
       }
     }
 
