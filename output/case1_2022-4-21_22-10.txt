@@ -2,7 +2,7 @@ Information:
 	Truck: licencePlate volMax weightMax cost
 	Package: id priority volume weight reward duration
 
-Thu Apr 21 00:13:34 2022
+Thu Apr 21 22:10:56 2022
 
 	Truck: IK-37-DL 398 378 15048
 		Package 1: 133 0 3 3 575 287

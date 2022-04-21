@@ -76,9 +76,7 @@ int main(int argc, char *argv[])
   int mode = modeString[0] - '0';
   if (mode > 3 || mode < 1)
   {
-    cerr << "Invalid mode" << endl
-         << "\tIf you need help use '--help'" << endl;
-    exit(-1);
+    error();
   }
 
   if ((mode == 1 || mode == 2) && (argc == 3 || argc > 5))
@@ -115,15 +113,24 @@ int main(int argc, char *argv[])
     }
     else
     {
-      numberOfSeconds = stoi(argv[3]);
-      if (argv[4] == NULL)
-      {
-        outputFile = DEFAULT_OUTPUT;
-      }
-      else
-      {
+      string temporary = argv[3];
+      if(isdigit(temporary[0])){
+        numberOfSeconds = stoi(argv[3]);
+
+        if (argv[4] == NULL)
+        {
+          outputFile = DEFAULT_OUTPUT;
+        }
+        else
+        {
         outputFile = "../output/";
         outputFile.append(argv[4]);
+        }
+      }
+      else{
+        numberOfSeconds = WORK_TIME;
+        outputFile = "../output/";
+        outputFile.append(argv[3]);
       }
     }
 

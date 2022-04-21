@@ -94,8 +94,7 @@ void MailSystem::case1(const string &filename)
         }
     }
 
-    if (!notDelivered.empty())
-        writeNotDelivered("Case1NotDelivered.txt", notDelivered, false);
+    writeNotDelivered("Case1NotDelivered.txt", notDelivered, false);
 
     int howManyTrucks = 0, howManyPackages = 0, totalPackages = 0, deliveredPackages = 0;
     for (list<Truck>::iterator j = trucks.begin(); j != trucks.end(); j++)
@@ -242,10 +241,8 @@ void MailSystem::case2(const string &filename)
 
     outputFile.close();
 
-    if (!normalPackages.empty())
-    {
-        writeNotDelivered("Case2NotDelivered.txt", normalPackages, false);
-    }
+    writeNotDelivered("Case2NotDelivered.txt", normalPackages, false);
+
 }
 
 bool MailSystem::knapsackWeight(Truck &currentTruck, list<Package> &currentPackages)

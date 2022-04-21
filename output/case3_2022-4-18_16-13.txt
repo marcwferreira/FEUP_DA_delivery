@@ -1,9 +1,0 @@
-Information: 
-	Package: id priority volume weight reward duration
-
-	Package 709 0 27 7 460 101
-
-Average time to make a delivery: 101 seconds.
-Number of packages to be delivered: 300
-Number of packages delivered: 1
-Percentage of delivered packages: 0.333333%
