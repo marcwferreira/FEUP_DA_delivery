@@ -8,8 +8,8 @@ Coloca o resultado na pasta ./data, em formato "encomendas<N>.txt"
 Garante que EXPRESS_PERCENTAGE % de todas as encomendas geradas são expresso
 '''
 
-ORIGINAL = "../input/encomendas450.txt"
-HEADER = "express priority volume weight reward duration"
+ORIGINAL = "../../input/encomendas450.txt"
+HEADER = "id express priority volume weight reward duration"
 MAXIMUM = 100000
 MINIMUM = -1
 DEFAULT_PRIORITY = 0
@@ -61,7 +61,7 @@ def generate(total):
         ) for x in range(total) 
     ]
 
-    with open("../input/encomendas" + str(total) + ".txt", "w") as file:
+    with open("../../input/encomendas" + str(total) + ".txt", "w") as file:
         
         file.write(HEADER + "\n")
         for line in allData[:-1]: file.write(line + "\n")

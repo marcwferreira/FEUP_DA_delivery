@@ -4,8 +4,8 @@ project(estafetas)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -fsanitize=address -fsanitize=undefined -fno-omit-frame-pointer")
 
-file(GLOB FILES CONFIGURE_DEPENDS "src/*.cpp")
-add_executable(project src/main.cpp ${FILES})
+file(GLOB FILES CONFIGURE_DEPENDS "codigo/*.cpp")
+add_executable(project codigo/main.cpp ${FILES})
 
 # Doxygen-generated documentation (doxygen needs to be installed)
 find_package(Doxygen)
@@ -25,7 +25,7 @@ if (DOXYGEN_FOUND)
     # note the option ALL which allows to build the docs together with the application
     add_custom_target(docs ALL
         COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY "../src"
+        WORKING_DIRECTORY "../codigo"
         COMMENT "Generating API documentation with Doxygen"
         VERBATIM )
 else (DOXYGEN_FOUND)

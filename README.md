@@ -5,6 +5,7 @@ IMPORTANT - the files generate by the program is stored in the output folder (on
 ## Installation
 
 ```
+mkdir output/
 mkdir build/
 cd build
 cmake ..

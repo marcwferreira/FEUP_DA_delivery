@@ -5,6 +5,6 @@ do
     do  
         python3 packagesGenerator.py "$i";
         bash case$case.sh "$i"
-        rm -r "../input/encomendas$i.txt";
+        rm -r "../../input/encomendas$i.txt";
     done 
 done
