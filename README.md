@@ -1,5 +1,7 @@
 # Urban Logistics for Goods Delivery
 
+IMPORTANT - the files generate by the program is stored in the output folder (on the main folder, together with codigo, documentation, etc)
+
 ## Installation
 
 ```
