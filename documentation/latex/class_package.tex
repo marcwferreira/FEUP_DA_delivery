@@ -1,0 +1,253 @@
+\hypertarget{class_package}{}\doxysection{Package Class Reference}
+\label{class_package}\index{Package@{Package}}
+
+
+{\ttfamily \#include $<$Package.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_package_a114ae0642ba49f37dd0aea655f0f6eaf}{Package}} (int id, unsigned int priority, unsigned int volume, unsigned int weight, unsigned int reward, unsigned int duration)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_package_ac05fdde46ac5e5836864ddb2debed0ec}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the id (identifier number) of a package. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_package_a6b09d7fa36202f72efd6116f5b84e74b}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em This function can be used to change the id of a package. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_package_ab5a230213d6091a57b8deb5bb45a557e}{get\+Priority}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the Priority of the package as an int (the highter the value the more important is the package) \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_package_a33f63dfee7b5b3536444418121f4c49d}{get\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the Volume of the package. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_package_acc0cc1eb5bff7595b42e1c105fcfaa1f}{get\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the Weight of the package. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_package_a9483b99ae8fcdb8891f848cec5022cc2}{get\+Reward}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the Reward (profit) of the package. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_package_a8c433650faee26e06900cf6ce8213896}{get\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the time needed to deliver the package (time to deliver + time to return to warehouse) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_package_a37d2bf998c30855c1f94668d39287b5f}{add\+Priority}} ()
+\begin{DoxyCompactList}\small\item\em This functions makes the packages\textquotesingle{} priority level higher by one. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_package_a7d03b36eeb22a00b696c738c8bc5b437}{operator==}} (const \mbox{\hyperlink{class_package}{Package}} \&package) const
+\begin{DoxyCompactList}\small\item\em This function compares two objects of the class \mbox{\hyperlink{class_package}{Package}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_package_ad4282c62f903064a6d9b6d0fb67e5122}{operator$<$}} (const \mbox{\hyperlink{class_package}{Package}} \&package) const
+\begin{DoxyCompactList}\small\item\em This function compares two objects of the class \mbox{\hyperlink{class_package}{Package}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_package_aaa0a4c0d2752476040df5060aa47ee8c}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_package}{Package}} \&package)
+\begin{DoxyCompactList}\small\item\em This function returns all characteristics of the \mbox{\hyperlink{class_package}{Package}} being manipulated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a package 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the package \\
+\hline
+{\em priority} & The priority of the package \\
+\hline
+{\em volume} & The volume of the package \\
+\hline
+{\em weight} & The weight of the package \\
+\hline
+{\em reward} & The reward of the package \\
+\hline
+{\em duration} & The duration of the package delivery \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_package_a114ae0642ba49f37dd0aea655f0f6eaf}\label{class_package_a114ae0642ba49f37dd0aea655f0f6eaf}} 
+\index{Package@{Package}!Package@{Package}}
+\index{Package@{Package}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{Package()}{Package()}}
+{\footnotesize\ttfamily Package\+::\+Package (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{unsigned int}]{priority,  }\item[{unsigned int}]{volume,  }\item[{unsigned int}]{weight,  }\item[{unsigned int}]{reward,  }\item[{unsigned int}]{duration }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifier of the package \\
+\hline
+{\em priority} & Int representing the priority to be delivered \\
+\hline
+{\em volume} & Volume of the package \\
+\hline
+{\em weight} & Weight of the package \\
+\hline
+{\em reward} & Profit obtained from the package \\
+\hline
+{\em duration} & Time to deliver the package \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_package_a37d2bf998c30855c1f94668d39287b5f}\label{class_package_a37d2bf998c30855c1f94668d39287b5f}} 
+\index{Package@{Package}!addPriority@{addPriority}}
+\index{addPriority@{addPriority}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{addPriority()}{addPriority()}}
+{\footnotesize\ttfamily void Package\+::add\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This functions makes the packages\textquotesingle{} priority level higher by one. 
+
+\mbox{\Hypertarget{class_package_a8c433650faee26e06900cf6ce8213896}\label{class_package_a8c433650faee26e06900cf6ce8213896}} 
+\index{Package@{Package}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily unsigned int Package\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the time needed to deliver the package (time to deliver + time to return to warehouse) 
+
+\begin{DoxyReturn}{Returns}
+unsigned int representing the amount of time to deliver the package 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_ac05fdde46ac5e5836864ddb2debed0ec}\label{class_package_ac05fdde46ac5e5836864ddb2debed0ec}} 
+\index{Package@{Package}!getId@{getId}}
+\index{getId@{getId}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Package\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the id (identifier number) of a package. 
+
+\begin{DoxyReturn}{Returns}
+It returns an int with the id for the package 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_ab5a230213d6091a57b8deb5bb45a557e}\label{class_package_ab5a230213d6091a57b8deb5bb45a557e}} 
+\index{Package@{Package}!getPriority@{getPriority}}
+\index{getPriority@{getPriority}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{getPriority()}{getPriority()}}
+{\footnotesize\ttfamily unsigned int Package\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the Priority of the package as an int (the highter the value the more important is the package) 
+
+\begin{DoxyReturn}{Returns}
+unsigned int representing the prioroty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_a9483b99ae8fcdb8891f848cec5022cc2}\label{class_package_a9483b99ae8fcdb8891f848cec5022cc2}} 
+\index{Package@{Package}!getReward@{getReward}}
+\index{getReward@{getReward}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{getReward()}{getReward()}}
+{\footnotesize\ttfamily unsigned int Package\+::get\+Reward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the Reward (profit) of the package. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int representing the profit from it 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_a33f63dfee7b5b3536444418121f4c49d}\label{class_package_a33f63dfee7b5b3536444418121f4c49d}} 
+\index{Package@{Package}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily unsigned int Package\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the Volume of the package. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int representing the volume of the package 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_acc0cc1eb5bff7595b42e1c105fcfaa1f}\label{class_package_acc0cc1eb5bff7595b42e1c105fcfaa1f}} 
+\index{Package@{Package}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily unsigned int Package\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the Weight of the package. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int representing the weight of the object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_ad4282c62f903064a6d9b6d0fb67e5122}\label{class_package_ad4282c62f903064a6d9b6d0fb67e5122}} 
+\index{Package@{Package}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Package\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_package}{Package}} \&}]{package }\end{DoxyParamCaption}) const}
+
+
+
+This function compares two objects of the class \mbox{\hyperlink{class_package}{Package}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & another object that will be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the current object is less than object passed by reference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_a7d03b36eeb22a00b696c738c8bc5b437}\label{class_package_a7d03b36eeb22a00b696c738c8bc5b437}} 
+\index{Package@{Package}!operator==@{operator==}}
+\index{operator==@{operator==}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Package\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_package}{Package}} \&}]{package }\end{DoxyParamCaption}) const}
+
+
+
+This function compares two objects of the class \mbox{\hyperlink{class_package}{Package}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & another object that will be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the current object is equal than object passed by reference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_package_a6b09d7fa36202f72efd6116f5b84e74b}\label{class_package_a6b09d7fa36202f72efd6116f5b84e74b}} 
+\index{Package@{Package}!setId@{setId}}
+\index{setId@{setId}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Package\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+This function can be used to change the id of a package. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & A int wiht the new id number for the package \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_package_aaa0a4c0d2752476040df5060aa47ee8c}\label{class_package_aaa0a4c0d2752476040df5060aa47ee8c}} 
+\index{Package@{Package}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Package@{Package}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_package}{Package}} \&}]{package }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+This function returns all characteristics of the \mbox{\hyperlink{class_package}{Package}} being manipulated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & ostream object, passed by reference \\
+\hline
+{\em package} & package object, passed by reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_package_8h}{Package.\+h}}\item 
+\mbox{\hyperlink{_package_8cpp}{Package.\+cpp}}\end{DoxyCompactItemize}
