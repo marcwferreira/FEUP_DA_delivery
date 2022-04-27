@@ -1,0 +1,284 @@
+\hypertarget{class_truck}{}\doxysection{Truck Class Reference}
+\label{class_truck}\index{Truck@{Truck}}
+
+
+{\ttfamily \#include $<$Truck.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_truck_ae7b51b26f260a6f1cb4ef2c9ac6bcaa0}{Truck}} (string licence\+Plate, unsigned int max\+Volume, unsigned int max\+Weight, unsigned int cost)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_truck_ab8cde9a62672c013448dcf66b1a9a402}{get\+Licence\+Plate}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the license plate from the truck. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_truck_a26be30d23fe67987b7bf08af233e8382}{get\+Max\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em This function gets maximum volume the truck is able to carry. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_truck_a03e7886d4f9f6be6748113545e5e828d}{get\+Max\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the maximum weight the truck is able to carry. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_truck_a445683d744ca38c338ebf7c91cd962fd}{get\+Actual\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the volume that is loaded into the truck at the moment of its call. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_truck_ac8f78d457dd8f276c6825cd064c80bfd}{get\+Actual\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the weight that is loaded into the truck at the moment of its call. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_truck_a64294178a95c83be73c031dd3e1c0955}{get\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the cost of the truck. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ \mbox{\hyperlink{class_truck_a47e24aee0ef464839924848dfc8eb91f}{get\+Packages}} () const
+\begin{DoxyCompactList}\small\item\em This function gets the list os packages that are loaded into the truck at the moment os its call. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_truck_a2048ccaab59af202d554cce1d46e5142}{get\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em This function indicates whether the truck is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_truck_a2b730263c230702f74865553990f7ba3}{clear\+Packages}} ()
+\begin{DoxyCompactList}\small\item\em This function clears the packages loaded into the truck, making it empty. Also updates the current volume and weight left to the maximum amount of both. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_truck_a7c9eab7023c50912d5aa97c932c1e284}{add\+Package}} (\mbox{\hyperlink{class_package}{Package}} p)
+\begin{DoxyCompactList}\small\item\em This function loads a prackage into the truck and update the current load of the truck. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_truck_ac76fc9ba37e84354de8444ce251041cf}{operator==}} (const \mbox{\hyperlink{class_truck}{Truck}} \&truck) const
+\begin{DoxyCompactList}\small\item\em This function compares two objects of the class \mbox{\hyperlink{class_truck}{Truck}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_truck_aa8906d7ba38e3a6ac30ae3284928a193}{operator$<$}} (const \mbox{\hyperlink{class_truck}{Truck}} \&truck) const
+\begin{DoxyCompactList}\small\item\em This function compares two objects of the class \mbox{\hyperlink{class_truck}{Truck}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_truck_a599a087d698078be3848675ed99f2f63}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_truck}{Truck}} \&truck)
+\begin{DoxyCompactList}\small\item\em This function returns all characteristics of the \mbox{\hyperlink{class_truck}{Truck}} being manipulated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a truck (of delivery vehicle) 
+\begin{DoxyParams}{Parameters}
+{\em max\+Volume} & The maximum amount possible to load in the vehicle \\
+\hline
+{\em max\+Weight} & The maximum amount of wight supported by the vehicle \\
+\hline
+{\em actual\+Volume} & Actual volume filled in the vehicle \\
+\hline
+{\em actual\+Weight} & Actual weight loaded into the vehicle \\
+\hline
+{\em cost} & The price of a delivery (idependent of the actual load) \\
+\hline
+{\em list\+Of\+Packages} & List of packages currently loaded into the \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_truck_ae7b51b26f260a6f1cb4ef2c9ac6bcaa0}\label{class_truck_ae7b51b26f260a6f1cb4ef2c9ac6bcaa0}} 
+\index{Truck@{Truck}!Truck@{Truck}}
+\index{Truck@{Truck}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{Truck()}{Truck()}}
+{\footnotesize\ttfamily Truck\+::\+Truck (\begin{DoxyParamCaption}\item[{string}]{licence\+Plate,  }\item[{unsigned int}]{max\+Volume,  }\item[{unsigned int}]{max\+Weight,  }\item[{unsigned int}]{cost }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em license\+Plate} & Identifier for the truck -\/ license plate of it used for this purpose \\
+\hline
+{\em max\+Volume} & The maximum size able to be loaded into the truck \\
+\hline
+{\em max\+Weight} & the maximum weight the truck supports as a load \\
+\hline
+{\em cost} & Cost of using the truck for a delivery \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_truck_a7c9eab7023c50912d5aa97c932c1e284}\label{class_truck_a7c9eab7023c50912d5aa97c932c1e284}} 
+\index{Truck@{Truck}!addPackage@{addPackage}}
+\index{addPackage@{addPackage}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{addPackage()}{addPackage()}}
+{\footnotesize\ttfamily bool Truck\+::add\+Package (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_package}{Package}}}]{p }\end{DoxyParamCaption})}
+
+
+
+This function loads a prackage into the truck and update the current load of the truck. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & package to be added into the truck \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if adding the package to the truck was successful 
+
+false if otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a2b730263c230702f74865553990f7ba3}\label{class_truck_a2b730263c230702f74865553990f7ba3}} 
+\index{Truck@{Truck}!clearPackages@{clearPackages}}
+\index{clearPackages@{clearPackages}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{clearPackages()}{clearPackages()}}
+{\footnotesize\ttfamily void Truck\+::clear\+Packages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function clears the packages loaded into the truck, making it empty. Also updates the current volume and weight left to the maximum amount of both. 
+
+\mbox{\Hypertarget{class_truck_a445683d744ca38c338ebf7c91cd962fd}\label{class_truck_a445683d744ca38c338ebf7c91cd962fd}} 
+\index{Truck@{Truck}!getActualVolume@{getActualVolume}}
+\index{getActualVolume@{getActualVolume}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getActualVolume()}{getActualVolume()}}
+{\footnotesize\ttfamily unsigned int Truck\+::get\+Actual\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the volume that is loaded into the truck at the moment of its call. 
+
+\begin{DoxyReturn}{Returns}
+It returns an unsigned int with the actual volume 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_ac8f78d457dd8f276c6825cd064c80bfd}\label{class_truck_ac8f78d457dd8f276c6825cd064c80bfd}} 
+\index{Truck@{Truck}!getActualWeight@{getActualWeight}}
+\index{getActualWeight@{getActualWeight}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getActualWeight()}{getActualWeight()}}
+{\footnotesize\ttfamily unsigned int Truck\+::get\+Actual\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the weight that is loaded into the truck at the moment of its call. 
+
+\begin{DoxyReturn}{Returns}
+It returns an unsigned int with the loaded weight into the truck 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a64294178a95c83be73c031dd3e1c0955}\label{class_truck_a64294178a95c83be73c031dd3e1c0955}} 
+\index{Truck@{Truck}!getCost@{getCost}}
+\index{getCost@{getCost}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily unsigned int Truck\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the cost of the truck. 
+
+\begin{DoxyReturn}{Returns}
+It returns an unsigned int with the cost of current truck 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a2048ccaab59af202d554cce1d46e5142}\label{class_truck_a2048ccaab59af202d554cce1d46e5142}} 
+\index{Truck@{Truck}!getEmpty@{getEmpty}}
+\index{getEmpty@{getEmpty}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getEmpty()}{getEmpty()}}
+{\footnotesize\ttfamily bool Truck\+::get\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function indicates whether the truck is empty. 
+
+\begin{DoxyReturn}{Returns}
+It returns a boolean which indicates if the truck is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_ab8cde9a62672c013448dcf66b1a9a402}\label{class_truck_ab8cde9a62672c013448dcf66b1a9a402}} 
+\index{Truck@{Truck}!getLicencePlate@{getLicencePlate}}
+\index{getLicencePlate@{getLicencePlate}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getLicencePlate()}{getLicencePlate()}}
+{\footnotesize\ttfamily string Truck\+::get\+Licence\+Plate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the license plate from the truck. 
+
+\begin{DoxyReturn}{Returns}
+It returns a string of the license plate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a26be30d23fe67987b7bf08af233e8382}\label{class_truck_a26be30d23fe67987b7bf08af233e8382}} 
+\index{Truck@{Truck}!getMaxVolume@{getMaxVolume}}
+\index{getMaxVolume@{getMaxVolume}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getMaxVolume()}{getMaxVolume()}}
+{\footnotesize\ttfamily unsigned int Truck\+::get\+Max\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets maximum volume the truck is able to carry. 
+
+\begin{DoxyReturn}{Returns}
+It returns an unsigned int with the volume 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a03e7886d4f9f6be6748113545e5e828d}\label{class_truck_a03e7886d4f9f6be6748113545e5e828d}} 
+\index{Truck@{Truck}!getMaxWeight@{getMaxWeight}}
+\index{getMaxWeight@{getMaxWeight}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getMaxWeight()}{getMaxWeight()}}
+{\footnotesize\ttfamily unsigned int Truck\+::get\+Max\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the maximum weight the truck is able to carry. 
+
+\begin{DoxyReturn}{Returns}
+It returns an unsigned int with the maximum weight 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_a47e24aee0ef464839924848dfc8eb91f}\label{class_truck_a47e24aee0ef464839924848dfc8eb91f}} 
+\index{Truck@{Truck}!getPackages@{getPackages}}
+\index{getPackages@{getPackages}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{getPackages()}{getPackages()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_package}{Package}} $>$ Truck\+::get\+Packages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+This function gets the list os packages that are loaded into the truck at the moment os its call. 
+
+\begin{DoxyReturn}{Returns}
+It returns a list of packages with all the packages loaded into the truck 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_aa8906d7ba38e3a6ac30ae3284928a193}\label{class_truck_aa8906d7ba38e3a6ac30ae3284928a193}} 
+\index{Truck@{Truck}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Truck\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{truck }\end{DoxyParamCaption}) const}
+
+
+
+This function compares two objects of the class \mbox{\hyperlink{class_truck}{Truck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em truck} & another object that will be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the current object is less than object passed by reference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_truck_ac76fc9ba37e84354de8444ce251041cf}\label{class_truck_ac76fc9ba37e84354de8444ce251041cf}} 
+\index{Truck@{Truck}!operator==@{operator==}}
+\index{operator==@{operator==}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Truck\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{truck }\end{DoxyParamCaption}) const}
+
+
+
+This function compares two objects of the class \mbox{\hyperlink{class_truck}{Truck}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em truck} & another object that will be compared \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the current object is equal than object passed by reference 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_truck_a599a087d698078be3848675ed99f2f63}\label{class_truck_a599a087d698078be3848675ed99f2f63}} 
+\index{Truck@{Truck}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Truck@{Truck}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_truck}{Truck}} \&}]{truck }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+This function returns all characteristics of the \mbox{\hyperlink{class_truck}{Truck}} being manipulated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & ostream object, passed by reference \\
+\hline
+{\em truck} & truck object, passed by reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_truck_8h}{Truck.\+h}}\item 
+\mbox{\hyperlink{_truck_8cpp}{Truck.\+cpp}}\end{DoxyCompactItemize}

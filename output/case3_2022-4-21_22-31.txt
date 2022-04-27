@@ -1,0 +1,33 @@
+Information: 
+	Package: id priority volume weight reward duration
+
+	Package 171 0 6 16 1023 132
+	Package 208 0 7 23 907 152
+	Package 159 0 6 26 1143 180
+	Package 246 0 10 13 347 187
+	Package 50 0 22 13 293 191
+	Package 328 0 29 26 1522 215
+	Package 40 0 7 23 1303 229
+	Package 394 0 3 13 751 234
+	Package 430 0 7 3 1607 273
+	Package 24 0 3 13 1907 307
+	Package 213 0 22 19 1628 332
+	Package 251 0 13 16 1838 354
+	Package 406 0 23 7 983 372
+	Package 131 0 9 6 748 381
+	Package 352 0 23 29 957 387
+	Package 422 0 13 6 490 406
+	Package 301 0 26 7 618 442
+	Package 75 0 26 26 496 520
+	Package 122 0 25 19 1753 524
+	Package 173 0 3 19 952 540
+	Package 285 0 22 10 1233 546
+	Package 94 0 7 26 1166 552
+	Package 170 0 25 16 1200 591
+	Package 10 0 23 16 868 608
+	Package 54 0 26 26 1790 648
+
+Average time to make a delivery: 372 seconds.
+Number of packages to be delivered: 43
+Number of packages delivered: 25
+Percentage of delivered packages: 58.1395%
