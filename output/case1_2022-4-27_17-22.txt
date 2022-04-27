@@ -2,7 +2,7 @@ Information:
 	Truck: licencePlate volMax weightMax cost
 	Package: id priority volume weight reward duration
 
-Mon Apr 18 19:16:58 2022
+Wed Apr 27 17:22:57 2022
 
 	Truck: HI-66-NH 277 399 14862
 		Package 1: 16 0 8 3 1143 597

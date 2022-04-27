@@ -74,16 +74,26 @@ bool byRewardDesc(const Package &p1, const Package &p2)
 
 bool byDurationAsc(const Package &p1, const Package &p2)
 {
-    if (p1.getDuration() == p2.getDuration())
-        return p1.getPriority() < p2.getPriority();
-    return p1.getDuration() < p2.getDuration();
+    if (p1.getPriority() == p2.getPriority())
+    {
+        return p1.getDuration() < p2.getDuration();
+    }
+    else
+    {
+        return p1.getPriority() > p2.getPriority();
+    }
 }
 
 bool byDurationDesc(const Package &p1, const Package &p2)
 {
-    if (p1.getDuration() == p2.getDuration())
+    if (p1.getPriority() == p2.getPriority())
+    {
+        return p1.getDuration() > p2.getDuration();
+    }
+    else
+    {
         return p1.getPriority() > p2.getPriority();
-    return p1.getDuration() > p2.getDuration();
+    }
 }
 
 bool byMaxVolumeAsc(const Truck &t1, const Truck &t2)
