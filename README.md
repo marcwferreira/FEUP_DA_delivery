@@ -1,6 +1,6 @@
 # Urban Logistics for Goods Delivery
 
-### This was done for DA FEUP. Grade = 92.5%.
+### This was done for the subject of DA in FEUP. Grade = 92.5%.
 
 IMPORTANT - the files generate by the program is stored in the output folder (on the main folder, together with src, documentation, etc)
 
